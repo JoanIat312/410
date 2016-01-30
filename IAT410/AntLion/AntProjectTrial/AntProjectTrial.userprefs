@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Honey.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Water.cs" Line="55" Column="6" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="51" Column="3" />
+      <File FileName="Assets\Scripts\Honey.cs" Line="6" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
