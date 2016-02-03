@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Ant_Sprite_Rotate.cs" />
      <Compile Include="Assets\Scripts\Ant_Movement.cs" />
      <Compile Include="Assets\Scripts\Ant_Sprite_Rotate.cs" />
      <Compile Include="Assets\Scripts\Bottom.cs" />

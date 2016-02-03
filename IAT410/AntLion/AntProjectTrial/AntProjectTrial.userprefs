@@ -1,10 +1,13 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Honey.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\Water.cs" Line="55" Column="6" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="51" Column="3" />
-      <File FileName="Assets\Scripts\Honey.cs" Line="6" Column="17" />
+      <File FileName="Assets/Scripts/Rock.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MultiSpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PowerUpSpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="59" Column="1" />
+      <File FileName="Assets/Scripts/Health.cs" Line="25" Column="1" />
+      <File FileName="Assets/Scripts/Ant_Movement.cs" Line="91" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

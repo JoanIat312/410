@@ -22,9 +22,7 @@ public class Ant_Movement : MonoBehaviour {
 	void Update () {
 
 		Movement ();
-	
 	}
-
 
 	void Movement () {
 		anim.SetFloat ("speed", Mathf.Abs (Input.GetAxis ("Horizontal")));
@@ -65,6 +63,7 @@ public class Ant_Movement : MonoBehaviour {
 		
 	}
 	public IEnumerator Damaged(){
+		// flash when hurt
 		GetComponent<Renderer>().enabled = false;
 		yield return new WaitForSeconds(damaged);
 		GetComponent<Renderer>().enabled = true;
@@ -75,8 +74,8 @@ public class Ant_Movement : MonoBehaviour {
 		yield return new WaitForSeconds(damaged);
 		GetComponent<Renderer>().enabled = false;
 		yield return new WaitForSeconds(damaged);
-		GetComponent<Renderer>().enabled = true;
-		yield return new WaitForSeconds(damaged);
+//		GetComponent<Renderer>().enabled = true;
+//		yield return new WaitForSeconds(damaged);
 	}
 
 
