@@ -1,0 +1,17 @@
+/Users/Danny/Developer/Git/410/IAT410/AntLion/AntProjectTrial/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/Danny/Developer/Git/410/IAT410/AntLion/AntProjectTrial/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/Danny/Developer/Git/410/IAT410/AntLion/AntProjectTrial/obj/Debug/Assembly-CSharp.dll
+/Users/Danny/Developer/Git/410/IAT410/AntLion/AntProjectTrial/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/Danny/Developer/Git/410/IAT410/AntLion/AntProjectTrial/Temp/bin/Debug/UnityEngine.dll
+/Users/Danny/Developer/Git/410/IAT410/AntLion/AntProjectTrial/Temp/bin/Debug/UnityEditor.dll
+/Users/Danny/Developer/Git/410/IAT410/AntLion/AntProjectTrial/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/Danny/Developer/Git/410/IAT410/AntLion/AntProjectTrial/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/Danny/Developer/Git/410/IAT410/AntLion/AntProjectTrial/Temp/bin/Debug/Mono.Cecil.dll
+/Users/Danny/Developer/Git/410/IAT410/AntLion/AntProjectTrial/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/Danny/Developer/Git/410/IAT410/AntLion/AntProjectTrial/Temp/bin/Debug/Unity.DataContract.dll
+/Users/Danny/Developer/Git/410/IAT410/AntLion/AntProjectTrial/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/Danny/Developer/Git/410/IAT410/AntLion/AntProjectTrial/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/Danny/Developer/Git/410/IAT410/AntLion/AntProjectTrial/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/Danny/Developer/Git/410/IAT410/AntLion/AntProjectTrial/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/Danny/Developer/Git/410/IAT410/AntLion/AntProjectTrial/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/Danny/Developer/Git/410/IAT410/AntLion/AntProjectTrial/Temp/bin/Debug/Mono.Cecil.Mdb.dll

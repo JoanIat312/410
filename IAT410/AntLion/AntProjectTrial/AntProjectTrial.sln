@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{2A3D5E08-375A-51A9-CFE3-066049940003}") = "AntProjectTrial", "Assembly-CSharp.csproj", "{B32F94FE-4A97-D4B4-16F1-3148D76C1F73}"
 EndProject
+Project("{2A3D5E08-375A-51A9-CFE3-066049940003}") = "AntProjectTrial", "Assembly-UnityScript.unityproj", "{5B6ADF3F-78C3-F8B0-679C-ED2404D4EB8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{B32F94FE-4A97-D4B4-16F1-3148D76C1F73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B32F94FE-4A97-D4B4-16F1-3148D76C1F73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B32F94FE-4A97-D4B4-16F1-3148D76C1F73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B6ADF3F-78C3-F8B0-679C-ED2404D4EB8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B6ADF3F-78C3-F8B0-679C-ED2404D4EB8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B6ADF3F-78C3-F8B0-679C-ED2404D4EB8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B6ADF3F-78C3-F8B0-679C-ED2404D4EB8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
