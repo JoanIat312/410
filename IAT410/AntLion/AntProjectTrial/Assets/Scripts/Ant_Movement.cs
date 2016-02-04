@@ -101,7 +101,7 @@ public class Ant_Movement : MonoBehaviour {
 			
 			
 		}
-
+					
 		if (collision.gameObject.tag == "Shield") 
 		{
 			Debug.Log ("Shield Activated");
@@ -110,6 +110,20 @@ public class Ant_Movement : MonoBehaviour {
 
 				
 		}
+//		if (collision.gameObject.tag == "Wall") 
+//		{
+//
+//
+//				Destroy(collision.gameObject);
+//				//Application.LoadLevel("GameOver");
+//				if(Shield == true) {
+//						Shield = false;
+//						return;
+//
+//				}
+//
+//
+//		}
 	}
 
 }
