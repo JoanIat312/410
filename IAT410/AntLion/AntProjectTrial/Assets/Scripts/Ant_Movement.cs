@@ -30,32 +30,32 @@ public class Ant_Movement : MonoBehaviour {
 		
 		if (Input.GetAxisRaw ("Horizontal") > 0) 
 		{
-			if(transform.position.x <=  7.5){
+			//if(transform.position.x <=  7.5){
 				transform.Translate(Vector3.right * speed * Time.deltaTime);
 				transform.eulerAngles = new Vector2(0,0);
-			}
+			//}
 		}
 		if (Input.GetAxisRaw ("Horizontal") < 0) 
 		{
-			if(transform.position.x >= -8.5 ){
+			//if(transform.position.x >= -8.5 ){
 				transform.Translate(-Vector3.right * speed * Time.deltaTime);
 			//transform.eulerAngles = new Vector2(0,180);
-			}
+			//}
 		}
 
 		if (Input.GetAxisRaw ("Vertical") > 0) 
 		{
-			if(transform.position.y <= 0.3 ){
+			//if(transform.position.y <= 0.3 ){
 				transform.Translate(Vector3.up * speed * Time.deltaTime);
 				transform.eulerAngles = new Vector2(0,0);
-			}
+			//}
 		}
 		if (Input.GetAxisRaw ("Vertical") < 0) 
 		{
-			if(transform.position.y >= - 6.5 ){
+			//if(transform.position.y >= - 6.5 ){
 				transform.Translate(-Vector3.up * speed * Time.deltaTime);	
 			//transform.eulerAngles = new Vector2(0,180);
-			}
+			//}
 		}
 		
 
