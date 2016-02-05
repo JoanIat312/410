@@ -13,15 +13,13 @@ public class Ant_Movement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
 		anim = GetComponent<Animator> ();
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		Movement ();
+        Movement ();
 	}
 
 	void Movement () {
@@ -60,8 +58,9 @@ public class Ant_Movement : MonoBehaviour {
 		
 
 		
-		
 	}
+
+	
 	public IEnumerator Damaged(){
 		// flash when hurt
 		GetComponent<Renderer>().enabled = false;
@@ -111,5 +110,11 @@ public class Ant_Movement : MonoBehaviour {
 				
 		}
 	}
+    void FixedUpdate()
+    {
+        Vector3 objectPos = Camera.main.WorldToScreenPoint(transform.position);
+        Vector3 dis = Input.mousePosition - objectPos;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dis.y, dis.x) * Mathf.Rad2Deg));
+    }
 
 }
