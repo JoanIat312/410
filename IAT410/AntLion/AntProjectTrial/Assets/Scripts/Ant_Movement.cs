@@ -8,60 +8,65 @@ public class Ant_Movement : MonoBehaviour {
 	Animator anim;
 	float damaged = 0.2f;
 
-	public bool Shield = false;
+    public bool Shield = false;
 
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        Movement ();
-	}
+    }
 
-	void Movement () {
-		anim.SetFloat ("speed", Mathf.Abs (Input.GetAxis ("Horizontal")));
-		anim.SetFloat ("speed", Mathf.Abs (Input.GetAxis ("Vertical")));
+
+    void Movement() {
+        anim.SetFloat("speed", Mathf.Abs(Input.GetAxis("Horizontal")));
+        //Debug.Log(Mathf.Abs(Input.GetAxis("Horizontal")));
+
+		//anim.SetFloat ("speed", Mathf.Abs (Input.GetAxis ("Vertical")));
 		
-		if (Input.GetAxisRaw ("Horizontal") > 0) 
+		if (Input.GetKey(KeyCode.W)) 
 		{
-			if(transform.position.x <=  7.5){
-				transform.Translate(Vector3.right * speed * Time.deltaTime);
-				transform.eulerAngles = new Vector2(0,0);
+           
+            if (true)
+            {
+           
+                transform.position += (new Vector3( 0, 1 * speed, 0) * Time.deltaTime);
+				//transform.eulerAngles = new Vector2(0,0);
 			}
 		}
-		if (Input.GetAxisRaw ("Horizontal") < 0) 
+		if (Input.GetKey(KeyCode.S)) 
 		{
-			if(transform.position.x >= -8.5 ){
-				transform.Translate(-Vector3.right * speed * Time.deltaTime);
+            
+            if (true)
+            {
+                transform.position += (new Vector3(0, -1 * speed, 0) * Time.deltaTime);
+                //transform.eulerAngles = new Vector2(0,180);
+            }
+		}
+
+		if (Input.GetKey(KeyCode.A)) 
+		{
+            anim.SetBool("left", true);
+            if (true){
+                transform.position += (new Vector3(-1 * speed, 0, 0) * Time.deltaTime);
+                //transform.eulerAngles = new Vector2(0,0);
+            }
+		}
+		if (Input.GetKey(KeyCode.D)) 
+		{
+            anim.SetBool("left", false);
+            if (true)
+            {
+				transform.position += (new Vector3(1 * speed, 0, 0) * Time.deltaTime);	
 			//transform.eulerAngles = new Vector2(0,180);
 			}
 		}
-
-		if (Input.GetAxisRaw ("Vertical") > 0) 
-		{
-			if(transform.position.y <= 0.3 ){
-				transform.Translate(Vector3.up * speed * Time.deltaTime);
-				transform.eulerAngles = new Vector2(0,0);
-			}
-		}
-		if (Input.GetAxisRaw ("Vertical") < 0) 
-		{
-			if(transform.position.y >= - 6.5 ){
-				transform.Translate(-Vector3.up * speed * Time.deltaTime);	
-			//transform.eulerAngles = new Vector2(0,180);
-			}
-		}
 		
 
 		
 	}
 
 	
-	public IEnumerator Damaged(){
+	/*public IEnumerator Damaged(){
 		// flash when hurt
 		GetComponent<Renderer>().enabled = false;
 		yield return new WaitForSeconds(damaged);
@@ -73,9 +78,8 @@ public class Ant_Movement : MonoBehaviour {
 		yield return new WaitForSeconds(damaged);
 		GetComponent<Renderer>().enabled = false;
 		yield return new WaitForSeconds(damaged);
-//		GetComponent<Renderer>().enabled = true;
-//		yield return new WaitForSeconds(damaged);
-	}
+
+	}*/
 
 
 		
@@ -111,10 +115,16 @@ public class Ant_Movement : MonoBehaviour {
 		}
 	}
     void FixedUpdate()
+   
     {
-        Vector3 objectPos = Camera.main.WorldToScreenPoint(transform.position);
-        Vector3 dis = Input.mousePosition - objectPos;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dis.y, dis.x) * Mathf.Rad2Deg));
+        Movement();
+        print(Input.mousePosition.x);
+        
+       
+    }
+    
+    void Update()
+    {
     }
 
 }

@@ -9,15 +9,17 @@ public int playerHealth = 100;
 public Ant_Movement movement;
 public GUIStyle Health_bar_GUI;
 public Texture playersHealthTexture;
+public Camera main;
+private GameObject player;
 
-	void OnGUI() {
+	/*void OnGUI() {
 		
 		if (playerHealth > 0 && playerHealth <= 100){
 			
 			GUI.Box (new Rect (0, 5, Screen.width / 3 / (100 / playerHealth), 20), "" + playerHealth, Health_bar_GUI);
 			GUI.Box (new Rect (0, 30, Screen.width / 3 / (20 / time), 20), "" + time, Health_bar_GUI);
 		}
-	}
+	}*/
 
 	void PlayerHealthPlus(int health){
 		if(playerHealth < 100){
@@ -60,7 +62,7 @@ public Texture playersHealthTexture;
 		if(time <= 0){
 			time = 0;
 		}
-		
+        main.transform.position = new Vector3(player.transform.position.x +5, player.transform.position.y, player.transform.position.z -10);
 	}
 	IEnumerator PlayerFreeze(float t){
 		float s = movement.speed;
@@ -70,5 +72,8 @@ public Texture playersHealthTexture;
 
 	}
 
-	
+    void Awake()
+    {
+        player = GameObject.Find("Ant_Player");
+    }
 }
