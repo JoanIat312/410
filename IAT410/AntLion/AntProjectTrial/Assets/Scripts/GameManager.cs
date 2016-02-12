@@ -62,7 +62,7 @@ private GameObject player;
 		if(time <= 0){
 			time = 0;
 		}
-        main.transform.position = new Vector3(player.transform.position.x +5, player.transform.position.y, player.transform.position.z -10);
+		//main.transform.position = new Vector3(player.transform.position.x +5, player.transform.position.y, player.transform.position.z -10);
 	}
 	IEnumerator PlayerFreeze(float t){
 		float s = movement.speed;

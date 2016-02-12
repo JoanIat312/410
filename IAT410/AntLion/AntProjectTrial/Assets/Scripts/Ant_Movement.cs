@@ -18,49 +18,33 @@ public class Ant_Movement : MonoBehaviour {
 
 
     void Movement() {
-        anim.SetFloat("speed", Mathf.Abs(Input.GetAxis("Horizontal")));
-        //Debug.Log(Mathf.Abs(Input.GetAxis("Horizontal")));
+		anim.SetFloat ("speed", Mathf.Abs (Input.GetAxis ("Horizontal")));
+		anim.SetFloat ("speed", Mathf.Abs (Input.GetAxis ("Vertical")));
 
-		//anim.SetFloat ("speed", Mathf.Abs (Input.GetAxis ("Vertical")));
-		
-		if (Input.GetKey(KeyCode.W)) 
+		if (Input.GetAxisRaw ("Horizontal") > 0) 
 		{
-           
-            if (true)
-            {
-           
-                transform.position += (new Vector3( 0, 1 * speed, 0) * Time.deltaTime);
-				//transform.eulerAngles = new Vector2(0,0);
-			}
+						transform.Translate(Vector3.right * speed * Time.deltaTime);
+						transform.eulerAngles = new Vector2(0,0);
 		}
-		if (Input.GetKey(KeyCode.S)) 
+		if (Input.GetAxisRaw ("Horizontal") < 0) 
 		{
-            
-            if (true)
-            {
-                transform.position += (new Vector3(0, -1 * speed, 0) * Time.deltaTime);
-                //transform.eulerAngles = new Vector2(0,180);
-            }
+						transform.Translate(-Vector3.right * speed * Time.deltaTime);
+						//transform.eulerAngles = new Vector2(0,180);
 		}
 
-		if (Input.GetKey(KeyCode.A)) 
+		if (Input.GetAxisRaw ("Vertical") > 0) 
 		{
-            anim.SetBool("left", true);
-            if (true){
-                transform.position += (new Vector3(-1 * speed, 0, 0) * Time.deltaTime);
-                //transform.eulerAngles = new Vector2(0,0);
-            }
+						transform.Translate(Vector3.up * speed * Time.deltaTime);
+						transform.eulerAngles = new Vector2(0,0);
 		}
-		if (Input.GetKey(KeyCode.D)) 
+		if (Input.GetAxisRaw ("Vertical") < 0) 
 		{
-            anim.SetBool("left", false);
-            if (true)
-            {
-				transform.position += (new Vector3(1 * speed, 0, 0) * Time.deltaTime);	
-			//transform.eulerAngles = new Vector2(0,180);
-			}
+						transform.Translate(-Vector3.up * speed * Time.deltaTime);	
+						//transform.eulerAngles = new Vector2(0,180);
 		}
-		
+
+
+
 
 		
 	}

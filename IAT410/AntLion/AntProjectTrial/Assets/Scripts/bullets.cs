@@ -33,15 +33,15 @@ public class bullets : MonoBehaviour {
 
 
         Quaternion num = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dis.y, dis.x) * Mathf.Rad2Deg));
-        if (num.z > 0.5f)
-        {
-            num = Quaternion.Euler(num.x, num.y, 0.5f);
-        }
-
-        if (num.z < -0.5f)
-        {
-            num = Quaternion.Euler(num.x, num.y, -0.5f);
-        }
+//        if (num.z > 0.5f)
+//        {
+//            num = Quaternion.Euler(num.x, num.y, 0.5f);
+//        }
+//
+//        if (num.z < -0.5f)
+//        {
+//            num = Quaternion.Euler(num.x, num.y, -0.5f);
+//        }
 
         transform.position += new Vector3(1, num.z, 0);
         
