@@ -5,9 +5,12 @@ public class bullets : MonoBehaviour {
 
 	// Use this for initialization
 	public int moveSpeed = 20 ;
+	private Vector3 objectPos;
+	private Vector3 dis;
 
-	void Awake () {
-
+	void Start () {
+		objectPos = Camera.main.WorldToScreenPoint(transform.position);
+		dis = Input.mousePosition - objectPos;
 	}
 	
 	// Update is called once per frame
@@ -28,8 +31,7 @@ public class bullets : MonoBehaviour {
     void FixedUpdate()
     {
 
-        Vector3 objectPos = Camera.main.WorldToScreenPoint(transform.position);
-        Vector3 dis = Input.mousePosition - objectPos;
+
         Quaternion num = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dis.y, dis.x) * Mathf.Rad2Deg));
         if (num.z > 0.5f)
         {
