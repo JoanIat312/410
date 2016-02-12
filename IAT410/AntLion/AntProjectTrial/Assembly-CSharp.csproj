@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\Ant_Movement.cs" />
      <Compile Include="Assets\Scripts\Ant_Sprite_Rotate.cs" />
      <Compile Include="Assets\Scripts\Bottom.cs" />
+     <Compile Include="Assets\Scripts\BulletSpawn.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
@@ -58,6 +59,7 @@
      <Compile Include="Assets\Scripts\Rock.cs" />
      <Compile Include="Assets\Scripts\Shield.cs" />
      <Compile Include="Assets\Scripts\Water.cs" />
+     <Compile Include="Assets\Scripts\bullets.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
