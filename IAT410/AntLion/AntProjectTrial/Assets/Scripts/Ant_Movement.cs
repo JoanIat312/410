@@ -16,6 +16,7 @@ public class Ant_Movement : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator> ();
 		rb = gameObject.GetComponent<Rigidbody> ();
+       
     }
 
 
@@ -56,7 +57,7 @@ public class Ant_Movement : MonoBehaviour {
 	}
 
 	
-	/*public IEnumerator Damaged(){
+	public IEnumerator Damaged(){
 		// flash when hurt
 		GetComponent<Renderer>().enabled = false;
 		yield return new WaitForSeconds(damaged);
@@ -69,7 +70,7 @@ public class Ant_Movement : MonoBehaviour {
 		GetComponent<Renderer>().enabled = false;
 		yield return new WaitForSeconds(damaged);
 
-	}*/
+	}
 
 
 		
@@ -83,7 +84,7 @@ public class Ant_Movement : MonoBehaviour {
 		if (collision.gameObject.tag == "Enemy") 
 		{
 
-
+            Damaged();
 			Destroy(collision.gameObject);
 			rb.velocity = new Vector3(0, 0, 0); // make the player stop moving after getting hit
 

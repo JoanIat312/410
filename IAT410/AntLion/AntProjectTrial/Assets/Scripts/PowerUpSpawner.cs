@@ -6,20 +6,17 @@ public class PowerUpSpawner : MonoBehaviour {
 	private Vector3 startPosition;
 
 	public GameObject[] gameObjectSet;
-
-	public float timeLeftUnitlSpawn = 0f;
-	public float startTime = 0f;
 	
-	public float secondsBetweenSpawn = 3f;
+	public float spawnDelay = 10f;
 
 	public float spawn_position;
 
 	// Use this for initialization
 	void Start () {
 
-		//startPosition = transform.position;
-	
-	}
+        InvokeRepeating("spawnRandomObject", spawnDelay, spawnDelay);
+
+    }
 
 	void spawnRandomObject() 
 	{
@@ -28,7 +25,7 @@ public class PowerUpSpawner : MonoBehaviour {
 		GameObject myObj = Instantiate (gameObjectSet[whichItem]) as GameObject;
 		myObj.tag = "clone";
 		
-		myObj.transform.position = new Vector3(Random.Range(-8.5f, 7.5f), Random.Range(-6.5f,0.3f), 0);
+		myObj.transform.position = new Vector3(Random.Range(-11.7f, 12.74f), Random.Range(1.43f,-6.37f), 0);
 		
 	}
 
@@ -37,19 +34,6 @@ public class PowerUpSpawner : MonoBehaviour {
 	void Update () {
 
 		//transform.position = new Vector3(Random.Range(-5, 7), Random.Range(-5,7), 0);
-
-
-		timeLeftUnitlSpawn = Time.time - startTime;
-		
-		if (timeLeftUnitlSpawn >= secondsBetweenSpawn) 
-		{
-			startTime = Time.time;
-			timeLeftUnitlSpawn = 0;
-			
-			spawnRandomObject();
-			
-			
-		}
 	
 	}
 

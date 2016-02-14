@@ -11,20 +11,24 @@ public class bullets : MonoBehaviour
 	private Quaternion num;
 	private float angle;
 	private Rigidbody rb;
+    Animator anim;
 
 	void Start ()
 	{
 		rb = gameObject.GetComponent<Rigidbody> ();
-		
-		//http://answers.unity3d.com/questions/736511/shoot-towards-mouse-in-unity2d.html
-				/*angle = Mathf.Atan2 (dis.y, dis.x) * Mathf.Rad2Deg;
+        anim = GetComponent<Animator>();
+        //http://answers.unity3d.com/questions/736511/shoot-towards-mouse-in-unity2d.html
+        /*angle = Mathf.Atan2 (dis.y, dis.x) * Mathf.Rad2Deg;
 
-				if (angle < 0) {
-						angle += 360;
-				}
+        if (angle < 0) {
+                angle += 360;
+        }
 
-				num = Quaternion.Euler (new Vector3 (0, 0, angle));*/
-	}
+        num = Quaternion.Euler (new Vector3 (0, 0, angle));*/
+        objectPos = Camera.main.WorldToScreenPoint(transform.position);
+        dis = Input.mousePosition - objectPos;
+        dis.Normalize();
+    }
 
 	// Update is called once per frame
 	void Update ()
@@ -32,14 +36,13 @@ public class bullets : MonoBehaviour
 
         //transform.position += new Vector3(0.5f, 0, 0);
         //Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        objectPos = Camera.main.WorldToScreenPoint(transform.position);
-        dis = Input.mousePosition - objectPos;
-        dis.Normalize();
+        
     }
 
 	void OnTriggerEnter (Collider col)
 
 	{
+        
         if (col.gameObject.tag == "wall")
         {
             Destroy(gameObject);
@@ -73,4 +76,6 @@ public class bullets : MonoBehaviour
             rb.velocity = (dis * moveSpeed);
         }
 	}
+
+
 }

@@ -20,7 +20,7 @@ public class Shield : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision col){
 		if(col.gameObject.tag == "Player"){
-			gameManager.SendMessage("TimeIncrease", time, SendMessageOptions.DontRequireReceiver);
+			//gameManager.SendMessage("TimeIncrease", time, SendMessageOptions.DontRequireReceiver);
 			//gameManager.movement.SendMessage("Healed", SendMessageOptions.DontRequireReceiver);
 			
 			Destroy (gameObject);
