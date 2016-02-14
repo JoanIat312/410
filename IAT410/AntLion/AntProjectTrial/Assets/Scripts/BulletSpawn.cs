@@ -35,7 +35,7 @@ public class BulletSpawn : MonoBehaviour
         timestamp = Time.time + fireRate;
         GameObject newBullet = Instantiate(bObject, new Vector3(transform.position.x +0.6f, transform.position.y, transform.position.z), transform.rotation) as GameObject;
         //newBullet.transform.position = transform.position;
-        //newBullet.tag = "clone";
+        newBullet.tag = "bullets";
         Debug.Log("new bullet created");
 
     }

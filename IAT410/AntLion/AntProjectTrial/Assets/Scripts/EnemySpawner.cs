@@ -8,6 +8,8 @@ public class EnemySpawner : MonoBehaviour {
 		private float maxY;
 		private int spawnDelay;
 		public GameObject Enemy;
+        private int numOfMaxEnemy;
+    private int numOfEnemy;
 	// Use this for initialization
 	void Start () {
 		minX = -16.5f;
@@ -15,7 +17,8 @@ public class EnemySpawner : MonoBehaviour {
 		minY = -6.5f;
 		maxY = 1.5f;
 		spawnDelay = 2;
-
+        numOfMaxEnemy = 20;
+        numOfEnemy = 0;
 		InvokeRepeating ("SpawnEnemy", spawnDelay, spawnDelay);
 	}
 	
@@ -27,7 +30,7 @@ public class EnemySpawner : MonoBehaviour {
 	{
 		Vector3 position = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0);
 		
-		if (Physics.CheckSphere (position, .1f) == false)
+		if (Physics.CheckSphere (position, .1f) == false && numOfEnemy <= numOfMaxEnemy)
 		{ //You don't have something with a collider here
 			GameObject newEnemy = Instantiate (Enemy, position, Quaternion.identity) as GameObject;
 		}

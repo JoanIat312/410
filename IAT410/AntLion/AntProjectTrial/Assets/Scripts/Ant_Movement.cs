@@ -20,30 +20,34 @@ public class Ant_Movement : MonoBehaviour {
 
 
     void Movement() {
-		anim.SetFloat ("speed", Mathf.Abs (Input.GetAxis ("Horizontal")));
-		anim.SetFloat ("speed", Mathf.Abs (Input.GetAxis ("Vertical")));
+		
+		
 
 		if (Input.GetAxisRaw ("Horizontal") > 0) 
 		{
-						transform.Translate(Vector3.right * speed * Time.deltaTime);
-						transform.eulerAngles = new Vector2(0,0);
-		}
+            transform.Translate(Vector3.right * speed * Time.deltaTime);
+			transform.eulerAngles = new Vector2(0,0);
+            anim.SetFloat("speed", Mathf.Abs(Input.GetAxis("Horizontal")));
+        }
 		if (Input.GetAxisRaw ("Horizontal") < 0) 
 		{
-						transform.Translate(-Vector3.right * speed * Time.deltaTime);
-						//transform.eulerAngles = new Vector2(0,180);
-		}
+            transform.Translate(-Vector3.right * speed * Time.deltaTime);
+            //transform.eulerAngles = new Vector2(0,180);
+            anim.SetFloat("speed", Mathf.Abs(Input.GetAxis("Horizontal")));
+        }
 
 		if (Input.GetAxisRaw ("Vertical") > 0) 
 		{
 						transform.Translate(Vector3.up * speed * Time.deltaTime);
 						transform.eulerAngles = new Vector2(0,0);
-		}
+            anim.SetFloat("speed", Mathf.Abs(Input.GetAxis("Vertical")));
+        }
 		if (Input.GetAxisRaw ("Vertical") < 0) 
 		{
-						transform.Translate(-Vector3.up * speed * Time.deltaTime);	
-						//transform.eulerAngles = new Vector2(0,180);
-		}
+						transform.Translate(-Vector3.up * speed * Time.deltaTime);
+            //transform.eulerAngles = new Vector2(0,180);
+            anim.SetFloat("speed", Mathf.Abs(Input.GetAxis("Vertical")));
+        }
 
 
 
@@ -106,7 +110,14 @@ public class Ant_Movement : MonoBehaviour {
    
     {
         Movement();
-        //print(Input.mousePosition.x);
+        if (Input.GetKey(KeyCode.A))
+        {
+            anim.SetBool("left", true);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            anim.SetBool("left", false);
+        }
         
        
     }
