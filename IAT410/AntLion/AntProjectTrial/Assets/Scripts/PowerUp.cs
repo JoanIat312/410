@@ -37,7 +37,7 @@ public class PowerUp : MonoBehaviour{
 	
 	void OnCollisionEnter(Collision col){
 		if(col.gameObject.tag == "Player"){
-			//gameManager.SendMessage("PlayerHealthPlus", health, SendMessageOptions.DontRequireReceiver);
+			gameManager.SendMessage("PlayerHealthPlus", health, SendMessageOptions.DontRequireReceiver);
 			//gameManager.movement.SendMessage("HealthIncreased", SendMessageOptions.DontRequireReceiver);
 			//renderer.enabled = false;
 			Destroy(gameObject);

@@ -42,10 +42,12 @@ public class bullets : MonoBehaviour
 	void OnTriggerEnter (Collider col)
 
 	{
-        
+        anim.Play("bulletExplosion", 0, 0);
         if (col.gameObject.tag == "wall")
         {
             Destroy(gameObject);
+            
+            
         }
         if (col.gameObject.tag == "Enemy")
         {

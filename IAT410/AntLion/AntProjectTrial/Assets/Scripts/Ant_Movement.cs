@@ -6,6 +6,7 @@ public class Ant_Movement : MonoBehaviour {
 	public GameManager gameManager;
 	public float speed;
 	Animator anim;
+    private int damage = 30;
 	float damaged = 0.2f;
 	Rigidbody rb;
 
@@ -88,13 +89,8 @@ public class Ant_Movement : MonoBehaviour {
 			Destroy(collision.gameObject);
 			rb.velocity = new Vector3(0, 0, 0); // make the player stop moving after getting hit
 
-			//Application.LoadLevel("GameOver");
-			if(Shield == true) {
-				Shield = false;
-				return;
-				
-			}
-			
+            gameManager.SendMessage("PlayerDamage", damage, SendMessageOptions.DontRequireReceiver);
+
 			
 		}
 

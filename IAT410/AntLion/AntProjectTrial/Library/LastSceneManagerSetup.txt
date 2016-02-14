@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/merged walls + bullets.unity
+- path: Assets/Scenes/danny add enemies.unity
   isLoaded: 1
   isActive: 1

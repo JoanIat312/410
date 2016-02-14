@@ -1,25 +1,26 @@
 
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
-public float time = 20;
-public float countingDown = 0.01f;
-public int playerHealth = 100;
-public Ant_Movement movement;
-public GUIStyle Health_bar_GUI;
-public Texture playersHealthTexture;
-public Camera main;
-private GameObject player;
+    public float time = 20;
+    public float countingDown = 0.01f;
+    public int playerHealth = 100;
+    public Ant_Movement movement;
+    public GUIStyle Health_bar_GUI;
+    public Texture playersHealthTexture;
+    public Camera main;
+    private GameObject player;
+    public Text text;
 
-	/*void OnGUI() {
+	void OnGUI() {
 		
 		if (playerHealth > 0 && playerHealth <= 100){
-			
-			GUI.Box (new Rect (0, 5, Screen.width / 3 / (100 / playerHealth), 20), "" + playerHealth, Health_bar_GUI);
-			GUI.Box (new Rect (0, 30, Screen.width / 3 / (20 / time), 20), "" + time, Health_bar_GUI);
+			GUI.Box (new Rect (10, 30, Screen.width / 3 / (100 / playerHealth), 20), "Health: " + playerHealth, Health_bar_GUI);
+			//GUI.Box (new Rect (0, 30, Screen.width / 3 / (20 / time), 20), "" + time, Health_bar_GUI);
 		}
-	}*/
+	}
 
 	void PlayerHealthPlus(int health){
 		if(playerHealth < 100){
