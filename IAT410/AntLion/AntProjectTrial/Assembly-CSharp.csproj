@@ -45,12 +45,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Enemy_Deault_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ant_Movement.cs" />
      <Compile Include="Assets\Scripts\Ant_Sprite_Rotate.cs" />
      <Compile Include="Assets\Scripts\Bottom.cs" />
      <Compile Include="Assets\Scripts\BulletSpawn.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\Enemy_Default_Behaviour.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\Honey.cs" />

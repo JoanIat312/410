@@ -7,6 +7,7 @@ public class Ant_Movement : MonoBehaviour {
 	public float speed;
 	Animator anim;
 	float damaged = 0.2f;
+	Rigidbody rb;
 
     public bool Shield = false;
 
@@ -14,6 +15,7 @@ public class Ant_Movement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
+		rb = gameObject.GetComponent<Rigidbody> ();
     }
 
 
@@ -79,6 +81,8 @@ public class Ant_Movement : MonoBehaviour {
 
 
 			Destroy(collision.gameObject);
+			rb.velocity = new Vector3(0, 0, 0); // make the player stop moving after getting hit
+
 			//Application.LoadLevel("GameOver");
 			if(Shield == true) {
 				Shield = false;
@@ -102,7 +106,7 @@ public class Ant_Movement : MonoBehaviour {
    
     {
         Movement();
-        print(Input.mousePosition.x);
+        //print(Input.mousePosition.x);
         
        
     }
