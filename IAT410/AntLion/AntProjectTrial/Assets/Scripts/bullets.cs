@@ -12,7 +12,7 @@ public class bullets : MonoBehaviour
 	private float angle;
 	private Rigidbody rb;
 	private bool hitWall;
-
+	public int defaultDamage;
     Animator anim;
 
 	void Start ()
@@ -20,6 +20,7 @@ public class bullets : MonoBehaviour
 		rb = gameObject.GetComponent<Rigidbody> ();
         anim = GetComponent<Animator>();
 		hitWall = false;
+		defaultDamage = 20;
         //http://answers.unity3d.com/questions/736511/shoot-towards-mouse-in-unity2d.html
         /*angle = Mathf.Atan2 (dis.y, dis.x) * Mathf.Rad2Deg;
 
@@ -56,7 +57,8 @@ public class bullets : MonoBehaviour
         }
         if (col.gameObject.tag == "Enemy")
         {
-            Destroy(col.gameObject);
+			col.gameObject.SendMessage("TakeDamage", defaultDamage, SendMessageOptions.DontRequireReceiver);
+            //Destroy(col.gameObject);
             Destroy(gameObject);
         }
     }

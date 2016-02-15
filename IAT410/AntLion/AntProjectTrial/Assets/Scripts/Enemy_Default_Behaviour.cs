@@ -9,11 +9,13 @@ public class Enemy_Default_Behaviour : MonoBehaviour {
 	public float speed;
 	private Rigidbody rb;
 	private bool hit = false;
+	public int health;
 
 	// Use this for initialization
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody> ();
 		speed = 3;
+		health = 100;
 	}
 	
 	// Update is called once per frame
@@ -27,7 +29,8 @@ public class Enemy_Default_Behaviour : MonoBehaviour {
         if(hit == true)
         {
             rb.velocity = -rb.velocity;
-        }
+			Invoke("TurnAround", 1);
+		}
 	}
 
 	void OnCollisionEnter(Collision collision) {
@@ -35,14 +38,31 @@ public class Enemy_Default_Behaviour : MonoBehaviour {
         if (hit == true)
         {
             hit= false;
-        }else if (collision.gameObject.tag == "wall" || collision.gameObject.tag == "Enemy") 
-		{
-            //Vector3 eulerAngles = transform.rotation.eulerAngles;          
+        }
+        else if (collision.gameObject.tag == "wall" || collision.gameObject.tag == "Enemy") 
+    		{
+                //Vector3 eulerAngles = transform.rotation.eulerAngles;          
 
-            // Set the altered rotation back
-            //transform.rotation = Quaternion.AngleAxis(180, transform.forward) * transform.rotation;
-            hit = true;
-		}
-        
+                // Set the altered rotation back
+                //transform.rotation = Quaternion.AngleAxis(180, transform.forward) * transform.rotation;
+                hit = true;
+    		}
     }
+
+	void TurnAround() {
+		rb.velocity = -rb.velocity;
+	}
+
+	IEnumerator TakeDamage(int damage) {
+		// flash enemy when hit
+		GetComponent<SpriteRenderer> ().color = new Color (255f, 0f, 0f);
+		yield return new WaitForSeconds(0.1f); 
+		GetComponent<SpriteRenderer> ().color = new Color (255f, 255f, 255f);
+
+		health = health - damage;
+		Debug.Log (health);
+		if (health <= 0) {
+			Destroy (this.gameObject);
+		}
+	}
 }
