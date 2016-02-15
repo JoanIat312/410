@@ -86,7 +86,7 @@ public class Player_Movement : MonoBehaviour {
 		{
 
             Damaged();
-			Destroy(collision.gameObject);
+			//Destroy(collision.gameObject);
 			rb.velocity = new Vector3(0, 0, 0); // make the player stop moving after getting hit
 
             gameManager.SendMessage("PlayerDamage", damage, SendMessageOptions.DontRequireReceiver);
