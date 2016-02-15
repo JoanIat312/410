@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour {
     public float time = 20;
     public float countingDown = 0.01f;
     public int playerHealth = 100;
-    public Ant_Movement movement;
+    public Player_Movement movement;
     public GUIStyle Health_bar_GUI;
     public Texture playersHealthTexture;
     public Camera main;
@@ -75,6 +75,6 @@ public class GameManager : MonoBehaviour {
 
     void Awake()
     {
-        player = GameObject.Find("Ant_Player");
+        player = GameObject.Find("Player");
     }
 }

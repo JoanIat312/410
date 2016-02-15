@@ -8,7 +8,7 @@ public class CameraMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		target = GameObject.Find ("Ant_Player").transform;
+		target = GameObject.Find ("Player").transform;
 	
 	}
 	

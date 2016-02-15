@@ -18,7 +18,7 @@ public class Enemy_Default_Behaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		Player = GameObject.Find ("Ant_Player").transform.position;
+		Player = GameObject.Find ("Player").transform.position;
 		xDif = Player.x - transform.position.x;
 		yDif = Player.y - transform.position.y;
 
