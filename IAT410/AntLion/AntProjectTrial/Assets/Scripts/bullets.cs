@@ -11,12 +11,15 @@ public class bullets : MonoBehaviour
 	private Quaternion num;
 	private float angle;
 	private Rigidbody rb;
+	private bool hitWall;
+
     Animator anim;
 
 	void Start ()
 	{
 		rb = gameObject.GetComponent<Rigidbody> ();
         anim = GetComponent<Animator>();
+		hitWall = false;
         //http://answers.unity3d.com/questions/736511/shoot-towards-mouse-in-unity2d.html
         /*angle = Mathf.Atan2 (dis.y, dis.x) * Mathf.Rad2Deg;
 
@@ -42,10 +45,12 @@ public class bullets : MonoBehaviour
 	void OnTriggerEnter (Collider col)
 
 	{
-        anim.Play("bulletExplosion", 0, 0);
         if (col.gameObject.tag == "wall")
         {
-            Destroy(gameObject);
+			hitWall = true;
+			anim.Play("bulletExplosion", 0, 0);
+											
+            Destroy(gameObject, .4f);
             
             
         }
@@ -56,7 +61,7 @@ public class bullets : MonoBehaviour
         }
     }
  
-            void FixedUpdate ()
+    void FixedUpdate ()
 	{
 
       /*          if (num.z > 0.5f)
@@ -72,10 +77,25 @@ public class bullets : MonoBehaviour
         //transform.position += new Vector3(1, angle, 0);*/
         if (gameObject.name == "bullets")
         {
-            rb.velocity += Vector3.down;
+
+//			if (hitWall == true) {
+//
+//				rb.velocity = new Vector3 (0, 0, 0);	
+//			} else {
+//								Debug.Log ("poo");
+//
+//				rb.velocity += Vector3.down;
+//
+//			}
         }
         else {
-            rb.velocity = (dis * moveSpeed);
+			if (hitWall == true) {
+				rb.velocity = new Vector3 (0, 0, 0);	
+			} else {
+//				rb.velocity += Vector3.down;
+				rb.velocity = (dis * moveSpeed);
+
+			}
         }
 	}
 
