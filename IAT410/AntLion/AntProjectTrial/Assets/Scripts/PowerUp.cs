@@ -6,13 +6,14 @@ public class PowerUp : MonoBehaviour{
 	int health = 15;
 	float delay = 5f;
 	public GameManager gameManager;
+	int powerUpType;
 	//public PowerUpSpawner s;
 	//Vector3 startingPos;
 	//float endPos;
 	//public int unitsToMove = 5;
 	//public int moveSpeed = 2 ;
 
-	
+
 	void Awake(){
 				//transform.position = new Vector3(Random.Range(-8.5f, 7.5f), Random.Range(-6.5f,0.3f), 0);
 				//endPos = startingPos - unitsToMove;
@@ -42,7 +43,6 @@ public class PowerUp : MonoBehaviour{
 			//renderer.enabled = false;
 			Destroy(gameObject);
 		}
-
 	}
 	
 	

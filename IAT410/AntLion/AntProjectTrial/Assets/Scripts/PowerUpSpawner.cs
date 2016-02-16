@@ -20,7 +20,7 @@ public class PowerUpSpawner : MonoBehaviour {
 
 	void spawnRandomObject() 
 	{
-		int whichItem = Random.Range (0, 2);
+		int whichItem = Random.Range (0, 3);
 		
 		GameObject myObj = Instantiate (gameObjectSet[whichItem]) as GameObject;
 		myObj.tag = "clone";
