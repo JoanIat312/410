@@ -33,6 +33,7 @@ public class BulletSpawn : MonoBehaviour
 
     void Spawn()
     {
+ 
         timestamp = Time.time + fireRate;
         GameObject newBullet = Instantiate(bObject, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation) as GameObject;
         //newBullet.transform.position = transform.position;

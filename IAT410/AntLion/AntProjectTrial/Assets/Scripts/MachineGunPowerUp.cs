@@ -4,7 +4,7 @@ using System.Collections;
 public class MachineGunPowerUp : MonoBehaviour {
 
 	public BulletSpawn bulletSpawner;
-	public float fireRate = .2f;
+	public float fireRate = .4f;
 
 
 	void OnCollisionEnter(Collision col){
