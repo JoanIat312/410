@@ -1,6 +1,5 @@
 
 using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
@@ -12,9 +11,8 @@ public class GameManager : MonoBehaviour {
     public Texture playersHealthTexture;
     public Camera main;
     private GameObject player;
-    public Text text;
 	public static bool stunEnemies;
-
+    public static int score = 0;
 	private float stunDurationTimeStamp;
 	public static float stunDuration = 3f;
 
@@ -66,6 +64,12 @@ public class GameManager : MonoBehaviour {
 		}
 		
 	}
+
+    public void ScoreTracker()
+    {
+        score++;
+    }
+
 	void Update(){
 		time -= countingDown;
 		if(time <= 0){

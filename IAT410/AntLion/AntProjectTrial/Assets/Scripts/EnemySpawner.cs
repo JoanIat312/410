@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour {
 		private int spawnDelay;
 		public GameObject Enemy;
         private int numOfMaxEnemy;
-    private int numOfEnemy;
+        private int numOfEnemy;
 	// Use this for initialization
 	void Start () {
 		minX = -16.5f;

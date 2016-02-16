@@ -10,7 +10,7 @@ public class Enemy_Default_Behaviour : MonoBehaviour {
 	private Rigidbody rb;
 	private bool hit = false;
 	public int health;
-	//public GameManager gameManager;
+    public GameManager gameManager;
 
 	// Use this for initialization
 	void Start () {
@@ -46,7 +46,11 @@ public class Enemy_Default_Behaviour : MonoBehaviour {
 					Invoke ("TurnAround", 1);
 			}
 		}
-	}
+        if (health <= 0)
+        {
+            destory();
+        }
+    }
 
 	void OnCollisionEnter(Collision collision) {
         //Debug.Log("HIT WALL - ROTATING!"); // Display it in UI
@@ -73,11 +77,13 @@ public class Enemy_Default_Behaviour : MonoBehaviour {
 		GetComponent<SpriteRenderer> ().color = new Color (255f, 0f, 0f);
 		yield return new WaitForSeconds(0.1f); 
 		GetComponent<SpriteRenderer> ().color = new Color (255f, 255f, 255f);
-
-		health = health - damage;
-		Debug.Log (health);
-		if (health <= 0) {
-			Destroy (this.gameObject);
-		}
-	}
+        health -= damage;
+        Debug.Log(health);
+    }
+    void destory()
+    {
+        gameManager.SendMessage("ScoreTracker", SendMessageOptions.DontRequireReceiver);
+        Destroy(this.gameObject);
+    }
 }
+
