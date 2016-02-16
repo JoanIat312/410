@@ -10,6 +10,7 @@ public class Enemy_Default_Behaviour : MonoBehaviour {
 	private Rigidbody rb;
 	private bool hit = false;
 	public int health;
+	//public GameManager gameManager;
 
 	// Use this for initialization
 	void Start () {
@@ -17,24 +18,38 @@ public class Enemy_Default_Behaviour : MonoBehaviour {
 		speed = 3;
 		health = 100;
 	}
-	
+//	// Update is called once per frame
+//	void Update () {
+//		if (Input.GetKeyDown ("space")) {
+//			rb.velocity = new Vector3 (0, 0, 1);
+//		} 
+//	}
 	// Update is called once per frame
 	void FixedUpdate () {
-		Player = GameObject.Find ("Player").transform.position;
-		xDif = Player.x - transform.position.x;
-		yDif = Player.y - transform.position.y;
+		//if (Input.GetKeyDown ("space")) {
+				if (GameManager.stunEnemies == true) {
+				rb.velocity = new Vector3 (0, 0, 1);
+				//Debug.Log ("SPACE!");
+			}
+		//}
+		else if (GameManager.stunEnemies == false) 
+		{
 
-		Playerdirection = new Vector3 (xDif, yDif, 1);
-		rb.velocity = (Playerdirection.normalized * speed);
-        if(hit == true)
-        {
-            rb.velocity = -rb.velocity;
-			Invoke("TurnAround", 1);
+			Player = GameObject.Find ("Player").transform.position;
+			xDif = Player.x - transform.position.x;
+			yDif = Player.y - transform.position.y;
+
+			Playerdirection = new Vector3 (xDif, yDif, 1);
+			rb.velocity = (Playerdirection.normalized * speed);
+			if (hit == true) {
+					rb.velocity = -rb.velocity;
+					Invoke ("TurnAround", 1);
+			}
 		}
 	}
 
 	void OnCollisionEnter(Collision collision) {
-        Debug.Log("HIT WALL - ROTATING!"); // Display it in UI
+        //Debug.Log("HIT WALL - ROTATING!"); // Display it in UI
         if (hit == true)
         {
             hit= false;

@@ -13,6 +13,13 @@ public class GameManager : MonoBehaviour {
     public Camera main;
     private GameObject player;
     public Text text;
+	public static bool stunEnemies;
+
+	private float stunDurationTimeStamp;
+	public static float stunDuration = 3f;
+
+	public static float stunUseDelay = 10f;
+	private float stunUseDelayTimeStamp;
 
 	void OnGUI() {
 		
@@ -53,7 +60,7 @@ public class GameManager : MonoBehaviour {
 		}
 		if(playerHealth <= 0){
 			playerHealth = 0;
-						Debug.Log ("dead");
+			Debug.Log ("dead");
 			Application.LoadLevel("GameOver");
 			//Restart();
 		}
@@ -65,6 +72,21 @@ public class GameManager : MonoBehaviour {
 			time = 0;
 		}
 		//main.transform.position = new Vector3(player.transform.position.x +5, player.transform.position.y, player.transform.position.z -10);
+		if (Input.GetKeyDown ("space")) {
+			if (Time.time >= stunUseDelayTimeStamp) {
+					stunEnemies = true;
+					Debug.Log ("SPACE by!");
+					stunDurationTimeStamp = Time.time + stunDuration;
+					stunUseDelayTimeStamp = Time.time + stunUseDelay;
+			}
+			//else if (Time.time >= stunDurationTimeStamp) {
+					//stunEnemies = false;
+			//}
+		}
+		if (Time.time >= stunDurationTimeStamp) {
+			stunEnemies = false;
+		}
+						
 	}
 	IEnumerator PlayerFreeze(float t){
 		float s = movement.speed;
@@ -78,4 +100,5 @@ public class GameManager : MonoBehaviour {
     {
         player = GameObject.Find("Player");
     }
+	
 }
