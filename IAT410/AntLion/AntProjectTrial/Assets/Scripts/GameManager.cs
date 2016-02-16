@@ -53,7 +53,8 @@ public class GameManager : MonoBehaviour {
 		}
 		if(playerHealth <= 0){
 			playerHealth = 0;
-			//Application.LoadLevel("GameOver");
+						Debug.Log ("dead");
+			Application.LoadLevel("GameOver");
 			//Restart();
 		}
 		
