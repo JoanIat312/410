@@ -20,7 +20,7 @@ public class bullets : MonoBehaviour
 		rb = gameObject.GetComponent<Rigidbody> ();
         anim = GetComponent<Animator>();
 		hitWall = false;
-		defaultDamage = 20;
+		defaultDamage = 50;
         //http://answers.unity3d.com/questions/736511/shoot-towards-mouse-in-unity2d.html
         /*angle = Mathf.Atan2 (dis.y, dis.x) * Mathf.Rad2Deg;
 
