@@ -45,24 +45,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Ant_Sprite_Rotate.cs" />
-     <Compile Include="Assets\Scripts\Bottom.cs" />
      <Compile Include="Assets\Scripts\BulletSpawn.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Enemy_Default_Behaviour.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
-     <Compile Include="Assets\Scripts\Honey.cs" />
      <Compile Include="Assets\Scripts\MachineGunPowerUp.cs" />
      <Compile Include="Assets\Scripts\Menus.cs" />
      <Compile Include="Assets\Scripts\MultiSpawner.cs" />
      <Compile Include="Assets\Scripts\Player_Movement.cs" />
      <Compile Include="Assets\Scripts\PowerUp.cs" />
      <Compile Include="Assets\Scripts\PowerUpSpawner.cs" />
-     <Compile Include="Assets\Scripts\Rock.cs" />
-     <Compile Include="Assets\Scripts\Shield.cs" />
-     <Compile Include="Assets\Scripts\Water.cs" />
      <Compile Include="Assets\Scripts\bullets.cs" />
      <Compile Include="Assets\Scripts\loadingScore.cs" />
  <Reference Include="UnityEngine.UI">
