@@ -3,8 +3,6 @@ using UnityEngine;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
-    public float time = 20;
-    public float countingDown = 0.01f;
     public int playerHealth = 100;
     //public Player_Movement movement;
     public GUIStyle Health_bar_GUI;
@@ -14,19 +12,27 @@ public class GameManager : MonoBehaviour {
     public static int score = 0;
 	private float stunDurationTimeStamp;
 	public static float stunDuration = 3f;
-
+    public static bool shield = false;
 	public static float stunUseDelay = 10f;
 	private float stunUseDelayTimeStamp;
+    public float time = 5;
+    public float countDown = 0.0f;
 
 	void OnGUI() {
-		
-		if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 1){
-			GUI.Box (new Rect (10, 30, Screen.width / 3 / (100 / playerHealth), 20), "Health: " + playerHealth, Health_bar_GUI);
-			//GUI.Box (new Rect (0, 30, Screen.width / 3 / (20 / time), 20), "" + time, Health_bar_GUI);
-		}
+
+        if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 1)
+        {
+            GUI.Box(new Rect(10, 30, Screen.width / 3 / (100 / playerHealth), 20), "Health: " + playerHealth, Health_bar_GUI);
+
+            if (shield == true)
+            {
+                GUI.Box(new Rect(Screen.width / 3 / (100 / playerHealth) + 20, 30, Screen.width / 3 / (10 / time), 20), "Shield: " + time, Health_bar_GUI);
+            }
+        }
 	}
 
-	void PlayerHealthPlus(int health){
+
+    void PlayerHealthPlus(int health){
 		if(playerHealth < 100){
 			playerHealth += health;
 		}
@@ -38,18 +44,7 @@ public class GameManager : MonoBehaviour {
 		}
 		
 	}
-	void TimeIncrease(float t){
-		if (time >= 0) {
-			time -= t;
-		}
-		
-	}
-	void TimeDecrease(float t){
-		if (time >= 0) {
-			time += t;
-		}
-		
-	}
+
 
 	void PlayerDamage(int damage){
 		if(playerHealth > 0){
@@ -64,16 +59,27 @@ public class GameManager : MonoBehaviour {
 		
 	}
 
-    public void ScoreTracker()
+    void PlayerShield()
     {
-        score++;
+        shield = true;
+        countDown = 0.01f;
+        print("shield start");
+    }
+
+    public void ScoreTracker(int n)
+    {
+        score += n;
     }
 
 	void Update(){
-		time -= countingDown;
-		if(time <= 0){
-			time = 0;
-		}
+        time -= countDown;
+        if(time <= 0)
+        {
+            print("shield end");
+            shield = false;
+            countDown = 0.0f;
+            time = 5;
+        }
 		//main.transform.position = new Vector3(player.transform.position.x +5, player.transform.position.y, player.transform.position.z -10);
 		if (Input.GetKeyDown ("space")) {
 			if (Time.time >= stunUseDelayTimeStamp) {

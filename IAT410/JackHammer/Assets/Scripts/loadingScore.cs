@@ -14,7 +14,7 @@ public class loadingScore : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        txt.text = "Score: " + score*10;
+        txt.text = "Score: " + score;
     }
 
 }

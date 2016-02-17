@@ -83,8 +83,9 @@ public class Enemy_Default_Behaviour : MonoBehaviour {
     }
     void destory()
     {
-        gameManager.SendMessage("ScoreTracker", SendMessageOptions.DontRequireReceiver);
+        gameManager.SendMessage("ScoreTracker", 10, SendMessageOptions.DontRequireReceiver);
         Destroy(this.gameObject);
+        EnemySpawner.numOfEnemy--;
     }
 }
 

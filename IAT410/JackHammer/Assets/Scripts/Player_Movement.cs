@@ -80,19 +80,15 @@ public class Player_Movement : MonoBehaviour {
             StartCoroutine(Damaged());
             //Destroy(collision.gameObject);
             //rb.velocity = new Vector3(0, 0, 0); // make the player stop moving after getting hit
-            gameManager.SendMessage("PlayerDamage", damage, SendMessageOptions.DontRequireReceiver);
-
-			
-		}
-
-		if (collision.gameObject.tag == "Shield") 
-		{
-			Debug.Log ("Shield Activated");
-			Shield = true;
-			Destroy(collision.gameObject);
-
-				
-		}
+            if(GameManager.shield == true)
+            {
+                gameManager.SendMessage("PlayerDamage", 5, SendMessageOptions.DontRequireReceiver);
+            }
+            else
+            {
+                gameManager.SendMessage("PlayerDamage", damage, SendMessageOptions.DontRequireReceiver);
+            }
+        }
 	}
     void FixedUpdate()
    

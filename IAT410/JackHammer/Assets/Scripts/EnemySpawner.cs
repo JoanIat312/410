@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour {
 	private int spawnDelay;
 	public GameObject Enemy;
     private int numOfMaxEnemy;
-    private int numOfEnemy;
+    public static int numOfEnemy;
     public GameObject[] enemyArray;
     public GameManager gameManager;
 	// Use this for initialization
@@ -32,7 +32,7 @@ public class EnemySpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //print(numOfEnemy - GameManager.score);
-        if (numOfEnemy - GameManager.score < numOfMaxEnemy)
+        if (numOfEnemy < numOfMaxEnemy)
         {
             //Invoke("SpawnEnemy", spawnDelay);
             SpawnEnemy();

@@ -7,43 +7,40 @@ public class PowerUp : MonoBehaviour{
 	float delay = 5f;
 	public GameManager gameManager;
 	int powerUpType;
-	//public PowerUpSpawner s;
-	//Vector3 startingPos;
-	//float endPos;
-	//public int unitsToMove = 5;
-	//public int moveSpeed = 2 ;
+    public BulletSpawn bulletSpawner;
+    public float fireRate = .4f;
 
 
-	void Awake(){
-				//transform.position = new Vector3(Random.Range(-8.5f, 7.5f), Random.Range(-6.5f,0.3f), 0);
-				//endPos = startingPos - unitsToMove;
+    void Awake(){
+			
 		}
 		
-		/*public IEnumerator Destory() {
-			if (gameObject.tag == "clone") {
-						yield return new WaitForSeconds (delay);
-						Destroy (gameObject);
-				}
-			
-		}*/
-	
-	/*void FixedUpdate(){
-		if (rigidbody.position.y <= -20) {
-			//Destroy (gameObject); 
-			//renderer.enabled = false;
-			rigidbody.position = s.transform.position;
-			//renderer.enabled = true;
-		}
-	}*/
 	
 	void OnCollisionEnter(Collision col){
-		if(col.gameObject.tag == "Player"){
+		if(col.gameObject.tag == "Player" && gameObject.name == "BigMac(Clone)"){
 			gameManager.SendMessage("PlayerHealthPlus", health, SendMessageOptions.DontRequireReceiver);
-			//gameManager.movement.SendMessage("HealthIncreased", SendMessageOptions.DontRequireReceiver);
-			//renderer.enabled = false;
-			Destroy(gameObject);
+            gameManager.SendMessage("ScoreTracker", 5, SendMessageOptions.DontRequireReceiver);
+            //renderer.enabled = false;
+            Destroy(gameObject);
 		}
-	}
+        if (col.gameObject.tag == "Player" && gameObject.name == "Gear(Clone)")
+        {
+            gameManager.SendMessage("PlayerShield", SendMessageOptions.DontRequireReceiver);
+            gameManager.SendMessage("ScoreTracker", 5, SendMessageOptions.DontRequireReceiver);
+            //renderer.enabled = false;
+            Destroy(gameObject);
+        }
+
+        if (col.gameObject.tag == "Player" && gameObject.name == "machinegun(Clone)")
+        {
+            bulletSpawner.SendMessage("SetFireRate", fireRate, SendMessageOptions.DontRequireReceiver);
+            gameManager.SendMessage("ScoreTracker", 5, SendMessageOptions.DontRequireReceiver);
+            //renderer.enabled = false;
+            Destroy(gameObject);
+        }
+
+
+    }
 	
 	
 }

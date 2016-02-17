@@ -37,6 +37,7 @@ public class HeroBehavior : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             found = true;
+            gameManager.SendMessage("ScoreTracker", 100, SendMessageOptions.DontRequireReceiver);
         }
     }
 
