@@ -13,7 +13,7 @@ public class EnemySpawner : MonoBehaviour {
     public GameObject[] enemyArray;
     public GameManager gameManager;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		minX = -16.5f;
 		maxX = 12.5f;
 		minY = -6.5f;

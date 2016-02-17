@@ -15,7 +15,8 @@ public class Enemy_Default_Behaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody> ();
-		speed = 3;
+        Player = GameObject.Find("Player").transform.position;
+        speed = 3;
 		health = 100;
 	}
 //	// Update is called once per frame
@@ -35,7 +36,7 @@ public class Enemy_Default_Behaviour : MonoBehaviour {
 		else if (GameManager.stunEnemies == false) 
 		{
 
-			Player = GameObject.Find ("Player").transform.position;
+			
 			xDif = Player.x - transform.position.x;
 			yDif = Player.y - transform.position.y;
 
