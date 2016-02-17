@@ -4,13 +4,21 @@ using System.Collections;
 public class BulletSpawn : MonoBehaviour
 {
     public GameObject bObject;
-    public float fireRate;
-    private float timestamp;
+
+    public int equippedGun = 0; // active weapon status - 0 is default, 1 is fast shootng machinegun
+    private float currentFireRate = .5f;
+
+    public float defaultFireRate = .5f;
+    public float machineGunFireRate = .2f;
+
+    public int machineGunBullets = 50;
+
+    private float nextBulletSpawnTimestamp;
     // Use this for initialization
     void Start()
     {
         transform.position = GameObject.Find("jackhammer-gun").transform.position;
-		fireRate = .5f;
+		//fireRate = .5f;
     }
 
     // Update is called once per frame
@@ -22,28 +30,46 @@ public class BulletSpawn : MonoBehaviour
     {
 
        
-		if ((Input.GetMouseButton(0)) && (Time.time >= timestamp))
+    if ((Input.GetMouseButton(0)) && (Time.time >= nextBulletSpawnTimestamp))
         {
             Debug.Log("left pressed");
             Spawn();
-
-
         }
     }
 
     void Spawn()
     {
- 
-        timestamp = Time.time + fireRate;
+        nextBulletSpawnTimestamp = Time.time + currentFireRate;
+        if ((equippedGun == 1) && (machineGunBullets > 0))
+        {
+           machineGunBullets -= 1;
+           Debug.Log(machineGunBullets);
+           if (machineGunBullets <= 0)
+           {
+                // go back to default gun
+                SetWeapon(0);
+           }
+        }
         GameObject newBullet = Instantiate(bObject, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation) as GameObject;
         //newBullet.transform.position = transform.position;
         newBullet.tag = "bullets";
         Debug.Log("new bullet created");
 
     }
-	public void SetFireRate(float newRate) {
-			this.fireRate = newRate;
-				Debug.Log("new fire rate!");
 
-	}
+     public void SetWeapon(int newWeapon) {
+        this.equippedGun = newWeapon;
+
+      if (equippedGun == 0)
+      {
+       currentFireRate = defaultFireRate;
+      }
+      else if (equippedGun == 1)
+      {
+        machineGunBullets = 75;
+        currentFireRate = machineGunFireRate;
+      }
+
+      //Debug.Log("new fire rate!");
+     }
 }

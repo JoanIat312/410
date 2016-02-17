@@ -33,7 +33,7 @@ public class PowerUp : MonoBehaviour{
 
         if (col.gameObject.tag == "Player" && gameObject.name == "machinegun(Clone)")
         {
-            bulletSpawner.SendMessage("SetFireRate", fireRate, SendMessageOptions.DontRequireReceiver);
+            bulletSpawner.SendMessage("SetWeapon", 1, SendMessageOptions.DontRequireReceiver);
             gameManager.SendMessage("ScoreTracker", 5, SendMessageOptions.DontRequireReceiver);
             //renderer.enabled = false;
             Destroy(gameObject);

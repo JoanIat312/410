@@ -10,11 +10,15 @@ public class GameManager : MonoBehaviour {
     private GameObject player;
 	public static bool stunEnemies;
     public static int score = 0;
+
 	private float stunDurationTimeStamp;
 	public static float stunDuration = 3f;
-    public static bool shield = false;
 	public static float stunUseDelay = 10f;
 	private float stunUseDelayTimeStamp;
+
+    public static bool shield = false;
+
+
     public float time = 5;
     public float countDown = 0.0f;
 
