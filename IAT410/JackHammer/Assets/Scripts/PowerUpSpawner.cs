@@ -18,15 +18,15 @@ public class PowerUpSpawner : MonoBehaviour {
 
     }
 
-	void spawnRandomObject() 
-	{
-		int whichItem = Random.Range (0, 3);
-		
-		GameObject myObj = Instantiate (gameObjectSet[whichItem]) as GameObject;
-		myObj.tag = "clone";
-		
-		myObj.transform.position = new Vector3(Random.Range(-11.7f, 12.74f), Random.Range(1.43f,-6.37f), 0);
-		
+    void spawnRandomObject()
+    {
+        int whichItem = Random.Range(0, 3);
+
+        Vector3 objPos = new Vector3(Random.Range(-11.7f, 12.74f), Random.Range(1.43f, -6.37f), 0);
+        if (Physics.CheckSphere(objPos, .3f) == false) {
+            GameObject myObj = Instantiate(gameObjectSet[whichItem], objPos, transform.rotation) as GameObject;
+            myObj.tag = "clone";
+        }
 	}
 
 	
