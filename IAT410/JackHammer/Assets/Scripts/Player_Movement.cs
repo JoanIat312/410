@@ -17,7 +17,6 @@ public class Player_Movement : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator> ();
 		rb = gameObject.GetComponent<Rigidbody> ();
-       
     }
 
 
