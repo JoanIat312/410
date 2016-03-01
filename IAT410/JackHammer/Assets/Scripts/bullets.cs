@@ -92,10 +92,10 @@ public class bullets : MonoBehaviour
         }
         else {
 			if (hitWall == true) {
-				rb.velocity = new Vector3 (0, 0, 0);	
+				//rb.velocity = new Vector3 (0, 0, 0);	
 			} else {
 //				rb.velocity += Vector3.down;
-				rb.velocity = (dis * moveSpeed);
+				//rb.velocity = (dis * moveSpeed);
 
 			}
         }

@@ -39,14 +39,12 @@ public class Player_Movement : MonoBehaviour {
 
 		if (Input.GetAxisRaw ("Vertical") > 0) 
 		{
-						transform.Translate(Vector3.up * speed * Time.deltaTime);
-						transform.eulerAngles = new Vector2(0,0);
+			transform.Translate(Vector3.up * speed * Time.deltaTime);
             anim.SetFloat("speed", Mathf.Abs(Input.GetAxis("Vertical")));
         }
 		if (Input.GetAxisRaw ("Vertical") < 0) 
 		{
-						transform.Translate(-Vector3.up * speed * Time.deltaTime);
-            //transform.eulerAngles = new Vector2(0,180);
+			transform.Translate(-Vector3.up  * speed * Time.deltaTime);
             anim.SetFloat("speed", Mathf.Abs(Input.GetAxis("Vertical")));
         }
 
