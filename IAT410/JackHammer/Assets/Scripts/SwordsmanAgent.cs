@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyAgent : MonoBehaviour {
+public class SwordsmanAgent : MonoBehaviour {
     private NavMeshAgent agent;
 
 	// Use this for initialization
