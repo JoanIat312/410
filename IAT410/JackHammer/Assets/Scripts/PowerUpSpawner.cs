@@ -22,7 +22,7 @@ public class PowerUpSpawner : MonoBehaviour {
     {
         int whichItem = Random.Range(0, 3);
 
-        Vector3 objPos = new Vector3(Random.Range(-11.7f, 12.74f), Random.Range(1.43f, -6.37f), 0);
+        Vector3 objPos = new Vector3(Random.Range(-11.7f, 12.74f), 0, Random.Range(1.43f, -6.37f));
         if (Physics.CheckSphere(objPos, .3f) == false) {
             GameObject myObj = Instantiate(gameObjectSet[whichItem], objPos, transform.rotation) as GameObject;
             myObj.tag = "clone";

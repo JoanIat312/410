@@ -21,14 +21,6 @@ public class bullets : MonoBehaviour
         anim = GetComponent<Animator>();
 		hitWall = false;
 		defaultDamage = 50;
-        //http://answers.unity3d.com/questions/736511/shoot-towards-mouse-in-unity2d.html
-        /*angle = Mathf.Atan2 (dis.y, dis.x) * Mathf.Rad2Deg;
-
-        if (angle < 0) {
-                angle += 360;
-        }
-
-        num = Quaternion.Euler (new Vector3 (0, 0, angle));*/
   
         objectPos = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 zConvertedObjectPos = new Vector3(objectPos.x, 1, objectPos.y);
@@ -45,9 +37,6 @@ public class bullets : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-
-        //transform.position += new Vector3(0.5f, 0, 0);
-        //Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
     }
 
@@ -64,7 +53,6 @@ public class bullets : MonoBehaviour
         if (col.gameObject.tag == "Enemy" && gameObject.name != "bullets")
         {
 			col.gameObject.SendMessage("TakeDamage", defaultDamage, SendMessageOptions.DontRequireReceiver);
-            //Destroy(col.gameObject);
             Destroy(gameObject);
         }
     }
@@ -72,38 +60,15 @@ public class bullets : MonoBehaviour
     void FixedUpdate ()
 	{
 
-      /*          if (num.z > 0.5f)
-                {
-                    num = Quaternion.Euler(num.x, num.y, 0.5f);
-                }
-        
-                if (num.z < -0.5f)
-                {
-                    num = Quaternion.Euler(num.x, num.y, -0.5f);
-                }
-
-        //transform.position += new Vector3(1, angle, 0);*/
-        if (gameObject.name == "bullets")
+        if (gameObject.name != "bullets")
         {
-
-//			if (hitWall == true) {
-//
-//				rb.velocity = new Vector3 (0, 0, 0);	
-//			} else {
-//								Debug.Log ("poo");
-//
-//				rb.velocity += Vector3.down;
-//
-//			}
-        }
-        else {
-			if (hitWall == true) {
+            if (hitWall == true) {
 				rb.velocity = new Vector3 (0, 0, 0);	
 			} else {
-//				rb.velocity += Vector3.down;
                 rb.velocity = (dis * moveSpeed);
 			}
         }
+       
 	}
 
 

@@ -6,9 +6,9 @@ public class BulletSpawn : MonoBehaviour
     public GameObject bObject;
 
     public int equippedGun = 0; // active weapon status - 0 is default, 1 is fast shootng machinegun
-    private float currentFireRate = .5f;
+    private float currentFireRate = .1f;
 
-    public float defaultFireRate = .5f;
+    public float defaultFireRate = .1f;
     public float machineGunFireRate = .2f;
 
     public int machineGunBullets = 50;

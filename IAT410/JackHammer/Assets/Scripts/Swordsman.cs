@@ -17,6 +17,6 @@ public class Swordsman : MonoBehaviour {
 	}
 
     void LateUpdate() {
-  transform.localPosition = new Vector3(target.localPosition.x + xOffset, transform.localPosition.y, target.localPosition.z + zOffset);
+        transform.localPosition = new Vector3(target.localPosition.x + xOffset, transform.localPosition.y, target.localPosition.z + zOffset);
     }
 }

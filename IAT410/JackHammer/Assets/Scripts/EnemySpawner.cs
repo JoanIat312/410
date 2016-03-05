@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour {
 		minY = -6.5f;
 		maxY = 1.5f;
 		spawnDelay = 15;
-        numOfMaxEnemy = 5;
+        numOfMaxEnemy = 2;
         numOfEnemy = 0;
         enemyArray = new GameObject[numOfMaxEnemy];
         for (int i = numOfEnemy; i <= numOfMaxEnemy; i++)
@@ -41,13 +41,10 @@ public class EnemySpawner : MonoBehaviour {
 
 	void SpawnEnemy()
 	{
-		Vector3 position = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0);
-		
-		if (Physics.CheckSphere (position, .3f) == false)
-		{ //You don't have something with a collider here
-			GameObject newEnemy = Instantiate (Enemy, position, Quaternion.identity) as GameObject;
-            numOfEnemy++;
-        }
+		Vector3 position = new Vector3(Random.Range(minX, maxX), 2, Random.Range(minY, maxY));
+
+		GameObject newEnemy = Instantiate (Enemy, position, Quaternion.identity) as GameObject;
+        numOfEnemy++;
 	}
 
 
