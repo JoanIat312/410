@@ -4,7 +4,7 @@ using System.Collections;
 public class BulletSpawn : MonoBehaviour
 {
     public GameObject bObject;
-
+    public AudioClip shot;
     public int equippedGun = 0; // active weapon status - 0 is default, 1 is fast shootng machinegun
     private float currentFireRate = .1f;
 
@@ -50,8 +50,8 @@ public class BulletSpawn : MonoBehaviour
                 SetWeapon(0);
            }
         }
-        GameObject newBullet = Instantiate(bObject, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation) as GameObject;
-        //newBullet.transform.position = transform.position;
+        GameObject newBullet = Instantiate(bObject, new Vector3(transform.position.x, 0, transform.position.z), transform.rotation) as GameObject;
+        AudioSource.PlayClipAtPoint(shot, transform.position);
         newBullet.tag = "bullets";
         Debug.Log("new bullet created");
 

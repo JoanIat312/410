@@ -5,6 +5,7 @@ public class bullets : MonoBehaviour
 {
 
 	// Use this for initialization
+    public AudioClip explosion;
 	public int moveSpeed = 0;
 	private Vector3 objectPos;
 	private Vector3 dis;
@@ -26,11 +27,11 @@ public class bullets : MonoBehaviour
         Vector3 zConvertedObjectPos = new Vector3(objectPos.x, 1, objectPos.y);
         Vector3 zConvertedMousePos = new Vector3(Input.mousePosition.x, 1, Input.mousePosition.y);
 
-          Debug.Log("zConvertedObjectPos: " + zConvertedObjectPos);
-          Debug.Log("zConvertedMousePos: " + zConvertedMousePos);
+        Debug.Log("zConvertedObjectPos: " + zConvertedObjectPos);
+        Debug.Log("zConvertedMousePos: " + zConvertedMousePos);
         dis = zConvertedMousePos - zConvertedObjectPos;
         dis.Normalize();
-  Debug.Log("dis: " + dis);
+        Debug.Log("dis: " + dis);
 
     }
 
@@ -47,7 +48,7 @@ public class bullets : MonoBehaviour
         {
 			hitWall = true;
 			anim.Play("bulletExplosion", 0, 0);
-										
+			 AudioSource.PlayClipAtPoint(explosion, transform.position);			
             Destroy(gameObject, .4f);
         }
         if (col.gameObject.tag == "Enemy" && gameObject.name != "bullets")
