@@ -5,7 +5,7 @@ public class bullets : MonoBehaviour
 {
 
 	// Use this for initialization
-	public int moveSpeed = 20;
+	public int moveSpeed = 0;
 	private Vector3 objectPos;
 	private Vector3 dis;
 	private Quaternion num;
@@ -29,9 +29,17 @@ public class bullets : MonoBehaviour
         }
 
         num = Quaternion.Euler (new Vector3 (0, 0, angle));*/
+  
         objectPos = Camera.main.WorldToScreenPoint(transform.position);
-        dis = Input.mousePosition - objectPos;
+        Vector3 zConvertedObjectPos = new Vector3(objectPos.x, 1, objectPos.y);
+        Vector3 zConvertedMousePos = new Vector3(Input.mousePosition.x, 1, Input.mousePosition.y);
+
+          Debug.Log("zConvertedObjectPos: " + zConvertedObjectPos);
+          Debug.Log("zConvertedMousePos: " + zConvertedMousePos);
+        dis = zConvertedMousePos - zConvertedObjectPos;
         dis.Normalize();
+  Debug.Log("dis: " + dis);
+
     }
 
 	// Update is called once per frame
@@ -50,10 +58,8 @@ public class bullets : MonoBehaviour
         {
 			hitWall = true;
 			anim.Play("bulletExplosion", 0, 0);
-											
+										
             Destroy(gameObject, .4f);
-            
-            
         }
         if (col.gameObject.tag == "Enemy" && gameObject.name != "bullets")
         {
@@ -92,11 +98,10 @@ public class bullets : MonoBehaviour
         }
         else {
 			if (hitWall == true) {
-				//rb.velocity = new Vector3 (0, 0, 0);	
+				rb.velocity = new Vector3 (0, 0, 0);	
 			} else {
 //				rb.velocity += Vector3.down;
-				//rb.velocity = (dis * moveSpeed);
-
+                rb.velocity = (dis * moveSpeed);
 			}
         }
 	}
