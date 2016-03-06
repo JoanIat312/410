@@ -50,6 +50,7 @@ public class BulletSpawn : MonoBehaviour
                 SetWeapon(0);
            }
         }
+
         GameObject newBullet = Instantiate(bObject, new Vector3(transform.position.x, 0, transform.position.z), transform.rotation) as GameObject;
         AudioSource.PlayClipAtPoint(shot, transform.position);
         newBullet.tag = "bullets";
@@ -58,7 +59,7 @@ public class BulletSpawn : MonoBehaviour
     }
 
      public void SetWeapon(int newWeapon) {
-        this.equippedGun = newWeapon;
+      this.equippedGun = newWeapon;
 
       if (equippedGun == 0)
       {

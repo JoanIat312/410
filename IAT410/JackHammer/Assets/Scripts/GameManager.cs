@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour {
     public GUIStyle Health_bar_GUI;
     public Camera main;
     private GameObject player;
+    private BulletSpawn playerBulletSpawner; // used to get number of bullets remaining
+
 	public static bool stunEnemies;
     public static int score = 0;
 
@@ -21,6 +23,10 @@ public class GameManager : MonoBehaviour {
 
     public float time = 5;
     public float countDown = 0.0f;
+    
+    void Start() {
+        playerBulletSpawner = GameObject.Find("PlayerBulletSpawner").GetComponent<BulletSpawn>();
+    }
 
 	void OnGUI() {
 
@@ -32,7 +38,13 @@ public class GameManager : MonoBehaviour {
             {
                 GUI.Box(new Rect(Screen.width / 3 / (100 / playerHealth) + 20, 30, Screen.width / 3 / (10 / time), 20), "Shield: " + time, Health_bar_GUI);
             }
+
         }
+
+        //if (machineGunEquipped == true) {
+        GUI.Label(new Rect(10, 10, 100, 20), playerBulletSpawner.machineGunBullets.ToString());
+        //GUI.Label(new Rect(new Vector2(100f,100f), new Vector2(100f,100f)), playerBulletSpawner.machineGunBullets).ToString();
+        //}
 	}
 
 

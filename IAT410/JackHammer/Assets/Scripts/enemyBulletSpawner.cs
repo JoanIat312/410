@@ -28,7 +28,7 @@ public class enemyBulletSpawner : MonoBehaviour {
         targetPos = GameObject.Find("Player").transform.position;
         dis = transform.position - targetPos;
         dis.Normalize();
-        Debug.Log("player dis" + dis);
+        //Debug.Log("player dis" + dis);
         if (Time.time >= nextBulletSpawnTimestamp)
             {
                 if((dis.z < 0.4 && dis. z > -0.4) || (dis.x < 0.5 && dis.x > -0.5 )){

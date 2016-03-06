@@ -5,6 +5,8 @@ public class SwordsmanAgent : MonoBehaviour {
     private NavMeshAgent agent;
     private GameObject player;
     private Vector3 playerPos;
+     public float zOffset;
+     public float xOffset;
 
 	// Use this for initialization
 	void Start () {

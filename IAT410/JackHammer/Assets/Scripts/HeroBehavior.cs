@@ -3,12 +3,15 @@ using System.Collections;
 
 public class HeroBehavior : MonoBehaviour
 {
+ public Transform target;
+ public float zOffset;
+ public float xOffset; // need this but dont know why
     public GameManager gameManager;
     private Vector3 playerPos;
     private Vector3 playerDirection;
     private bool found;
     public int speed;
-    private Rigidbody rb;
+    //private Rigidbody rb;
     float xDif, yDif;
     // Use this for initialization
     void Start()
@@ -16,29 +19,33 @@ public class HeroBehavior : MonoBehaviour
         
         found = false;
         speed = 1;
-        rb = gameObject.GetComponent<Rigidbody>();
+        //rb = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(found == true)
-        {
-            Debug.Log("found hero");
-            playerPos = GameObject.Find("Player").transform.position;
-            playerDirection = new Vector3(playerPos.x - transform.position.x + 2, playerPos.y - transform.position.y + 2, playerPos.z);
-            transform.Translate(playerDirection *speed * Time.deltaTime);
-            //rb.velocity += targetDirection * speed;
-        }
+//        if(found == true)
+//        {
+//            Debug.Log("found hero");
+//            playerPos = GameObject.Find("Player").transform.position;
+//            playerDirection = new Vector3(playerPos.x - transform.position.x + 2, playerPos.y - transform.position.y + 2, playerPos.z);
+//            transform.Translate(playerDirection *speed * Time.deltaTime);
+//            //rb.velocity += targetDirection * speed;
+//        }
     }
+    
 
+     void LateUpdate() {
+        transform.localPosition = new Vector3(target.localPosition.x + xOffset, transform.localPosition.y, target.localPosition.z + zOffset);
+     }
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Player")
-        {
-            found = true;
-            gameManager.SendMessage("ScoreTracker", 100, SendMessageOptions.DontRequireReceiver);
-        }
+//        if(collision.gameObject.tag == "Player")
+//        {
+//            found = true;
+//            gameManager.SendMessage("ScoreTracker", 100, SendMessageOptions.DontRequireReceiver);
+//        }
     }
 
 }
