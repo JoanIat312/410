@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class bullets : MonoBehaviour
+public class enemyBullets : MonoBehaviour
 {
 
 	// Use this for initialization
     public AudioClip explosion;
 	public int moveSpeed = 0;
-	private Vector3 objectPos;
+    private Vector3 objectPos;
+    private Vector3 targetPos;
 	private Vector3 dis;
 	private Quaternion num;
 	private float angle;
@@ -22,16 +23,14 @@ public class bullets : MonoBehaviour
         anim = GetComponent<Animator>();
 		hitWall = false;
 		defaultDamage = 50;
-  
-        objectPos = Camera.main.WorldToScreenPoint(transform.position);
-        Vector3 zConvertedObjectPos = new Vector3(objectPos.x, 0, objectPos.y);
-        Vector3 zConvertedMousePos = new Vector3(Input.mousePosition.x, 0, Input.mousePosition.y);
+        objectPos = transform.position;
+        targetPos = GameObject.Find("Player").transform.position;
+        //Vector3 zConvertedObjectPos = new Vector3(objectPos.x, 1, objectPos.y);
+        //Vector3 zConvertedTargetPos = new Vector3(targetPos.x, 1, targetPos.y);
 
-        Debug.Log("zConvertedObjectPos: " + zConvertedObjectPos);
-        Debug.Log("zConvertedMousePos: " + zConvertedMousePos);
-        dis = zConvertedMousePos - zConvertedObjectPos;
+        //dis = zConvertedTargetPos - zConvertedObjectPos;
+        dis = targetPos - objectPos;
         dis.Normalize();
-        Debug.Log("dis: " + dis);
 
     }
 
@@ -44,14 +43,14 @@ public class bullets : MonoBehaviour
 	void OnTriggerEnter (Collider col)
 
 	{
-        if (col.gameObject.tag == "wall" && gameObject.name != "bullets")
+        if (col.gameObject.tag == "wall" && gameObject.name != "enemyBullets")
         {
 			hitWall = true;
 			anim.Play("bulletExplosion", 0, 0);
-			 AudioSource.PlayClipAtPoint(explosion, transform.position);			
+			AudioSource.PlayClipAtPoint(explosion, transform.position);			
             Destroy(gameObject, .4f);
         }
-        if (col.gameObject.tag == "Enemy" && gameObject.name != "bullets")
+        if (col.gameObject.tag == "Player" && gameObject.name != "enemyBullets")
         {
 			col.gameObject.SendMessage("TakeDamage", defaultDamage, SendMessageOptions.DontRequireReceiver);
             Destroy(gameObject);
@@ -61,7 +60,7 @@ public class bullets : MonoBehaviour
     void FixedUpdate ()
 	{
 
-        if (gameObject.name != "bullets")
+        if (gameObject.name != "enemyBullets")
         {
             if (hitWall == true) {
 				rb.velocity = new Vector3 (0, 0, 0);	

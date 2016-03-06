@@ -16,19 +16,6 @@ public class SwordsmanAgent : MonoBehaviour {
 	void Update () {
         playerPos = player.transform.position;
 
-          agent.SetDestination(playerPos);
-//        if (Input.GetMouseButtonDown(0))
-//        {
-//            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-//            RaycastHit hit;
-//                        
-//            if (Physics.Raycast(ray, out hit))
-//            {
-//                if (hit.collider.tag == "Ground")
-//                {
-//                 agent.SetDestination(hit.point);
-//                }
-//            }
-//        }
+        agent.SetDestination(playerPos);
 	}
 }

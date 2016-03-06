@@ -15,6 +15,7 @@ public class enemyBulletSpawner : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+       transform.position = GameObject.Find("Swordsman").transform.position;
     }
 
     // Update is called once per frame
@@ -27,19 +28,19 @@ public class enemyBulletSpawner : MonoBehaviour {
         targetPos = GameObject.Find("Player").transform.position;
         dis = transform.position - targetPos;
         dis.Normalize();
-        if (dis.z < 0.5 && Time.time >= nextBulletSpawnTimestamp)
+        Debug.Log("player dis" + dis);
+        if (Time.time >= nextBulletSpawnTimestamp)
             {
-                
-                Spawn();
-            }else{
-              
+                if((dis.z < 0.4 && dis. z > -0.4) || (dis.x < 0.5 && dis.x > -0.5 )){
+                    Spawn();
+                }
             }
     }
 
     void Spawn()
     {
         nextBulletSpawnTimestamp = Time.time + currentFireRate;
-        GameObject newBullet = Instantiate(bObject, new Vector3(transform.position.x, 0, transform.position.z), transform.rotation) as GameObject;
+        GameObject newBullet = Instantiate(bObject, new Vector3(transform.position.x, 0.38f, transform.position.z), transform.rotation) as GameObject;
         AudioSource.PlayClipAtPoint(shot, transform.position);
         newBullet.tag = "bullets";
 
