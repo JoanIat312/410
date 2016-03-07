@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour {
     public float countDown = 0.0f;
     
     void Start() {
-        playerBulletSpawner = GameObject.Find("PlayerBulletSpawner").GetComponent<BulletSpawn>();
+        //playerBulletSpawner = GameObject.Find("PlayerBulletSpawner").GetComponent<BulletSpawn>();
     }
 
 	void OnGUI() {

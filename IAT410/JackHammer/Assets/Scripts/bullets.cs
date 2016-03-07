@@ -21,7 +21,7 @@ public class bullets : MonoBehaviour
 		rb = gameObject.GetComponent<Rigidbody> ();
         anim = GetComponent<Animator>();
 		hitWall = false;
-		defaultDamage = 20;
+		defaultDamage = 50;
   
         objectPos = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 zConvertedObjectPos = new Vector3(objectPos.x, 0, objectPos.y);

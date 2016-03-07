@@ -92,12 +92,12 @@ public class SwordsmanAgent : MonoBehaviour {
 		if (hit.collider.gameObject.tag == "wall") {
 			state = SwordsmanAgent.State.CHASE;
 		}
-		if (Time.time >= nextBulletSpawnTimestamp) {
+		/*if (Time.time >= nextBulletSpawnTimestamp) {
 			nextBulletSpawnTimestamp = Time.time + defaultFireRate;
 			GameObject newBullet = Instantiate (bObject, sprite.transform.position, sprite.transform.rotation) as GameObject;
 			AudioSource.PlayClipAtPoint (shot, transform.position);
 			newBullet.tag = "bullets";
-		}
+		}*/
 	}
 
 	void TakeDamage(int damage){
