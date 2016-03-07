@@ -21,14 +21,12 @@ public class bullets : MonoBehaviour
 		rb = gameObject.GetComponent<Rigidbody> ();
         anim = GetComponent<Animator>();
 		hitWall = false;
-		defaultDamage = 25;
+		defaultDamage = 20;
   
         objectPos = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 zConvertedObjectPos = new Vector3(objectPos.x, 0, objectPos.y);
         Vector3 zConvertedMousePos = new Vector3(Input.mousePosition.x, 0, Input.mousePosition.y);
-
-//        Debug.Log("zConvertedObjectPos: " + zConvertedObjectPos);
-//        Debug.Log("zConvertedMousePos: " + zConvertedMousePos);
+	
         dis = zConvertedMousePos - zConvertedObjectPos;
         dis.Normalize();
     }
