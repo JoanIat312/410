@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour {
 
         if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 1)
         {
-            GUI.Box(new Rect(10, 30, Screen.width / 3 / (100 / playerHealth), 20), "Health: " + playerHealth, Health_bar_GUI);
+			GUI.Box(new Rect(10, 30, Screen.width / 4 / (100 / playerHealth), 10, Health_bar_GUI));
 
             if (shield == true)
             {
