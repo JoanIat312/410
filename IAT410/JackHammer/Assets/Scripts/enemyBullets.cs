@@ -16,13 +16,14 @@ public class enemyBullets : MonoBehaviour
 	private bool hitWall;
 	public int defaultDamage;
     Animator anim;
+	public GameManager gameManager;
 
 	void Start ()
 	{
 		rb = gameObject.GetComponent<Rigidbody> ();
         anim = GetComponent<Animator>();
 		hitWall = false;
-		defaultDamage = 50;
+		defaultDamage = 20;
         objectPos = transform.position;
         targetPos = GameObject.Find("Player").transform.position;
         //Vector3 zConvertedObjectPos = new Vector3(objectPos.x, 1, objectPos.y);
@@ -52,7 +53,8 @@ public class enemyBullets : MonoBehaviour
         }
         if (col.gameObject.tag == "Player" && gameObject.name != "enemyBullets")
         {
-			col.gameObject.SendMessage("TakeDamage", defaultDamage, SendMessageOptions.DontRequireReceiver);
+			col.gameObject.SendMessage("Damaged", SendMessageOptions.DontRequireReceiver);
+			gameManager.SendMessage("PlayerDamage", defaultDamage, SendMessageOptions.DontRequireReceiver);
             Destroy(gameObject);
         }
     }

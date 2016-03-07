@@ -22,12 +22,10 @@ public class Swordsman : MonoBehaviour {
         transform.position = new Vector3(target.position.x, transform.position.y, target.position.z);
     }
     
-    IEnumerator TakeDamage(int damage) {
+    IEnumerator TakeDamage() {
 		// flash enemy when hit
 		GetComponent<SpriteRenderer> ().color = new Color (255f, 0f, 0f);
 		yield return new WaitForSeconds(0.1f); 
 		GetComponent<SpriteRenderer> ().color = new Color (255f, 255f, 255f);
-        health -= damage;
-        Debug.Log(health);
     }
 }

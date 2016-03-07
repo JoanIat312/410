@@ -71,7 +71,7 @@ public class Player_Movement : MonoBehaviour {
 
 
 
-		if (collision.gameObject.tag == "Enemy") 
+		if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "bullets") 
 		{
             
             StartCoroutine(Damaged());

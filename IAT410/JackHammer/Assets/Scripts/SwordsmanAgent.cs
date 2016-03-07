@@ -3,6 +3,7 @@ using System.Collections;
 
 public class SwordsmanAgent : MonoBehaviour {
     private NavMeshAgent agent;
+	public GameManager gameManager;
     private GameObject player;
 	public float chaseSpeed = 1f;
 	public State state;
@@ -16,6 +17,7 @@ public class SwordsmanAgent : MonoBehaviour {
 	private Vector3 shootingLocation;
 	public GameObject sprite;
 	private float nextBulletSpawnTimestamp;
+	private float health;
 	public enum State
 	{
 		IDLE,
@@ -33,23 +35,20 @@ public class SwordsmanAgent : MonoBehaviour {
 		alive = true;
 		state = SwordsmanAgent.State.IDLE;
 		StartCoroutine ("FSM");
+		health = 100;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        //playerPos = player.transform.position;
-        /*agent.SetDestination(playerPos);
-		if (Physics.Raycast (transform.position, playerPos - transform.position, out hit, col.radius)) {
-			blocked = true;
-			Debug.Log ("true");
-		} else {
-			blocked = false;
+		if (GameManager.stunEnemies == true) {
+			agent.Stop ();
+
 		}
-		s.SendMessage("blockDetection", blocked, SendMessageOptions.DontRequireReceiver);*/
+		else{
+			agent.Resume ();
+		}
 		dis = transform.position - player.transform.position;
 		Debug.DrawRay (transform.position, -dis, Color.green);
-		//Debug.DrawRay (transform.position, (transform.forward + transform.right).normalized * sightDist, Color.green);
-		//Debug.DrawRay (transform.position, (transform.forward - transform.right).normalized * sightDist, Color.green);
 		if (Physics.Raycast (transform.position, -dis, out hit, sightDist)) {
 			if (hit.collider.gameObject.tag == "Player") {
 				state = SwordsmanAgent.State.CHASE;
@@ -83,17 +82,6 @@ public class SwordsmanAgent : MonoBehaviour {
 
 	void Idle() {
 		agent.speed = 0;
-		/*agent.speed = patrolSpeed;
-		if (Vector3.Distance (transform.position, waypoints [wayPointInd].transform.position) >= 2) {
-			agent.SetDestination (waypoints [wayPointInd].transform.position);
-		} else if (Vector3.Distance (transform.position, waypoints [wayPointInd].transform.position) <= 2) {
-			wayPointInd += 1;
-			if (wayPointInd > waypoints.Length) {
-				wayPointInd = 0;
-			}
-		} else {
-			//agent.speed = 0;
-		}*/
 	}
 
 	void Chase() {
@@ -111,10 +99,23 @@ public class SwordsmanAgent : MonoBehaviour {
 			newBullet.tag = "bullets";
 		}
 	}
-	void OnTriggerEnter(Collider col){
-		if (col.tag == "Player") {
-			state = SwordsmanAgent.State.CHASE;
-			player = col.gameObject;
+
+	void TakeDamage(int damage){
+		if (health - damage >= 0) {
+			health -= damage;
+
+			sprite.SendMessage("TakeDamage", SendMessageOptions.DontRequireReceiver);
+		} else {
+			alive = false;
+			destory ();
 		}
+	}
+
+	void destory()
+	{
+		gameManager.SendMessage("ScoreTracker", 10, SendMessageOptions.DontRequireReceiver);
+		Destroy (sprite);
+		Destroy(this.gameObject);
+
 	}
 }
