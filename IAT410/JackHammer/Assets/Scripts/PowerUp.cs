@@ -8,7 +8,7 @@ public class PowerUp : MonoBehaviour{
 	public GameManager gameManager;
 	int powerUpType;
     public BulletSpawn bulletSpawner;
-    public float fireRate = .4f;
+    //public float fireRate = .4f;
 
 
     void Awake(){
@@ -38,7 +38,14 @@ public class PowerUp : MonoBehaviour{
             //renderer.enabled = false;
             Destroy(gameObject);
         }
-
+        
+      if (col.gameObject.tag == "Player" && gameObject.name == "shotgun-placeholder(Clone)")
+      {
+       bulletSpawner.SendMessage("SetWeapon", 2, SendMessageOptions.DontRequireReceiver);
+       gameManager.SendMessage("ScoreTracker", 5, SendMessageOptions.DontRequireReceiver);
+       //renderer.enabled = false;
+       Destroy(gameObject);
+      }
 
     }
 	

@@ -6,7 +6,7 @@ public class bullets : MonoBehaviour
 
 	// Use this for initialization
     public AudioClip explosion;
-	public int moveSpeed = 0;
+	public int moveSpeed = 5;
 	private Vector3 objectPos;
 	private Vector3 dis;
 	private Quaternion num;
@@ -21,18 +21,16 @@ public class bullets : MonoBehaviour
 		rb = gameObject.GetComponent<Rigidbody> ();
         anim = GetComponent<Animator>();
 		hitWall = false;
-		defaultDamage = 50;
+		defaultDamage = 25;
   
         objectPos = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 zConvertedObjectPos = new Vector3(objectPos.x, 0, objectPos.y);
         Vector3 zConvertedMousePos = new Vector3(Input.mousePosition.x, 0, Input.mousePosition.y);
 
-        Debug.Log("zConvertedObjectPos: " + zConvertedObjectPos);
-        Debug.Log("zConvertedMousePos: " + zConvertedMousePos);
+//        Debug.Log("zConvertedObjectPos: " + zConvertedObjectPos);
+//        Debug.Log("zConvertedMousePos: " + zConvertedMousePos);
         dis = zConvertedMousePos - zConvertedObjectPos;
         dis.Normalize();
-        Debug.Log("dis: " + dis);
-
     }
 
 	// Update is called once per frame

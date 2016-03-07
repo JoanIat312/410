@@ -22,7 +22,7 @@ public class GeorgeWashingtonneAgent: MonoBehaviour {
   playerPos = player.transform.position;
 
   float distance = Vector3.Distance(playerPos, gameObject.transform.position);
-  Debug.Log("distance:"+distance);
+//  Debug.Log("distance:"+distance);
   if (rescued == false) {
    if (distance < distanceToTrigger) {
     rescued = true;

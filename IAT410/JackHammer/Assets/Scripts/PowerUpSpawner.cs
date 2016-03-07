@@ -20,7 +20,7 @@ public class PowerUpSpawner : MonoBehaviour {
 
     void spawnRandomObject()
     {
-        int whichItem = Random.Range(0, 3);
+        int whichItem = Random.Range(0, 4);
 
         Vector3 objPos = new Vector3(Random.Range(-13.63f, -4f), .5f, Random.Range(-3f, 1.66f));
         if (Physics.CheckSphere(objPos, .3f) == false) {

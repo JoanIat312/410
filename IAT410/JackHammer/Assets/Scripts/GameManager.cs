@@ -41,10 +41,10 @@ public class GameManager : MonoBehaviour {
 
         }
 
-        //if (machineGunEquipped == true) {
-        GUI.Label(new Rect(10, 10, 100, 20), playerBulletSpawner.machineGunBullets.ToString());
+        if (playerBulletSpawner.machineGunBullets > 0) {
+            GUI.Label(new Rect(10, 10, 100, 20), playerBulletSpawner.machineGunBullets.ToString());
         //GUI.Label(new Rect(new Vector2(100f,100f), new Vector2(100f,100f)), playerBulletSpawner.machineGunBullets).ToString();
-        //}
+        }
 	}
 
 
