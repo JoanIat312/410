@@ -1,9 +1,14 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class SwordsmanAgent : MonoBehaviour {
     private NavMeshAgent agent;
     private GameObject player;
+<<<<<<< HEAD
+    private Vector3 playerPos;
+     public float zOffset;
+     public float xOffset;
+=======
 	public float chaseSpeed = 1f;
 	public State state;
 	private bool alive;
@@ -23,6 +28,7 @@ public class SwordsmanAgent : MonoBehaviour {
 		ATTACK
 	}
 
+>>>>>>> 949751c4ee1a2fcdf1fabaeb6f5e22a6db9c4315
 
 	// Use this for initialization
 	void Start () {

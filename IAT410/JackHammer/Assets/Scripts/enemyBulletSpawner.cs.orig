@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class enemyBulletSpawner : MonoBehaviour {
@@ -28,9 +28,15 @@ public class enemyBulletSpawner : MonoBehaviour {
     {
         targetPos = GameObject.Find("Player").transform.position;
         dis = transform.position - targetPos;
+<<<<<<< HEAD
+        dis.Normalize();
+        //Debug.Log("player dis" + dis);
+        if (Time.time >= nextBulletSpawnTimestamp)
+=======
         //dis.Normalize();
         //Debug.Log("player dis" + dis);
 		if (Time.time >= nextBulletSpawnTimestamp && blocked == false)
+>>>>>>> 949751c4ee1a2fcdf1fabaeb6f5e22a6db9c4315
             {
                 if((dis.z < 2.4 && dis. z > -2.4) && (dis.x < 2.4 && dis.x > -2.4 )){
                     //Debug.Log("player in sight, start firing");

@@ -30,21 +30,21 @@ public class GameManager : MonoBehaviour {
 
 	void OnGUI() {
 
-        if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 1)
-        {
-            GUI.Box(new Rect(10, 30, Screen.width / 3 / (100 / playerHealth), 20), "Health: " + playerHealth, Health_bar_GUI);
-
-            if (shield == true)
-            {
-                GUI.Box(new Rect(Screen.width / 3 / (100 / playerHealth) + 20, 30, Screen.width / 3 / (10 / time), 20), "Shield: " + time, Health_bar_GUI);
-            }
-
-        }
-
-        if (playerBulletSpawner.machineGunBullets > 0) {
-            GUI.Label(new Rect(10, 10, 100, 20), playerBulletSpawner.machineGunBullets.ToString());
-        //GUI.Label(new Rect(new Vector2(100f,100f), new Vector2(100f,100f)), playerBulletSpawner.machineGunBullets).ToString();
-        }
+//        if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 1)
+//        {
+//			GUI.Box(new Rect(10, 30, Screen.width / 4 / (100 / playerHealth), 10, Health_bar_GUI));
+//
+//            if (shield == true)
+//            {
+//                GUI.Box(new Rect(Screen.width / 3 / (100 / playerHealth) + 20, 30, Screen.width / 3 / (10 / time), 20), "Shield: " + time, Health_bar_GUI);
+//            }
+//
+//        }
+//
+//        if (playerBulletSpawner.machineGunBullets > 0) {
+//            GUI.Label(new Rect(10, 10, 100, 20), playerBulletSpawner.machineGunBullets.ToString());
+//        //GUI.Label(new Rect(new Vector2(100f,100f), new Vector2(100f,100f)), playerBulletSpawner.machineGunBullets).ToString();
+//        }
 	}
 
 
