@@ -5,17 +5,18 @@ public class enemyBulletSpawner : MonoBehaviour {
 
 	public GameObject bObject;
     public AudioClip shot;
-    private float currentFireRate = .5f;
+    private float currentFireRate = .8f;
     private Vector3 targetPos;
     private Vector3 dis;
-    public float defaultFireRate = .5f;
+    public float defaultFireRate = .8f;
+	private bool blocked;
 
 
     private float nextBulletSpawnTimestamp;
     // Use this for initialization
     void Start()
     {
-       transform.position = GameObject.Find("Swordsman").transform.position;
+		transform.position = GameObject.Find ("Swordsman").transform.position;
     }
 
     // Update is called once per frame
@@ -27,12 +28,15 @@ public class enemyBulletSpawner : MonoBehaviour {
     {
         targetPos = GameObject.Find("Player").transform.position;
         dis = transform.position - targetPos;
-        dis.Normalize();
-        Debug.Log("player dis" + dis);
-        if (Time.time >= nextBulletSpawnTimestamp)
+        //dis.Normalize();
+        //Debug.Log("player dis" + dis);
+		if (Time.time >= nextBulletSpawnTimestamp && blocked == false)
             {
-                if((dis.z < 0.4 && dis. z > -0.4) || (dis.x < 0.5 && dis.x > -0.5 )){
-                    Spawn();
+                if((dis.z < 2.4 && dis. z > -2.4) && (dis.x < 2.4 && dis.x > -2.4 )){
+                    //Debug.Log("player in sight, start firing");
+                    //Spawn();
+                }else{
+                    //Debug.Log("player not in sight, stop firing");
                 }
             }
     }
@@ -45,5 +49,10 @@ public class enemyBulletSpawner : MonoBehaviour {
         newBullet.tag = "bullets";
 
     }
+
+	void blockDetection(bool b){
+		blocked = b;
+		Debug.Log ("Received: " + b);
+	}
 
 }

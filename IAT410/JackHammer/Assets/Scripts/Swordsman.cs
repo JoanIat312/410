@@ -5,10 +5,12 @@ public class Swordsman : MonoBehaviour {
     
      public Transform target;
      public float zOffset;
-     public float xOffset; // need this but dont know why
+     public float xOffset; 
+     public int health;
+     public GameManager gameManager;// need this but dont know why
 	// Use this for initialization
 	void Start () {
-	
+	   health = 100;
 	}
 	
 	// Update is called once per frame
@@ -17,6 +19,15 @@ public class Swordsman : MonoBehaviour {
 	}
 
     void LateUpdate() {
-        transform.localPosition = new Vector3(target.localPosition.x + xOffset, transform.localPosition.y, target.localPosition.z + zOffset);
+        transform.position = new Vector3(target.position.x, transform.position.y, target.position.z);
+    }
+    
+    IEnumerator TakeDamage(int damage) {
+		// flash enemy when hit
+		GetComponent<SpriteRenderer> ().color = new Color (255f, 0f, 0f);
+		yield return new WaitForSeconds(0.1f); 
+		GetComponent<SpriteRenderer> ().color = new Color (255f, 255f, 255f);
+        health -= damage;
+        Debug.Log(health);
     }
 }
