@@ -38,4 +38,12 @@ public class GeorgeWashingtonneAgent: MonoBehaviour
 			agent.SetDestination (playerPos);
 		}
 	}
+
+     void OnCollisionStay (Collision collision)
+     {
+      if (collision.gameObject.tag == "Enemy") {
+       collision.gameObject.SendMessage("TakeDamage", 10, SendMessageOptions.DontRequireReceiver);
+       //Debug.Log("WOWWWWWWW");
+      }
+     }
 }

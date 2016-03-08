@@ -31,9 +31,9 @@ public class ShotgunBullet : MonoBehaviour
 //  Debug.Log("zConvertedMousePos: " + zConvertedMousePos);
 
   dis = zConvertedMousePos - zConvertedObjectPos;
-  Debug.Log("dis before: " + dis);
+//  Debug.Log("dis before: " + dis);
   dis = dis + new Vector3(Random.Range(-70,70), 0, Random.Range(-70,70));
-  Debug.Log("dis after: " + dis);
+//  Debug.Log("dis after: " + dis);
   dis.Normalize();
  }
 
