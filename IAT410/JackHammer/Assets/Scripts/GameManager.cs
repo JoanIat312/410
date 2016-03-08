@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour {
     }
 
 	void Update(){
-		stunCharger += 0.003f;
+		stunCharger += 0.0003f;
 		time -= countDown;
 		if (time <= 0) {
 			shield = false;
