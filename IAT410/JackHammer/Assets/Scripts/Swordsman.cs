@@ -6,14 +6,14 @@ public class Swordsman : MonoBehaviour {
      public Transform target;
      public float zOffset;
      public float xOffset; 
-     public int health;
+     //public int health;
      public GameManager gameManager;// need this but dont know why
     public NavMeshAgent myAgent;
     private Animator animator;
 
 	// Use this for initialization
 	void Start () {
-	   health = 100;
+	   //health = 100;
        animator = GetComponent<Animator>();
 	}
 	
@@ -23,16 +23,16 @@ public class Swordsman : MonoBehaviour {
             {
                animator.SetInteger("Direction", 0);
             }
-          else if (myAgent.velocity.z > .5f) {
+          else if (myAgent.velocity.z > .5f) { // up
            animator.SetInteger("Direction", 1);
           }
-          else if (myAgent.velocity.z < -.5f) {
+          else if (myAgent.velocity.z < -.5f) { // down
            animator.SetInteger("Direction", 3);
           }
-          else if (myAgent.velocity.x > .5f) {
+          else if (myAgent.velocity.x > .5f) { // right
            animator.SetInteger("Direction", 2);
           }
-          else if (myAgent.velocity.x < -.5f) {
+          else if (myAgent.velocity.x < -.5f) { // left
            animator.SetInteger("Direction", 4);
           }
 	}

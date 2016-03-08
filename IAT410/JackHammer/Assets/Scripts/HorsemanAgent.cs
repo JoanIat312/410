@@ -17,7 +17,10 @@ public class HorsemanAgent : MonoBehaviour {
  private Vector3 shootingLocation;
  public GameObject sprite;
  private float nextBulletSpawnTimestamp;
- private float health;
+ public float health = 100;
+ public float firingRange = 2.5f;
+ private float defaultStoppingDist;
+
  public enum State
  {
   IDLE,
@@ -36,6 +39,7 @@ public class HorsemanAgent : MonoBehaviour {
   state = HorsemanAgent.State.IDLE;
   StartCoroutine ("FSM");
   health = 100;
+  defaultStoppingDist = agent.stoppingDistance;
  }
 
  // Update is called once per frame
@@ -52,9 +56,8 @@ public class HorsemanAgent : MonoBehaviour {
   if (Physics.Raycast (transform.position, -dis, out hit, sightDist)) {
    if (hit.collider.gameObject.tag == "Player") {
     state = HorsemanAgent.State.CHASE;
-    if ((dis.z < 1.5 && dis.z > -1.5) && (dis.x < 1.5 && dis.x > -1.5)) {
-     state = HorsemanAgent.State.ATTACK;
-
+    if ((dis.z < firingRange && dis.z > -firingRange) && (dis.x < firingRange && dis.x > -firingRange)) {
+        state = HorsemanAgent.State.ATTACK;
     }
    }
   } else {
@@ -84,20 +87,39 @@ public class HorsemanAgent : MonoBehaviour {
   agent.speed = 0;
  }
 
- void Chase() {
+ void Chase()
+ {
   agent.speed = chaseSpeed;
-  agent.SetDestination (player.transform.position);
+  agent.SetDestination(player.transform.position);
+  if (Physics.Raycast(transform.position, -dis, out hit, sightDist))
+  {
+   if (hit.collider.gameObject.tag != "Player")
+   { // if the enemy still cant see the player
+    //go right up to him
+    agent.stoppingDistance = .7f;
+   }
+   else
+   {
+    agent.stoppingDistance = defaultStoppingDist; // reset the stopping distance
+   }
+  }
  }
+
+
  void Attack(){
-  if (hit.collider.gameObject.tag == "wall") {
-   state = HorsemanAgent.State.CHASE;
-  }
-  if (Time.time >= nextBulletSpawnTimestamp) {
-   nextBulletSpawnTimestamp = Time.time + defaultFireRate;
-   GameObject newBullet = Instantiate (bObject, sprite.transform.position, sprite.transform.rotation) as GameObject;
-   AudioSource.PlayClipAtPoint (shot, transform.position);
-   newBullet.tag = "bullets";
-  }
+      agent.stoppingDistance = defaultStoppingDist; // reset the stopping distance
+
+      agent.speed = chaseSpeed;
+      agent.SetDestination(player.transform.position);
+      if (hit.collider.gameObject.tag == "wall") {
+            state = HorsemanAgent.State.CHASE;
+      }
+      if (Time.time >= nextBulletSpawnTimestamp) {
+           nextBulletSpawnTimestamp = Time.time + defaultFireRate;
+           GameObject newBullet = Instantiate (bObject, sprite.transform.position, sprite.transform.rotation) as GameObject;
+           AudioSource.PlayClipAtPoint (shot, transform.position);
+           newBullet.tag = "bullets";
+      }
  }
 
  void TakeDamage(int damage){

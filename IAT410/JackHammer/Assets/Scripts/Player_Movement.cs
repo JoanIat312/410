@@ -67,11 +67,9 @@ public class Player_Movement : MonoBehaviour {
 
 
 
-	void OnCollisionEnter(Collision collision) {
+   void OnCollisionEnter(Collision collision) {
 
-
-
-		if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "bullets") 
+		if (collision.gameObject.tag == "bullets") 
 		{
             
             StartCoroutine(Damaged());
@@ -87,6 +85,22 @@ public class Player_Movement : MonoBehaviour {
             }
         }
 	}
+
+     void OnCollisionStay(Collision collision) {
+        if (collision.gameObject.tag == "Enemy")
+        {
+           StartCoroutine(Damaged());
+           if(GameManager.shield == true)
+           {
+            gameManager.SendMessage("PlayerDamage", .1f, SendMessageOptions.DontRequireReceiver);
+           }
+           else
+           {
+            gameManager.SendMessage("PlayerDamage", .5f, SendMessageOptions.DontRequireReceiver);
+           }
+        }
+     }
+
     void FixedUpdate()
    
     {

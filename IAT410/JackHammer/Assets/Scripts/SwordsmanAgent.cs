@@ -21,8 +21,8 @@ public class SwordsmanAgent : MonoBehaviour {
 	public enum State
 	{
 		IDLE,
-		CHASE,
-		ATTACK
+		CHASE//,
+		//ATTACK
 	}
 
 
@@ -44,20 +44,20 @@ public class SwordsmanAgent : MonoBehaviour {
 			agent.Stop ();
 
 		}
-		else{
+		else {
 			agent.Resume ();
 		}
 		dis = transform.position - player.transform.position;
-		Debug.DrawRay (transform.position, -dis, Color.green);
+		//Debug.DrawRay (transform.position, -dis, Color.green);
 		if (Physics.Raycast (transform.position, -dis, out hit, sightDist)) {
 			if (hit.collider.gameObject.tag == "Player") {
 				state = SwordsmanAgent.State.CHASE;
 				if ((dis.z < 1.5 && dis.z > -1.5) && (dis.x < 1.5 && dis.x > -1.5)) {
-					state = SwordsmanAgent.State.ATTACK;
-
+					//state = SwordsmanAgent.State.ATTACK;
 				}
 			}
-		} else {
+		}
+        else {
 			state = SwordsmanAgent.State.IDLE;
 		}
 	}
@@ -71,9 +71,9 @@ public class SwordsmanAgent : MonoBehaviour {
 				case State.IDLE:
 					Idle ();
 					break;
-				case State.ATTACK:
-					Attack ();
-					break;
+//				case State.ATTACK:
+//					Attack ();
+//					break;
 			}
 
 			yield return null;
@@ -88,17 +88,20 @@ public class SwordsmanAgent : MonoBehaviour {
 		agent.speed = chaseSpeed;
 		agent.SetDestination (player.transform.position);
 	}
-	void Attack(){
-		if (hit.collider.gameObject.tag == "wall") {
-			state = SwordsmanAgent.State.CHASE;
-		}
-		if (Time.time >= nextBulletSpawnTimestamp) {
-			nextBulletSpawnTimestamp = Time.time + defaultFireRate;
-			GameObject newBullet = Instantiate (bObject, sprite.transform.position, sprite.transform.rotation) as GameObject;
-			AudioSource.PlayClipAtPoint (shot, transform.position);
-			newBullet.tag = "bullets";
-		}
-	}
+//	void Attack(){
+//        agent.speed = chaseSpeed;
+//        agent.SetDestination (player.transform.position);
+   
+//		if (hit.collider.gameObject.tag == "wall") {
+//			state = SwordsmanAgent.State.CHASE;
+//		}
+//		if (Time.time >= nextBulletSpawnTimestamp) {
+//			nextBulletSpawnTimestamp = Time.time + defaultFireRate;
+//			GameObject newBullet = Instantiate (bObject, sprite.transform.position, sprite.transform.rotation) as GameObject;
+//			AudioSource.PlayClipAtPoint (shot, transform.position);
+//			newBullet.tag = "bullets";
+//		}
+//	}
 
 	void TakeDamage(int damage){
 		if (health - damage >= 0) {
@@ -107,11 +110,11 @@ public class SwordsmanAgent : MonoBehaviour {
 			sprite.SendMessage("TakeDamage", SendMessageOptions.DontRequireReceiver);
 		} else {
 			alive = false;
-			destory ();
+			destroy ();
 		}
 	}
 
-	void destory()
+ void destroy()
 	{
 		gameManager.SendMessage("ScoreTracker", 10, SendMessageOptions.DontRequireReceiver);
 		Destroy (sprite);

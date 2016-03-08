@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
-    public int playerHealth = 100;
+    public float playerHealth = 100f;
     //public Player_Movement movement;
     public GUIStyle Health_bar_GUI;
     public Camera main;
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour {
     public float countDown = 0.0f;
     
     void Start() {
-        playerBulletSpawner = GameObject.Find("PlayerBulletSpawner").GetComponent<BulletSpawn>();
+//        playerBulletSpawner = GameObject.Find("PlayerBulletSpawner").GetComponent<BulletSpawn>();
     }
 
 	void OnGUI() {
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 
-	void PlayerDamage(int damage){
+	void PlayerDamage(float damage){
 		if(playerHealth > 0){
 			playerHealth -= damage;
 		}
