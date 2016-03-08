@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour {
     public float time = 5;
     public float countDown = 0.0f;
 	private float stunCharger = 0;
-	private int level = 0;
+	private int level;
     void Start() {
        
 		spawner = playerBulletSpawner.GetComponent<playerBulletSpawner>();
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour {
 
 	void OnGUI() {
 
-		if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 3) {
+		if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 4 && Application.loadedLevel != 3) {
 			health.fillAmount = playerHealth / 100f ;
 			stun.fillAmount = stunCharger;
 			if (shield == true) {
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour {
 			} else {
 				shotGunBulletText.text = "";
 			}
-		} else if (Application.loadedLevel == 3) {
+		} else if (Application.loadedLevel == 4 || Application.loadedLevel == 3) {
 			ScoreText.text = "Score: " + score;
 		}
 	}
@@ -138,11 +138,14 @@ public class GameManager : MonoBehaviour {
 			paused = false;
 			Time.timeScale = 1;
 		}
-
+		if (Input.GetKeyDown (KeyCode.Return) && Application.loadedLevel == 4) {
+			Application.LoadLevel (0);
+		}
 	}
 
     void Awake()
     {
+		level = Application.loadedLevel;
         player = GameObject.Find("Player");
     }
 	

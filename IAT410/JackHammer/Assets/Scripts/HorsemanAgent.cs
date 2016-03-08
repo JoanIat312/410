@@ -130,13 +130,23 @@ public class HorsemanAgent : MonoBehaviour
 			sprite.SendMessage ("TakeDamage", SendMessageOptions.DontRequireReceiver);
 		} else {
 			alive = false;
+
 			destory ();
+			if (this.name == "CannonAgent") {
+				gameManager.SendMessage ("loadNextScene", SendMessageOptions.DontRequireReceiver);
+			}
 		}
 	}
 
 	void destory ()
 	{
-		gameManager.SendMessage ("ScoreTracker", 20, SendMessageOptions.DontRequireReceiver);
+		if (this.name == "CannonAgent") {
+			gameManager.SendMessage ("ScoreTracker", 100, SendMessageOptions.DontRequireReceiver);
+		} else if (this.name == "HorsemanAgent") {
+			gameManager.SendMessage ("ScoreTracker", 20, SendMessageOptions.DontRequireReceiver);
+		}else if (this.name == "MusketManAgent") {
+			gameManager.SendMessage ("ScoreTracker", 40, SendMessageOptions.DontRequireReceiver);
+		}
 		Destroy (sprite);
 		Destroy (this.gameObject);
 
