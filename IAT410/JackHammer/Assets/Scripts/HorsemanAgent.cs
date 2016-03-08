@@ -18,7 +18,7 @@ public class HorsemanAgent : MonoBehaviour
 	private Vector3 shootingLocation;
 	public GameObject sprite;
 	private float nextBulletSpawnTimestamp;
-	public float health = 100;
+	public float health;
 	public float firingRange = 2.5f;
 	private float defaultStoppingDist;
 
@@ -40,7 +40,6 @@ public class HorsemanAgent : MonoBehaviour
 		alive = true;
 		state = HorsemanAgent.State.IDLE;
 		StartCoroutine ("FSM");
-		health = 100;
 		defaultStoppingDist = agent.stoppingDistance;
 	}
 

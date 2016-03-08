@@ -45,8 +45,16 @@ public class GameManager : MonoBehaviour {
 				shieldText.text = "";
 			}
 			ScoreText.text = "Score: " + score;
-			machineGunBulletText.text = spawner.machineGunBullets.ToString ();
-			shotGunBulletText.text = spawner.shotGunBullets.ToString ();
+			if (spawner.machineGunBullets > 0) {
+				machineGunBulletText.text = spawner.machineGunBullets.ToString ();
+			} else {
+				machineGunBulletText.text = "";
+			}
+			if (spawner.shotGunBullets > 0) {
+				shotGunBulletText.text = spawner.shotGunBullets.ToString ();
+			} else {
+				shotGunBulletText.text = "";
+			}
 		} else if (Application.loadedLevel == 3) {
 			ScoreText.text = "Score: " + score;
 		}

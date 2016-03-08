@@ -1,0 +1,678 @@
+fileFormatVersion: 2
+guid: 180c1794e64c4f34b924a1c8cec6b243
+timeCreated: 1457470637
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: musketmen_sprites_0
+    21300002: musketmen_sprites_1
+    21300004: musketmen_sprites_2
+    21300006: musketmen_sprites_3
+    21300008: musketmen_sprites_4
+    21300010: musketmen_sprites_5
+    21300012: musketmen_sprites_6
+    21300014: musketmen_sprites_7
+    21300016: musketmen_sprites_8
+    21300018: musketmen_sprites_9
+    21300020: musketmen_sprites_10
+    21300022: musketmen_sprites_11
+    21300024: musketmen_sprites_12
+    21300026: musketmen_sprites_13
+    21300028: musketmen_sprites_14
+    21300030: musketmen_sprites_15
+    21300032: musketmen_sprites_16
+    21300034: musketmen_sprites_17
+    21300036: musketmen_sprites_18
+    21300038: musketmen_sprites_19
+    21300040: musketmen_sprites_20
+    21300042: musketmen_sprites_21
+    21300044: musketmen_sprites_22
+    21300046: musketmen_sprites_23
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: musketmen_sprites_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 317
+        width: 64
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 40.5}
+        - {x: -25, y: 40.5}
+        - {x: -26, y: 39.5}
+        - {x: -30, y: 24.5}
+        - {x: -26, y: 20.5}
+        - {x: -32, y: 14.5}
+        - {x: -32, y: -22.5}
+        - {x: -24, y: -40.5}
+        - {x: 0, y: -40.5}
+        - {x: 32, y: -12.5}
+        - {x: 32, y: -1.5}
+    - name: musketmen_sprites_1
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 316
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 40}
+        - {x: -32, y: -19}
+        - {x: -21, y: -40}
+        - {x: 5, y: -40}
+        - {x: 32, y: -16}
+        - {x: 32, y: -7}
+        - {x: 17, y: 40}
+    - name: musketmen_sprites_2
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 316
+        width: 61
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26.5, y: -40.5}
+        - {x: 13.5, y: -40.5}
+        - {x: 30.5, y: -29.5}
+        - {x: 30.5, y: 10.5}
+        - {x: 11.5, y: 40.5}
+        - {x: -30.5, y: 40.5}
+        - {x: -30.5, y: -33.5}
+    - name: musketmen_sprites_3
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 318
+        width: 63
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31.5, y: 40.5}
+        - {x: -31.5, y: -12.5}
+        - {x: -10.5, y: -40.5}
+        - {x: 5.5, y: -40.5}
+        - {x: 31.5, y: -27.5}
+        - {x: 31.5, y: 40.5}
+    - name: musketmen_sprites_4
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 222
+        width: 73
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31.5, y: -46.5}
+        - {x: -32.5, y: -43.5}
+        - {x: -36.5, y: -43.5}
+        - {x: -36.5, y: -46.5}
+      - - {x: -23.5, y: -46.5}
+        - {x: -24.5, y: -43.5}
+        - {x: -30.5, y: -43.5}
+        - {x: -31.5, y: -46.5}
+      - - {x: 20.5, y: -37.5}
+        - {x: 18.5, y: -40.5}
+        - {x: 19.5, y: -43.5}
+        - {x: 32.5, y: -43.5}
+        - {x: 34.5, y: -41.5}
+        - {x: 34.5, y: -39.5}
+        - {x: 33.5, y: -37.5}
+      - - {x: -19.5, y: 46.5}
+        - {x: -33.5, y: 32.5}
+        - {x: -33.5, y: -0.5}
+        - {x: 2.5, y: -42.5}
+        - {x: 35.5, y: -42.5}
+        - {x: 36.5, y: -40.5}
+        - {x: 36.5, y: 45.5}
+        - {x: 35.5, y: 46.5}
+    - name: musketmen_sprites_5
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 227
+        width: 89
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31.5, y: -44.5}
+        - {x: 31.5, y: -42.5}
+        - {x: 28.5, y: -41.5}
+        - {x: 26.5, y: -44.5}
+      - - {x: -38.5, y: 23.5}
+        - {x: -38.5, y: -19.5}
+        - {x: -15.5, y: -43.5}
+        - {x: 39.5, y: -43.5}
+        - {x: 44.5, y: -42.5}
+        - {x: 44.5, y: 13.5}
+        - {x: 34.5, y: 39.5}
+        - {x: -19.5, y: 39.5}
+        - {x: -34.5, y: 33.5}
+      - - {x: 16.5, y: 36.5}
+        - {x: 19.5, y: 37.5}
+        - {x: 19.5, y: 40.5}
+        - {x: 16.5, y: 41.5}
+        - {x: 14.5, y: 39.5}
+      - - {x: 25.5, y: 39.5}
+        - {x: 26.5, y: 36.5}
+        - {x: 29.5, y: 36.5}
+        - {x: 31.5, y: 38.5}
+        - {x: 30.5, y: 41.5}
+        - {x: 27.5, y: 41.5}
+      - - {x: -44.5, y: 44.5}
+        - {x: -44.5, y: 41.5}
+        - {x: -36.5, y: 41.5}
+        - {x: -34.5, y: 43.5}
+        - {x: -34.5, y: 44.5}
+    - name: musketmen_sprites_6
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 228
+        width: 68
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 41}
+        - {x: -20, y: 26}
+        - {x: -34, y: 8}
+        - {x: -34, y: -2}
+        - {x: -12, y: -41}
+        - {x: 29, y: -41}
+        - {x: 34, y: -39}
+        - {x: 34, y: 39}
+        - {x: 25, y: 41}
+      - - {x: -28, y: 41}
+        - {x: -28, y: 37}
+        - {x: -26, y: 36}
+        - {x: -23, y: 36}
+        - {x: -22, y: 38}
+        - {x: -22, y: 40}
+        - {x: -23, y: 41}
+    - name: musketmen_sprites_7
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 228
+        width: 72
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 38.5}
+        - {x: -31, y: 37.5}
+        - {x: -36, y: 25.5}
+        - {x: -36, y: -14.5}
+        - {x: -20, y: -38.5}
+        - {x: 35, y: -38.5}
+        - {x: 36, y: -36.5}
+        - {x: 36, y: 16.5}
+        - {x: 27, y: 38.5}
+    - name: musketmen_sprites_8
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 216
+        width: 43
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.5, y: 41}
+        - {x: -21.5, y: -41}
+        - {x: 14.5, y: -41}
+        - {x: 21.5, y: -15}
+        - {x: 21.5, y: 41}
+    - name: musketmen_sprites_9
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 217
+        width: 40
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: 42.5}
+        - {x: -12, y: 42.5}
+        - {x: -20, y: 36.5}
+        - {x: -20, y: -20.5}
+        - {x: -17, y: -42.5}
+        - {x: 20, y: -42.5}
+        - {x: 20, y: 31.5}
+        - {x: 13, y: 37.5}
+    - name: musketmen_sprites_10
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 133
+        width: 72
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 38.5}
+        - {x: -20, y: 32.5}
+        - {x: -23, y: 18.5}
+        - {x: -17, y: 14.5}
+        - {x: -36, y: -4.5}
+        - {x: -36, y: -31.5}
+        - {x: -33, y: -38.5}
+        - {x: 25, y: -38.5}
+        - {x: 36, y: -26.5}
+        - {x: 36, y: 38.5}
+    - name: musketmen_sprites_11
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 133
+        width: 68
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: 24}
+        - {x: -34, y: -29}
+        - {x: -20, y: -41}
+        - {x: 4, y: -41}
+        - {x: 34, y: -24}
+        - {x: 34, y: 41}
+        - {x: -22, y: 41}
+        - {x: -33, y: 26}
+      - - {x: 24, y: 41}
+        - {x: 22, y: 39}
+        - {x: 22, y: 38}
+        - {x: 24, y: 36}
+        - {x: 26, y: 36}
+        - {x: 28, y: 38}
+        - {x: 28, y: 40}
+        - {x: 27, y: 41}
+    - name: musketmen_sprites_12
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 132
+        width: 81
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: -42}
+        - {x: -22.5, y: -40}
+        - {x: -25.5, y: -39}
+        - {x: -27.5, y: -42}
+      - - {x: 40.5, y: 24}
+        - {x: 23.5, y: 42}
+        - {x: -28.5, y: 42}
+        - {x: -40.5, y: 14}
+        - {x: -40.5, y: -39}
+        - {x: -39.5, y: -41}
+        - {x: 9.5, y: -41}
+        - {x: 18.5, y: -38}
+        - {x: 24.5, y: -33}
+        - {x: 20.5, y: -23}
+        - {x: 40.5, y: -3}
+      - - {x: -27.5, y: 42}
+        - {x: -26.5, y: 39}
+        - {x: -23.5, y: 39}
+        - {x: -21.5, y: 41}
+        - {x: -21.5, y: 42}
+      - - {x: -10.5, y: 40}
+        - {x: -10.5, y: 42}
+        - {x: -15.5, y: 42}
+        - {x: -13.5, y: 39}
+    - name: musketmen_sprites_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 68
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: -41.5}
+        - {x: 23, y: -44.5}
+        - {x: 23, y: -45.5}
+        - {x: 34, y: -45.5}
+        - {x: 34, y: -44.5}
+        - {x: 32, y: -41.5}
+      - - {x: -31, y: -37.5}
+        - {x: -32, y: -38.5}
+        - {x: -32, y: -43.5}
+        - {x: -16, y: -43.5}
+        - {x: -16, y: -40.5}
+        - {x: -17, y: -37.5}
+      - - {x: -16, y: 45.5}
+        - {x: -27, y: 39.5}
+        - {x: -34, y: 23.5}
+        - {x: -34, y: -35.5}
+        - {x: -29, y: -42.5}
+        - {x: -2, y: -42.5}
+        - {x: 1, y: -39.5}
+        - {x: 34, y: -3.5}
+        - {x: 34, y: 12.5}
+        - {x: 21, y: 45.5}
+      - - {x: 28, y: 26.5}
+        - {x: 28, y: 21.5}
+        - {x: 31, y: 18.5}
+        - {x: 34, y: 19.5}
+        - {x: 34, y: 26.5}
+        - {x: 32, y: 28.5}
+        - {x: 30, y: 28.5}
+      - - {x: 21, y: 22.5}
+        - {x: 23, y: 20.5}
+        - {x: 26, y: 21.5}
+        - {x: 26, y: 26.5}
+        - {x: 24, y: 28.5}
+        - {x: 21, y: 27.5}
+    - name: musketmen_sprites_14
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 119
+        width: 68
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: 39}
+        - {x: -34, y: -18}
+        - {x: -17, y: -39}
+        - {x: 34, y: -39}
+        - {x: 34, y: 39}
+      - - {x: -30, y: 8}
+        - {x: -27, y: 9}
+        - {x: -27, y: 12}
+        - {x: -30, y: 13}
+        - {x: -32, y: 11}
+    - name: musketmen_sprites_15
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 120
+        width: 68
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 39}
+        - {x: -34, y: 34}
+        - {x: -34, y: -39}
+        - {x: 12, y: -39}
+        - {x: 34, y: -11}
+        - {x: 34, y: 9}
+        - {x: 16, y: 39}
+      - - {x: 29, y: 8}
+        - {x: 32, y: 9}
+        - {x: 32, y: 12}
+        - {x: 29, y: 13}
+        - {x: 27, y: 11}
+    - name: musketmen_sprites_16
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 34
+        width: 49
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 41.5}
+        - {x: -24.5, y: 30.5}
+        - {x: -24.5, y: 19.5}
+        - {x: -19.5, y: 6.5}
+        - {x: -10.5, y: -41.5}
+        - {x: 11.5, y: -41.5}
+        - {x: 24.5, y: -35.5}
+        - {x: 24.5, y: 39.5}
+        - {x: 20.5, y: 41.5}
+      - - {x: 20.5, y: 21.5}
+        - {x: 20.5, y: 18.5}
+        - {x: 23.5, y: 15.5}
+        - {x: 24.5, y: 15.5}
+        - {x: 24.5, y: 21.5}
+        - {x: 23.5, y: 22.5}
+    - name: musketmen_sprites_17
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 36
+        width: 72
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 39.5}
+        - {x: -36, y: 31.5}
+        - {x: -36, y: 4.5}
+        - {x: -19, y: -39.5}
+        - {x: 7, y: -39.5}
+        - {x: 25, y: -22.5}
+        - {x: 25, y: 21.5}
+        - {x: 19, y: 39.5}
+      - - {x: 12, y: 10.5}
+        - {x: 15, y: 11.5}
+        - {x: 15, y: 14.5}
+        - {x: 12, y: 15.5}
+        - {x: 10, y: 13.5}
+      - - {x: 33, y: 16.5}
+        - {x: 35, y: 14.5}
+        - {x: 36, y: 14.5}
+        - {x: 36, y: 22.5}
+        - {x: 33, y: 21.5}
+      - - {x: 26, y: 22.5}
+        - {x: 28, y: 20.5}
+        - {x: 31, y: 21.5}
+        - {x: 31, y: 27.5}
+        - {x: 29, y: 29.5}
+        - {x: 26, y: 28.5}
+    - name: musketmen_sprites_18
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 35
+        width: 62
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 39.5}
+        - {x: -23, y: 38.5}
+        - {x: -27, y: 32.5}
+        - {x: -27, y: -39.5}
+        - {x: 14, y: -39.5}
+        - {x: 31, y: 10.5}
+        - {x: 31, y: 33.5}
+        - {x: 23, y: 39.5}
+      - - {x: -28, y: 21.5}
+        - {x: -28, y: 24.5}
+        - {x: -31, y: 25.5}
+        - {x: -31, y: 20.5}
+    - name: musketmen_sprites_19
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 32
+        width: 46
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 41}
+        - {x: -23, y: -38}
+        - {x: -10, y: -45}
+        - {x: 14, y: -45}
+        - {x: 23, y: -10}
+        - {x: 23, y: 37}
+        - {x: 16, y: 41}
+      - - {x: 22, y: 43}
+        - {x: 22, y: 45}
+        - {x: 17, y: 45}
+        - {x: 19, y: 42}
+    - name: musketmen_sprites_20
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 30
+        width: 57
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: 38.5}
+        - {x: -28.5, y: -38.5}
+        - {x: 28.5, y: -38.5}
+        - {x: 28.5, y: 27.5}
+        - {x: 21.5, y: 38.5}
+    - name: musketmen_sprites_21
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 21
+        width: 57
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22.5, y: -42}
+        - {x: 21.5, y: -39}
+        - {x: 17.5, y: -39}
+        - {x: 16.5, y: -42}
+      - - {x: 17.5, y: 10}
+        - {x: 25.5, y: 14}
+        - {x: 28.5, y: 16}
+        - {x: 28.5, y: 35}
+        - {x: 22.5, y: 42}
+        - {x: -20.5, y: 42}
+        - {x: -26.5, y: 41}
+        - {x: -28.5, y: 33}
+        - {x: -28.5, y: 5}
+        - {x: -14.5, y: -37}
+        - {x: 2.5, y: -39}
+        - {x: 22.5, y: -39}
+        - {x: 28.5, y: -35}
+        - {x: 28.5, y: -30}
+        - {x: 20.5, y: 9}
+    - name: musketmen_sprites_22
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 21
+        width: 57
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: -42}
+        - {x: -17.5, y: -39}
+        - {x: -21.5, y: -39}
+        - {x: -22.5, y: -42}
+      - - {x: 15.5, y: 42}
+        - {x: -18.5, y: 42}
+        - {x: -27.5, y: 40}
+        - {x: -28.5, y: 38}
+        - {x: -28.5, y: -39}
+        - {x: 15.5, y: -39}
+        - {x: 17.5, y: -32}
+        - {x: 28.5, y: 6}
+        - {x: 28.5, y: 33}
+    - name: musketmen_sprites_23
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 30
+        width: 57
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17.5, y: 38.5}
+        - {x: -28.5, y: 38.5}
+        - {x: -28.5, y: -38.5}
+        - {x: 28.5, y: -38.5}
+        - {x: 28.5, y: 14.5}
+        - {x: 22.5, y: 37.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
