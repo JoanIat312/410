@@ -28,16 +28,15 @@ public class GameManager : MonoBehaviour {
     public float time = 5;
     public float countDown = 0.0f;
 	private float stunCharger = 0;
-    
+	private int level = 0;
     void Start() {
        
 		spawner = playerBulletSpawner.GetComponent<playerBulletSpawner>();
-		//Debug.Log (spawner.returnMachineGunBullets());
     }
 
 	void OnGUI() {
 
-		if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 1) {
+		if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 3) {
 			health.fillAmount = playerHealth / 100f ;
 			stun.fillAmount = stunCharger;
 			if (shield == true) {
@@ -48,7 +47,7 @@ public class GameManager : MonoBehaviour {
 			ScoreText.text = "Score: " + score;
 			machineGunBulletText.text = spawner.machineGunBullets.ToString ();
 			shotGunBulletText.text = spawner.shotGunBullets.ToString ();
-		} else if (Application.loadedLevel == 1) {
+		} else if (Application.loadedLevel == 3) {
 			ScoreText.text = "Score: " + score;
 		}
 	}
@@ -80,7 +79,11 @@ public class GameManager : MonoBehaviour {
 		}
 		
 	}
-
+	void loadNextScene(){
+		level++;
+		Application.LoadLevel (level);
+	}
+		
 	void PlayerShield()
     {
         shield = true;
@@ -95,6 +98,7 @@ public class GameManager : MonoBehaviour {
 
 	void Update(){
 		stunCharger += 0.003f;
+		Debug.Log (spawner.machineGunBullets + ", " + spawner.shotGunBullets);
 		//Debug.Log (stunUseDelayTimeStamp);
 		time -= countDown;
 		if (time <= 0) {
@@ -128,6 +132,7 @@ public class GameManager : MonoBehaviour {
 			paused = false;
 			Time.timeScale = 1;
 		}
+
 	}
 
     void Awake()

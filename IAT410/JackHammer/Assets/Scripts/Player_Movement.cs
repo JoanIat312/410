@@ -71,6 +71,9 @@ public class Player_Movement : MonoBehaviour {
                 gameManager.SendMessage("PlayerDamage", damage, SendMessageOptions.DontRequireReceiver);
             }
         }
+		if (collision.gameObject.tag == "Finish") {
+				gameManager.SendMessage ("loadNextScene", SendMessageOptions.DontRequireReceiver);
+		}
 	}
 
      void OnCollisionStay(Collision collision) {

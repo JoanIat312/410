@@ -39,7 +39,7 @@ public class PowerUp : MonoBehaviour{
             Destroy(gameObject);
         }
         
-      if (col.gameObject.tag == "Player" && gameObject.name == "shotgun(Clone)")
+      if (col.gameObject.tag == "Player" && gameObject.name == "shotgun-placeholder(Clone)")
       {
        bulletSpawner.SendMessage("SetWeapon", 2, SendMessageOptions.DontRequireReceiver);
        gameManager.SendMessage("ScoreTracker", 5, SendMessageOptions.DontRequireReceiver);
