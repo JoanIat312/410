@@ -44,7 +44,7 @@ public class bullets : MonoBehaviour
         {
 			hitWall = true;
 			anim.Play("bulletExplosion", 0, 0);
-			 AudioSource.PlayClipAtPoint(explosion, transform.position);			
+			AudioSource.PlayClipAtPoint(explosion, transform.position);			
             Destroy(gameObject, .4f);
         }
         if (col.gameObject.tag == "Enemy" && gameObject.name != "bullets")

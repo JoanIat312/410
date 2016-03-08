@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Player_Movement : MonoBehaviour {
-
+	public AudioClip checkpoint;
 	public GameManager gameManager;
 	public float speed;
 	Animator anim;
@@ -73,6 +73,7 @@ public class Player_Movement : MonoBehaviour {
         }
 		if (collision.gameObject.tag == "Finish") {
 				gameManager.SendMessage ("loadNextScene", SendMessageOptions.DontRequireReceiver);
+			AudioSource.PlayClipAtPoint (checkpoint, transform.position);
 		}
 	}
 
@@ -82,11 +83,11 @@ public class Player_Movement : MonoBehaviour {
            StartCoroutine(Damaged());
            if(GameManager.shield == true)
            {
-            gameManager.SendMessage("PlayerDamage", .1f, SendMessageOptions.DontRequireReceiver);
+            gameManager.SendMessage("PlayerDamage", 1, SendMessageOptions.DontRequireReceiver);
            }
            else
            {
-            gameManager.SendMessage("PlayerDamage", .5f, SendMessageOptions.DontRequireReceiver);
+            gameManager.SendMessage("PlayerDamage", 5, SendMessageOptions.DontRequireReceiver);
            }
         }
      }
