@@ -14,7 +14,6 @@ public class cutscene : MonoBehaviour {
 	}
 
 	IEnumerator LoadAfterAnim(){
-		Debug.Log ("enter");
 		yield return new WaitForSeconds (36);
 		Application.LoadLevel (Application.loadedLevel+1);
 	}

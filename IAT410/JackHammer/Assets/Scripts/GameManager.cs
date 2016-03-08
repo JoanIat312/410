@@ -98,8 +98,6 @@ public class GameManager : MonoBehaviour {
 
 	void Update(){
 		stunCharger += 0.003f;
-		Debug.Log (spawner.machineGunBullets + ", " + spawner.shotGunBullets);
-		//Debug.Log (stunUseDelayTimeStamp);
 		time -= countDown;
 		if (time <= 0) {
 			shield = false;

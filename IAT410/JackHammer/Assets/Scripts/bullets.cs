@@ -48,7 +48,8 @@ public class bullets : MonoBehaviour
             Destroy(gameObject, .4f);
         }
         if (col.gameObject.tag == "Enemy" && gameObject.name != "bullets")
-        {
+        {	
+			AudioSource.PlayClipAtPoint(explosion, transform.position);	
 			col.gameObject.SendMessage("TakeDamage", defaultDamage, SendMessageOptions.DontRequireReceiver);
             Destroy(gameObject);
         }

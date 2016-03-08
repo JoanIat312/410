@@ -36,7 +36,7 @@ public class playerBulletSpawner : MonoBehaviour {
 
 
 			if ((Input.GetMouseButton (0)) && (Time.time >= nextBulletSpawnTimestamp)) {
-				Debug.Log ("left pressed");
+				//Debug.Log ("left pressed");
 				Spawn ();
 			}
 		}
@@ -47,7 +47,7 @@ public class playerBulletSpawner : MonoBehaviour {
 
 			if ((equippedGun == 1) && (machineGunBullets > 0)) {
 				machineGunBullets -= 1;
-				Debug.Log (machineGunBullets);
+				//Debug.Log (machineGunBullets);
 				if (machineGunBullets <= 0) {
 					// go back to default gun
 					SetWeapon (0);
@@ -58,7 +58,7 @@ public class playerBulletSpawner : MonoBehaviour {
 
 			if ((equippedGun == 2) && (shotGunBullets > 0)) {
 				shotGunBullets -= 1;
-				Debug.Log (shotGunBullets);
+				//Debug.Log (shotGunBullets);
 				if (shotGunBullets <= 0) {
 					// go back to default gun
 					SetWeapon (0);
