@@ -21,9 +21,6 @@ public class Player_Movement : MonoBehaviour {
 
 
     void Movement() {
-		
-		
-
 		if (Input.GetAxisRaw ("Horizontal") > 0) 
 		{
             transform.Translate(Vector3.right * speed * Time.deltaTime);
@@ -43,11 +40,6 @@ public class Player_Movement : MonoBehaviour {
 		{
 			transform.Translate(-Vector3.up  * speed * Time.deltaTime);
         }
-
-
-
-
-		
 	}
 
 	
