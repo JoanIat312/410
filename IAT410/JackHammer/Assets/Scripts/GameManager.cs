@@ -1,4 +1,4 @@
-
+using UnityEngine.UI;
 using UnityEngine;
 using System.Collections;
 
@@ -8,43 +8,49 @@ public class GameManager : MonoBehaviour {
     public GUIStyle Health_bar_GUI;
     public Camera main;
     private GameObject player;
-    private BulletSpawn playerBulletSpawner; // used to get number of bullets remaining
-
+	public GameObject playerBulletSpawner;// used to gset number of bullets remaining
+	private playerBulletSpawner spawner;
+	public Text shieldText;
+	public Text machineGunBulletText;
+	public Text shotGunBulletText;
 	public static bool stunEnemies;
+	public Image health;
+	public Image stun;
     public static int score = 0;
-
+	public GameObject pauseMenu;
 	private float stunDurationTimeStamp;
 	public static float stunDuration = 3f;
 	public static float stunUseDelay = 10f;
 	private float stunUseDelayTimeStamp;
-
+	private bool paused = false;
     public static bool shield = false;
-
-
+	public Text ScoreText;
     public float time = 5;
     public float countDown = 0.0f;
+	private float stunCharger = 0;
     
     void Start() {
-        //playerBulletSpawner = GameObject.Find("PlayerBulletSpawner").GetComponent<BulletSpawn>();
+       
+		spawner = playerBulletSpawner.GetComponent<playerBulletSpawner>();
+		//Debug.Log (spawner.returnMachineGunBullets());
     }
 
 	void OnGUI() {
 
-        if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 1)
-        {
-			GUI.Box(new Rect(10, 30, Screen.width / 5 / (100 / playerHealth), 20), "", Health_bar_GUI);
-
-            if (shield == true)
-            {
-                GUI.Box(new Rect(Screen.width / 3 / (100 / playerHealth) + 20, 30, Screen.width / 3 / (10 / time), 20), "Shield: " + time, Health_bar_GUI);
-            }
-
-        }
-
-        //if (playerBulletSpawner.machineGunBullets > 0) {
-            //GUI.Label(new Rect(10, 10, 100, 20), playerBulletSpawner.machineGunBullets.ToString());
-        //GUI.Label(new Rect(new Vector2(100f,100f), new Vector2(100f,100f)), playerBulletSpawner.machineGunBullets).ToString();
-        //}
+		if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 1) {
+			health.fillAmount = playerHealth / 100f ;
+			stun.fillAmount = stunCharger;
+			if (shield == true) {
+				shieldText.text = time.ToString ("F2");
+			} else {
+				shieldText.text = "";
+			}
+			ScoreText.text = "Score: " + score;
+			machineGunBulletText.text = spawner.machineGunBullets.ToString ();
+			shotGunBulletText.text = spawner.shotGunBullets.ToString ();
+		} else if (Application.loadedLevel == 1) {
+			ScoreText.text = "Score: " + score;
+		}
 	}
 
 
@@ -75,7 +81,7 @@ public class GameManager : MonoBehaviour {
 		
 	}
 
-    void PlayerShield()
+	void PlayerShield()
     {
         shield = true;
         countDown = 0.01f;
@@ -88,18 +94,20 @@ public class GameManager : MonoBehaviour {
     }
 
 	void Update(){
-        time -= countDown;
-        if(time <= 0)
-        {
-            print("shield end");
-            shield = false;
-            countDown = 0.0f;
-            time = 5;
-        }
+		stunCharger += 0.003f;
+		Debug.Log (stunUseDelayTimeStamp);
+		time -= countDown;
+		if (time <= 0) {
+			shield = false;
+			print ("shield end");
+			countDown = 0.0f;
+			time = 5;
+		}
 		//main.transform.position = new Vector3(player.transform.position.x +5, player.transform.position.y, player.transform.position.z -10);
-		if (Input.GetKeyDown ("space")) {
+		if (Input.GetKeyDown (KeyCode.Space)) {
 			if (Time.time >= stunUseDelayTimeStamp) {
 					stunEnemies = true;
+					stunCharger = 0;
 					Debug.Log ("SPACE by!");
 					stunDurationTimeStamp = Time.time + stunDuration;
 					stunUseDelayTimeStamp = Time.time + stunUseDelay;
@@ -111,15 +119,16 @@ public class GameManager : MonoBehaviour {
 		if (Time.time >= stunDurationTimeStamp) {
 			stunEnemies = false;
 		}
-						
+		if (Input.GetKeyDown (KeyCode.Escape) && paused == false) {
+			pauseMenu.active = true;
+			paused = true;
+			Time.timeScale = 0.0f;
+		} else if (Input.GetKeyDown (KeyCode.Escape) && paused == true) {
+			pauseMenu.active = false;
+			paused = false;
+			Time.timeScale = 1;
+		}
 	}
-	/*IEnumerator PlayerFreeze(float t){
-		float s = movement.speed;
-		movement.speed = 0;
-		yield return new WaitForSeconds (t);
-		movement.speed = s;
-
-	}*/
 
     void Awake()
     {

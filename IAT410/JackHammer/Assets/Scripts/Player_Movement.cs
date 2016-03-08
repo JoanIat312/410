@@ -28,24 +28,20 @@ public class Player_Movement : MonoBehaviour {
 		{
             transform.Translate(Vector3.right * speed * Time.deltaTime);
 			//transform.eulerAngles = new Vector2(0,0);
-            anim.SetFloat("speed", Mathf.Abs(Input.GetAxis("Horizontal")));
         }
 		if (Input.GetAxisRaw ("Horizontal") < 0) 
 		{
             transform.Translate(-Vector3.right * speed * Time.deltaTime);
-            //transform.eulerAngles = new Vector2(0,180);
-            anim.SetFloat("speed", Mathf.Abs(Input.GetAxis("Horizontal")));
+           //transform.eulerAngles = new Vector2(0,180);
         }
 
 		if (Input.GetAxisRaw ("Vertical") > 0) 
 		{
 			transform.Translate(Vector3.up * speed * Time.deltaTime);
-            anim.SetFloat("speed", Mathf.Abs(Input.GetAxis("Vertical")));
         }
 		if (Input.GetAxisRaw ("Vertical") < 0) 
 		{
 			transform.Translate(-Vector3.up  * speed * Time.deltaTime);
-            anim.SetFloat("speed", Mathf.Abs(Input.GetAxis("Vertical")));
         }
 
 
@@ -75,8 +71,7 @@ public class Player_Movement : MonoBehaviour {
 		{
             
             StartCoroutine(Damaged());
-            //Destroy(collision.gameObject);
-            //rb.velocity = new Vector3(0, 0, 0); // make the player stop moving after getting hit
+
             if(GameManager.shield == true)
             {
                 gameManager.SendMessage("PlayerDamage", 5, SendMessageOptions.DontRequireReceiver);
@@ -93,11 +88,11 @@ public class Player_Movement : MonoBehaviour {
         Movement();
         if (Input.GetKey(KeyCode.A))
         {
-            anim.SetBool("left", true);
+            //anim.SetBool("left", true);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            anim.SetBool("left", false);
+            //anim.SetBool("left", false);
         }
         
        
