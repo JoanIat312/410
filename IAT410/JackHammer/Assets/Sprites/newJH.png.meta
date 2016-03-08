@@ -1,0 +1,1613 @@
+fileFormatVersion: 2
+guid: 8df0268350ac0564b81ed82235dcde83
+timeCreated: 1457466812
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: newJH_0
+    21300002: newJH_1
+    21300004: newJH_2
+    21300006: newJH_3
+    21300008: newJH_4
+    21300010: newJH_5
+    21300012: newJH_6
+    21300014: newJH_7
+    21300016: newJH_8
+    21300018: newJH_9
+    21300020: newJH_10
+    21300022: newJH_11
+    21300024: newJH_12
+    21300026: newJH_13
+    21300028: newJH_14
+    21300030: newJH_15
+    21300032: newJH_16
+    21300034: newJH_17
+    21300036: newJH_18
+    21300038: newJH_19
+    21300040: newJH_20
+    21300042: newJH_21
+    21300044: newJH_22
+    21300046: newJH_23
+    21300048: newJH_24
+    21300050: newJH_25
+    21300052: newJH_26
+    21300054: newJH_27
+    21300056: newJH_28
+    21300058: newJH_29
+    21300060: newJH_30
+    21300062: newJH_31
+    21300064: newJH_32
+    21300066: newJH_33
+    21300068: newJH_34
+    21300070: newJH_35
+    21300072: newJH_36
+    21300074: newJH_37
+    21300076: newJH_38
+    21300078: newJH_39
+    21300080: newJH_40
+    21300082: newJH_41
+    21300084: newJH_42
+    21300086: newJH_43
+    21300088: newJH_44
+    21300090: newJH_45
+    21300092: newJH_46
+    21300094: newJH_47
+    21300096: newJH_48
+    21300098: newJH_49
+    21300100: newJH_50
+    21300102: newJH_51
+    21300104: newJH_52
+    21300106: newJH_53
+    21300108: newJH_54
+    21300110: newJH_55
+    21300112: newJH_56
+    21300114: newJH_57
+    21300116: newJH_58
+    21300118: newJH_59
+    21300120: newJH_60
+    21300122: newJH_61
+    21300124: newJH_62
+    21300126: newJH_63
+    21300128: newJH_64
+    21300130: newJH_65
+    21300132: newJH_66
+    21300134: newJH_67
+    21300136: newJH_68
+    21300138: newJH_69
+    21300140: newJH_70
+    21300142: newJH_71
+    21300144: newJH_72
+    21300146: newJH_73
+    21300148: newJH_74
+    21300150: newJH_75
+    21300152: newJH_76
+    21300154: newJH_77
+    21300156: newJH_78
+    21300158: newJH_79
+    21300160: newJH_80
+    21300162: newJH_81
+    21300164: newJH_82
+    21300166: newJH_83
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: newJH_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 610
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_1
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 610
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_2
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 609
+        width: 31
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_3
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 608
+        width: 30
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_4
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 609
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 30}
+        - {x: -16, y: -25}
+        - {x: -13, y: -28}
+        - {x: -8, y: -30}
+        - {x: 13, y: -30}
+        - {x: 15, y: -29}
+        - {x: 16, y: -27}
+        - {x: 16, y: 13}
+        - {x: 4, y: 30}
+    - name: newJH_5
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 610
+        width: 32
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 29.5}
+        - {x: -16, y: 22.5}
+        - {x: -16, y: -29.5}
+        - {x: 16, y: -29.5}
+        - {x: 16, y: 18.5}
+        - {x: -2, y: 29.5}
+    - name: newJH_6
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 609
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 30}
+        - {x: -16, y: 29}
+        - {x: -16, y: -19}
+        - {x: -11, y: -28}
+        - {x: -9, y: -30}
+        - {x: 11, y: -30}
+        - {x: 16, y: -24}
+        - {x: 16, y: 16}
+        - {x: 4, y: 30}
+    - name: newJH_7
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 608
+        width: 32
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 30.5}
+        - {x: -16, y: -27.5}
+        - {x: -13, y: -30.5}
+        - {x: 16, y: -30.5}
+        - {x: 16, y: 25.5}
+        - {x: 8, y: 30.5}
+    - name: newJH_8
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 609
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16, y: -23}
+        - {x: 16, y: 15}
+        - {x: 0, y: 30}
+        - {x: -16, y: 30}
+        - {x: -16, y: -26}
+        - {x: -10, y: -30}
+        - {x: 9, y: -30}
+    - name: newJH_9
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 545
+        width: 60
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 23.5}
+        - {x: -30, y: 11.5}
+        - {x: -30, y: -11.5}
+        - {x: -27, y: -12.5}
+        - {x: -2, y: -23.5}
+        - {x: 28, y: -23.5}
+        - {x: 30, y: -16.5}
+        - {x: 30, y: 23.5}
+    - name: newJH_10
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 545
+        width: 63
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4.5, y: 23}
+        - {x: -31.5, y: -2}
+        - {x: -31.5, y: -13}
+        - {x: -1.5, y: -23}
+        - {x: 31.5, y: -23}
+        - {x: 31.5, y: 23}
+    - name: newJH_11
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 546
+        width: 62
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 23}
+        - {x: -31, y: 9}
+        - {x: -31, y: -14}
+        - {x: -6, y: -23}
+        - {x: 31, y: -23}
+        - {x: 31, y: 23}
+    - name: newJH_12
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 546
+        width: 56
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 23}
+        - {x: -28, y: 13}
+        - {x: -28, y: -16}
+        - {x: -26, y: -18}
+        - {x: -4, y: -23}
+        - {x: 27, y: -23}
+        - {x: 28, y: -18}
+        - {x: 28, y: 23}
+    - name: newJH_13
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 545
+        width: 55
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.5, y: -22.5}
+        - {x: -26.5, y: -23.5}
+        - {x: 25.5, y: -23.5}
+        - {x: 27.5, y: -22.5}
+        - {x: 27.5, y: 23.5}
+        - {x: -15.5, y: 23.5}
+        - {x: -27.5, y: 3.5}
+    - name: newJH_14
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 545
+        width: 54
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 23}
+        - {x: -27, y: 1}
+        - {x: -27, y: -21}
+        - {x: -13, y: -23}
+        - {x: 27, y: -23}
+        - {x: 27, y: 22}
+        - {x: 23, y: 23}
+    - name: newJH_15
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 545
+        width: 55
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.5, y: 23.5}
+        - {x: -27.5, y: 14.5}
+        - {x: -27.5, y: -15.5}
+        - {x: -7.5, y: -23.5}
+        - {x: 27.5, y: -23.5}
+        - {x: 27.5, y: 23.5}
+    - name: newJH_16
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 545
+        width: 58
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: -12.5}
+        - {x: -26, y: -13.5}
+        - {x: -13, y: -23.5}
+        - {x: 25, y: -23.5}
+        - {x: 29, y: -21.5}
+        - {x: 29, y: 23.5}
+        - {x: -9, y: 23.5}
+        - {x: -29, y: 10.5}
+    - name: newJH_17
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 545
+        width: 60
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 23.5}
+        - {x: -30, y: 0.5}
+        - {x: -30, y: -14.5}
+        - {x: -5, y: -22.5}
+        - {x: 0, y: -23.5}
+        - {x: 26, y: -23.5}
+        - {x: 30, y: -11.5}
+        - {x: 30, y: 22.5}
+        - {x: 26, y: 23.5}
+    - name: newJH_18
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 454
+        width: 31
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_19
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 454
+        width: 31
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_20
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 452
+        width: 31
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_21
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 451
+        width: 30
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_22
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 453
+        width: 31
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_23
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 453
+        width: 31
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_24
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 455
+        width: 31
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_25
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 455
+        width: 31
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_26
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 456
+        width: 31
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_27
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 397
+        width: 59
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.5, y: 23.5}
+        - {x: -29.5, y: -23.5}
+        - {x: 29.5, y: -23.5}
+        - {x: 29.5, y: 7.5}
+        - {x: 17.5, y: 23.5}
+    - name: newJH_28
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 397
+        width: 63
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3.5, y: 23}
+        - {x: -31.5, y: 23}
+        - {x: -31.5, y: -23}
+        - {x: -3.5, y: -23}
+        - {x: 31.5, y: -11}
+        - {x: 31.5, y: 1}
+    - name: newJH_29
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 398
+        width: 63
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.5, y: 23}
+        - {x: -31.5, y: 22}
+        - {x: -31.5, y: -10}
+        - {x: -29.5, y: -23}
+        - {x: 8.5, y: -23}
+        - {x: 31.5, y: -12}
+        - {x: 31.5, y: 1}
+        - {x: 0.5, y: 23}
+    - name: newJH_30
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 398
+        width: 57
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: -23}
+        - {x: 28.5, y: -23}
+        - {x: 28.5, y: 2}
+        - {x: 12.5, y: 23}
+        - {x: -28.5, y: 23}
+        - {x: -28.5, y: -17}
+    - name: newJH_31
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 397
+        width: 56
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 23.5}
+        - {x: -28, y: 22.5}
+        - {x: -28, y: -15.5}
+        - {x: -22, y: -23.5}
+        - {x: 1, y: -23.5}
+        - {x: 28, y: -12.5}
+        - {x: 28, y: -0.5}
+        - {x: 2, y: 23.5}
+    - name: newJH_32
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 397
+        width: 55
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.5, y: 23}
+        - {x: -27.5, y: -23}
+        - {x: 4.5, y: -23}
+        - {x: 27.5, y: -15}
+        - {x: 27.5, y: 9}
+        - {x: 2.5, y: 23}
+    - name: newJH_33
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 397
+        width: 56
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 23.5}
+        - {x: -28, y: 19.5}
+        - {x: -28, y: -17.5}
+        - {x: -25, y: -23.5}
+        - {x: 6, y: -23.5}
+        - {x: 28, y: -17.5}
+        - {x: 28, y: -0.5}
+        - {x: -4, y: 23.5}
+    - name: newJH_34
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 397
+        width: 59
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.5, y: 23.5}
+        - {x: -29.5, y: -21.5}
+        - {x: -26.5, y: -23.5}
+        - {x: 26.5, y: -23.5}
+        - {x: 29.5, y: -22.5}
+        - {x: 29.5, y: 5.5}
+        - {x: 14.5, y: 23.5}
+    - name: newJH_35
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 397
+        width: 54
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 23.5}
+        - {x: -27, y: 22.5}
+        - {x: -27, y: -23.5}
+        - {x: 27, y: -23.5}
+        - {x: 27, y: 0.5}
+        - {x: -3, y: 23.5}
+    - name: newJH_36
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 337
+        width: 53
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26.5, y: 23.5}
+        - {x: -26.5, y: 11.5}
+        - {x: -0.5, y: -23.5}
+        - {x: 20.5, y: -23.5}
+        - {x: 26.5, y: -13.5}
+        - {x: 26.5, y: 23.5}
+    - name: newJH_37
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 337
+        width: 51
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: 23}
+        - {x: -25.5, y: 9}
+        - {x: -3.5, y: -23}
+        - {x: 25.5, y: -23}
+        - {x: 25.5, y: 23}
+    - name: newJH_38
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 338
+        width: 52
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 23}
+        - {x: -26, y: 7}
+        - {x: -8, y: -23}
+        - {x: 26, y: -23}
+        - {x: 26, y: 19}
+        - {x: 23, y: 23}
+    - name: newJH_39
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 338
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 23}
+        - {x: -24, y: 9}
+        - {x: -4, y: -23}
+        - {x: 20, y: -23}
+        - {x: 24, y: -18}
+        - {x: 24, y: 22}
+        - {x: 23, y: 23}
+    - name: newJH_40
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 337
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 23.5}
+        - {x: -22.5, y: 21.5}
+        - {x: -22.5, y: 1.5}
+        - {x: -8.5, y: -23.5}
+        - {x: 22.5, y: -23.5}
+        - {x: 22.5, y: 19.5}
+        - {x: 19.5, y: 23.5}
+    - name: newJH_41
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 337
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 23}
+        - {x: -23, y: 21}
+        - {x: -23, y: 8}
+        - {x: -10, y: -23}
+        - {x: 23, y: -23}
+        - {x: 23, y: 21}
+        - {x: 17, y: 23}
+    - name: newJH_42
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 337
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 23.5}
+        - {x: -23, y: 7.5}
+        - {x: -9, y: -23.5}
+        - {x: 23, y: -23.5}
+        - {x: 23, y: 22.5}
+        - {x: 19, y: 23.5}
+    - name: newJH_43
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 337
+        width: 49
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 23.5}
+        - {x: -24.5, y: 21.5}
+        - {x: -24.5, y: 9.5}
+        - {x: -0.5, y: -23.5}
+        - {x: 16.5, y: -23.5}
+        - {x: 24.5, y: -11.5}
+        - {x: 24.5, y: 20.5}
+        - {x: 22.5, y: 23.5}
+    - name: newJH_44
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 337
+        width: 52
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 23.5}
+        - {x: -26, y: -0.5}
+        - {x: -16, y: -13.5}
+        - {x: -1, y: -23.5}
+        - {x: 24, y: -23.5}
+        - {x: 26, y: -18.5}
+        - {x: 26, y: 23.5}
+    - name: newJH_45
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 253
+        width: 48
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 30.5}
+        - {x: -24, y: -19.5}
+        - {x: -24, y: -30.5}
+        - {x: -13, y: -30.5}
+        - {x: 18, y: -22.5}
+        - {x: 24, y: -1.5}
+        - {x: 24, y: 30.5}
+    - name: newJH_46
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 252
+        width: 48
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 30.5}
+        - {x: -24, y: -12.5}
+        - {x: -24, y: -30.5}
+        - {x: -9, y: -30.5}
+        - {x: 24, y: -15.5}
+        - {x: 24, y: 26.5}
+        - {x: 22, y: 30.5}
+    - name: newJH_47
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 254
+        width: 49
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1.5, y: 30}
+        - {x: -24.5, y: -18}
+        - {x: -24.5, y: -30}
+        - {x: -5.5, y: -30}
+        - {x: 23.5, y: -23}
+        - {x: 24.5, y: -15}
+        - {x: 24.5, y: 28}
+        - {x: 19.5, y: 30}
+    - name: newJH_48
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 254
+        width: 46
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 30}
+        - {x: -4, y: 25}
+        - {x: -23, y: -16}
+        - {x: -23, y: -30}
+        - {x: -10, y: -30}
+        - {x: 23, y: -24}
+        - {x: 23, y: 25}
+        - {x: 18, y: 30}
+    - name: newJH_49
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 252
+        width: 44
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 31}
+        - {x: -5, y: 31}
+        - {x: -15, y: 2}
+        - {x: -22, y: -18}
+        - {x: -22, y: -31}
+        - {x: -13, y: -31}
+        - {x: 15, y: -19}
+        - {x: 22, y: -15}
+    - name: newJH_50
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 250
+        width: 43
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.5, y: 31.5}
+        - {x: -19.5, y: -5.5}
+        - {x: -21.5, y: -14.5}
+        - {x: -21.5, y: -31.5}
+        - {x: -7.5, y: -31.5}
+        - {x: 21.5, y: -11.5}
+        - {x: 21.5, y: 27.5}
+        - {x: 14.5, y: 31.5}
+    - name: newJH_51
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 252
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4.5, y: 31}
+        - {x: -22.5, y: -12}
+        - {x: -22.5, y: -31}
+        - {x: -12.5, y: -31}
+        - {x: 22.5, y: -20}
+        - {x: 22.5, y: 31}
+    - name: newJH_52
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 251
+        width: 47
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2.5, y: 31.5}
+        - {x: -17.5, y: -1.5}
+        - {x: -23.5, y: -19.5}
+        - {x: -23.5, y: -31.5}
+        - {x: -13.5, y: -31.5}
+        - {x: 21.5, y: -16.5}
+        - {x: 23.5, y: -6.5}
+        - {x: 23.5, y: 31.5}
+    - name: newJH_53
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 252
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 31}
+        - {x: -7, y: 16}
+        - {x: -23, y: -20}
+        - {x: -23, y: -31}
+        - {x: -5, y: -31}
+        - {x: 23, y: -23}
+        - {x: 23, y: 27}
+        - {x: 17, y: 31}
+    - name: newJH_54
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 187
+        width: 51
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: 23.5}
+        - {x: -25.5, y: -20.5}
+        - {x: -20.5, y: -23.5}
+        - {x: 1.5, y: -23.5}
+        - {x: 25.5, y: 8.5}
+        - {x: 25.5, y: 23.5}
+    - name: newJH_55
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 187
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: 21}
+        - {x: 15, y: 23}
+        - {x: -15, y: 23}
+        - {x: -21, y: 18}
+        - {x: -21, y: -23}
+        - {x: 7, y: -23}
+        - {x: 9, y: -20}
+        - {x: 9, y: -16}
+        - {x: 21, y: 10}
+    - name: newJH_56
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 188
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 18}
+        - {x: 5, y: 23}
+        - {x: -21, y: 23}
+        - {x: -23, y: 19}
+        - {x: -23, y: -12}
+        - {x: -20, y: -23}
+        - {x: 9, y: -23}
+        - {x: 23, y: 8}
+        - {x: 23, y: 20}
+        - {x: 15, y: 20}
+    - name: newJH_57
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 188
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: 23}
+        - {x: -23.5, y: -18}
+        - {x: -21.5, y: -23}
+        - {x: 2.5, y: -23}
+        - {x: 23.5, y: 4}
+        - {x: 23.5, y: 23}
+    - name: newJH_58
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 187
+        width: 49
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.5, y: 16.5}
+        - {x: 14.5, y: 14.5}
+        - {x: 3.5, y: 23.5}
+        - {x: -24.5, y: 23.5}
+        - {x: -24.5, y: -19.5}
+        - {x: -18.5, y: -23.5}
+        - {x: 3.5, y: -23.5}
+        - {x: 24.5, y: 1.5}
+        - {x: 24.5, y: 15.5}
+        - {x: 23.5, y: 16.5}
+    - name: newJH_59
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 187
+        width: 50
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 19}
+        - {x: 12, y: 23}
+        - {x: -22, y: 23}
+        - {x: -25, y: 22}
+        - {x: -25, y: -23}
+        - {x: 7, y: -23}
+        - {x: 25, y: 4}
+        - {x: 25, y: 17}
+        - {x: 24, y: 18}
+    - name: newJH_60
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 187
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 23.5}
+        - {x: -24, y: -23.5}
+        - {x: 3, y: -23.5}
+        - {x: 24, y: 8.5}
+        - {x: 24, y: 23.5}
+    - name: newJH_61
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 187
+        width: 49
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.5, y: 20.5}
+        - {x: 14.5, y: 18.5}
+        - {x: 1.5, y: 23.5}
+        - {x: -19.5, y: 23.5}
+        - {x: -24.5, y: 22.5}
+        - {x: -24.5, y: -19.5}
+        - {x: -21.5, y: -23.5}
+        - {x: -1.5, y: -23.5}
+        - {x: 6.5, y: -20.5}
+        - {x: 24.5, y: 9.5}
+        - {x: 24.5, y: 19.5}
+        - {x: 23.5, y: 20.5}
+    - name: newJH_62
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 187
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 23.5}
+        - {x: -24, y: 22.5}
+        - {x: -24, y: -18.5}
+        - {x: -21, y: -23.5}
+        - {x: 2, y: -23.5}
+        - {x: 7, y: -17.5}
+        - {x: 24, y: 9.5}
+        - {x: 24, y: 23.5}
+    - name: newJH_63
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 118
+        width: 47
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: -29}
+        - {x: 23.5, y: -29}
+        - {x: 23.5, y: 12}
+        - {x: 7.5, y: 29}
+        - {x: -23.5, y: 29}
+        - {x: -23.5, y: -24}
+    - name: newJH_64
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 116
+        width: 49
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.5, y: -16.5}
+        - {x: -9.5, y: -24.5}
+        - {x: 7.5, y: -29.5}
+        - {x: 24.5, y: -29.5}
+        - {x: 24.5, y: -18.5}
+        - {x: 15.5, y: 5.5}
+        - {x: 2.5, y: 29.5}
+        - {x: -20.5, y: 29.5}
+        - {x: -24.5, y: 28.5}
+    - name: newJH_65
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 118
+        width: 48
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 29}
+        - {x: -24, y: 28}
+        - {x: -24, y: -19}
+        - {x: -2, y: -29}
+        - {x: 24, y: -29}
+        - {x: 24, y: -18}
+        - {x: 2, y: 29}
+    - name: newJH_66
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 117
+        width: 46
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 24.5}
+        - {x: 0, y: 29.5}
+        - {x: -17, y: 29.5}
+        - {x: -23, y: 24.5}
+        - {x: -23, y: -15.5}
+        - {x: -3, y: -29.5}
+        - {x: 23, y: -29.5}
+        - {x: 23, y: -18.5}
+        - {x: 9, y: 1.5}
+    - name: newJH_67
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 118
+        width: 46
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: -29}
+        - {x: 23, y: -29}
+        - {x: 23, y: -16}
+        - {x: 7, y: 29}
+        - {x: -21, y: 29}
+        - {x: -23, y: 28}
+        - {x: -23, y: -16}
+    - name: newJH_68
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 119
+        width: 46
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: -17}
+        - {x: -22, y: -20}
+        - {x: 5, y: -28}
+        - {x: 23, y: -28}
+        - {x: 23, y: -11}
+        - {x: 11, y: 28}
+        - {x: -19, y: 28}
+        - {x: -23, y: 23}
+    - name: newJH_69
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 118
+        width: 45
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 29}
+        - {x: -22.5, y: -19}
+        - {x: -8.5, y: -27}
+        - {x: -1.5, y: -29}
+        - {x: 22.5, y: -29}
+        - {x: 22.5, y: -11}
+        - {x: 11.5, y: 29}
+    - name: newJH_70
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 118
+        width: 47
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.5, y: 29}
+        - {x: -23.5, y: 27}
+        - {x: -23.5, y: -10}
+        - {x: -17.5, y: -28}
+        - {x: -5.5, y: -29}
+        - {x: 23.5, y: -29}
+        - {x: 23.5, y: -13}
+        - {x: 3.5, y: 29}
+    - name: newJH_71
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 118
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 29}
+        - {x: -21, y: -15}
+        - {x: -14, y: -22}
+        - {x: 6, y: -29}
+        - {x: 21, y: -29}
+        - {x: 21, y: 16}
+        - {x: 9, y: 29}
+    - name: newJH_72
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 27
+        width: 31
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_73
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 36
+        width: 32
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 33}
+        - {x: -16, y: -23}
+        - {x: -5, y: -33}
+        - {x: 16, y: -33}
+        - {x: 16, y: 33}
+    - name: newJH_74
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 29
+        width: 31
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_75
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 16
+        width: 30
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_76
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 0
+        width: 50
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: -51}
+        - {x: -4, y: -49}
+        - {x: -7, y: -48}
+        - {x: -9, y: -51}
+      - - {x: 3, y: -50}
+        - {x: 3, y: -51}
+        - {x: 11, y: -51}
+        - {x: 11, y: -50}
+        - {x: 8, y: -47}
+        - {x: 6, y: -47}
+      - - {x: -9, y: 51}
+        - {x: -11, y: 36}
+        - {x: -11, y: -39}
+        - {x: 9, y: -39}
+        - {x: 25, y: -34}
+        - {x: 25, y: 51}
+      - - {x: -23, y: -23}
+        - {x: -25, y: -24}
+        - {x: -25, y: -30}
+        - {x: -22, y: -30}
+        - {x: -19, y: -27}
+        - {x: -19, y: -26}
+        - {x: -21, y: -23}
+    - name: newJH_77
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 2
+        width: 63
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: -47}
+        - {x: -14.5, y: -50}
+        - {x: -6.5, y: -50}
+        - {x: -6.5, y: -48}
+        - {x: -9.5, y: -47}
+      - - {x: -0.5, y: -48}
+        - {x: -0.5, y: -50}
+        - {x: 6.5, y: -50}
+        - {x: 6.5, y: -48}
+        - {x: 4.5, y: -46}
+        - {x: 1.5, y: -46}
+      - - {x: 23.5, y: -50}
+        - {x: 23.5, y: -48}
+        - {x: 20.5, y: -47}
+        - {x: 18.5, y: -50}
+      - - {x: 10.5, y: -29}
+        - {x: 8.5, y: -27}
+        - {x: 11.5, y: -29}
+        - {x: 14.5, y: -29}
+        - {x: 22.5, y: -30}
+        - {x: 22.5, y: 50}
+        - {x: -14.5, y: 50}
+        - {x: -31.5, y: 32}
+        - {x: -31.5, y: -35}
+        - {x: 3.5, y: -43}
+        - {x: 9.5, y: -43}
+        - {x: 12.5, y: -38}
+        - {x: 12.5, y: -35}
+      - - {x: 29.5, y: -20}
+        - {x: 25.5, y: -23}
+        - {x: 25.5, y: -28}
+        - {x: 26.5, y: -29}
+        - {x: 30.5, y: -29}
+        - {x: 31.5, y: -28}
+        - {x: 31.5, y: -20}
+    - name: newJH_78
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 2
+        width: 36
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: -47}
+        - {x: -18, y: -50}
+        - {x: -10, y: -50}
+        - {x: -10, y: -48}
+        - {x: -13, y: -47}
+      - - {x: -4, y: -48}
+        - {x: -4, y: -50}
+        - {x: 3, y: -50}
+        - {x: 3, y: -48}
+        - {x: 1, y: -46}
+        - {x: -2, y: -46}
+      - - {x: -13, y: 50}
+        - {x: -18, y: 36}
+        - {x: -18, y: -34}
+        - {x: -14, y: -38}
+        - {x: 2, y: -38}
+        - {x: 8, y: -34}
+        - {x: 17, y: 11}
+        - {x: 17, y: 49}
+        - {x: 14, y: 50}
+    - name: newJH_79
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 2
+        width: 36
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: -46.5}
+        - {x: -18, y: -49.5}
+        - {x: -10, y: -49.5}
+        - {x: -10, y: -47.5}
+        - {x: -13, y: -46.5}
+      - - {x: -4, y: -47.5}
+        - {x: -4, y: -49.5}
+        - {x: 3, y: -49.5}
+        - {x: 3, y: -47.5}
+        - {x: 1, y: -45.5}
+        - {x: -2, y: -45.5}
+      - - {x: -18, y: 49.5}
+        - {x: -18, y: -38.5}
+        - {x: 2, y: -42.5}
+        - {x: 10, y: -42.5}
+        - {x: 18, y: -31.5}
+        - {x: 18, y: 46.5}
+        - {x: 17, y: 49.5}
+    - name: newJH_80
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 2
+        width: 35
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.5, y: -47}
+        - {x: -17.5, y: -50}
+        - {x: -10.5, y: -50}
+        - {x: -10.5, y: -48}
+        - {x: -13.5, y: -47}
+      - - {x: 2.5, y: -50}
+        - {x: 2.5, y: -48}
+        - {x: -0.5, y: -47}
+        - {x: -2.5, y: -50}
+      - - {x: -17.5, y: 50}
+        - {x: -17.5, y: -38}
+        - {x: 2.5, y: -38}
+        - {x: 15.5, y: -32}
+        - {x: 15.5, y: 48}
+        - {x: 8.5, y: 50}
+    - name: newJH_81
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 25
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_82
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 25
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJH_83
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 19
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
