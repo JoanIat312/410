@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
 	public GameObject playerBulletSpawner;// used to gset number of bullets remaining
 	private playerBulletSpawner spawner;
 	public Text shieldText;
+	public Image shieldImage;
 	public Text machineGunBulletText;
 	public Text shotGunBulletText;
 	public Image machineGunImage;
@@ -47,8 +48,14 @@ public class GameManager : MonoBehaviour {
 			health.fillAmount = playerHealth / 100f ;
 			stun.fillAmount = stunCharger;
 			if (shield == true) {
+				Color c = shieldImage.color;
+				c.a = 1;
+				shieldImage.color = c;
 				shieldText.text = time.ToString ("F2");
 			} else {
+				Color c = shieldImage.color;
+				c.a = 0;
+				shieldImage.color = c;
 				shieldText.text = "";
 			}
 			ScoreText.text = "Score: " + score;
