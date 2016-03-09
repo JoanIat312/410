@@ -11,7 +11,7 @@ public class playerBulletSpawner : MonoBehaviour {
 		// active weapon status - 0 is default, 1 is fast shootng machinegun
 
 		public float defaultFireRate = .5f;
-		private float currentFireRate = .5f;
+		public float currentFireRate = .5f;
 		public float machineGunFireRate = .2f;
 		public float shotGunFireRate = .6f;
 
@@ -36,7 +36,7 @@ public class playerBulletSpawner : MonoBehaviour {
 
 
 			if ((Input.GetMouseButton (0)) && (Time.time >= nextBulletSpawnTimestamp)) {
-				Debug.Log ("left pressed");
+//				Debug.Log ("left pressed");
 				Spawn ();
 			}
 		}

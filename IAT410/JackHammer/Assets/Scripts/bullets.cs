@@ -13,7 +13,7 @@ public class bullets : MonoBehaviour
 	private float angle;
 	private Rigidbody rb;
 	private bool hitWall;
-	public int defaultDamage;
+	public int defaultDamage = 20;
     Animator anim;
 
 	void Start ()
@@ -21,7 +21,7 @@ public class bullets : MonoBehaviour
 		rb = gameObject.GetComponent<Rigidbody> ();
         anim = GetComponent<Animator>();
 		hitWall = false;
-		defaultDamage = 50;
+		//defaultDamage = 50;
   
         objectPos = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 zConvertedObjectPos = new Vector3(objectPos.x, 0, objectPos.y);

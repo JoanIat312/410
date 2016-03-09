@@ -12,12 +12,12 @@ public class SwordsmanAgent : MonoBehaviour {
 	public GameObject bObject;
 	public AudioClip shot;
 	private Vector3 dis;
-	public float defaultFireRate = .8f;
+//	public float defaultFireRate = .8f;
 	private RaycastHit hit;
 	private Vector3 shootingLocation;
 	public GameObject sprite;
 	private float nextBulletSpawnTimestamp;
-	private float health;
+	public float health;
 	public enum State
 	{
 		IDLE,
@@ -103,10 +103,11 @@ public class SwordsmanAgent : MonoBehaviour {
 //		}
 //	}
 
-	void TakeDamage(int damage){
+	void TakeDamage(float damage){
+        Debug.Log(health);
 		if (health - damage >= 0) {
 			health -= damage;
-
+            
 			sprite.SendMessage("TakeDamage", SendMessageOptions.DontRequireReceiver);
 		} else {
 			alive = false;

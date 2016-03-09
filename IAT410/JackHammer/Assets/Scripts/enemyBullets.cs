@@ -6,7 +6,7 @@ public class enemyBullets : MonoBehaviour
 
 	// Use this for initialization
     public AudioClip explosion;
-	public int moveSpeed = 0;
+    public float moveSpeed = 0;
     private Vector3 objectPos;
     private Vector3 targetPos;
 	private Vector3 dis;
