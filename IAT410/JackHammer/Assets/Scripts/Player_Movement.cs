@@ -5,6 +5,7 @@ public class Player_Movement : MonoBehaviour
 {
 	public AudioClip checkpoint;
 	public GameManager gameManager;
+	public GameObject bloodSpawner;
 	public float speed;
 	Animator anim;
 	private int damage = 20;
@@ -51,6 +52,7 @@ public class Player_Movement : MonoBehaviour
 	
 	IEnumerator Damaged ()
 	{
+		bloodSpawner.SendMessage("spawn", transform.position, SendMessageOptions.DontRequireReceiver);
 		GetComponent<SpriteRenderer> ().color = new Color (255f, 0f, 0f);
 		yield return new WaitForSeconds (0.1f);
 		GetComponent<SpriteRenderer> ().color = new Color (255f, 255f, 255f);
@@ -65,6 +67,7 @@ public class Player_Movement : MonoBehaviour
 			StartCoroutine (Damaged ());
 
 			if (GameManager.shield == true) {
+				
 				gameManager.SendMessage ("PlayerDamage", 5, SendMessageOptions.DontRequireReceiver);
 			} else {
 				gameManager.SendMessage ("PlayerDamage", damage, SendMessageOptions.DontRequireReceiver);

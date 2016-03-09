@@ -5,6 +5,7 @@ public class SwordsmanAgent : MonoBehaviour {
     private NavMeshAgent agent;
 	public GameManager gameManager;
     private GameObject player;
+	public GameObject bloodSpawner;
 	public float chaseSpeed = 1f;
 	public State state;
 	private bool alive;
@@ -107,7 +108,7 @@ public class SwordsmanAgent : MonoBehaviour {
         Debug.Log(health);
 		if (health - damage >= 0) {
 			health -= damage;
-            
+			bloodSpawner.SendMessage("spawn", transform.position, SendMessageOptions.DontRequireReceiver);
 			sprite.SendMessage("TakeDamage", SendMessageOptions.DontRequireReceiver);
 		} else {
 			alive = false;

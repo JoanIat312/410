@@ -6,6 +6,7 @@ public class HorsemanAgent : MonoBehaviour
 	private NavMeshAgent agent;
 	public GameManager gameManager;
 	private GameObject player;
+	public GameObject bloodSpawner;
 	public float chaseSpeed = 2f;
 	public State state;
 	private bool alive;
@@ -126,7 +127,7 @@ public class HorsemanAgent : MonoBehaviour
 	{
 		if (health - damage >= 0) {
 			health -= damage;
-
+			bloodSpawner.SendMessage ("spawn", transform.position, SendMessageOptions.DontRequireReceiver);
 			sprite.SendMessage ("TakeDamage", SendMessageOptions.DontRequireReceiver);
 		} else {
 			alive = false;
@@ -144,7 +145,7 @@ public class HorsemanAgent : MonoBehaviour
 			gameManager.SendMessage ("ScoreTracker", 100, SendMessageOptions.DontRequireReceiver);
 		} else if (this.name == "HorsemanAgent") {
 			gameManager.SendMessage ("ScoreTracker", 20, SendMessageOptions.DontRequireReceiver);
-		}else if (this.name == "MusketManAgent") {
+		} else if (this.name == "MusketManAgent") {
 			gameManager.SendMessage ("ScoreTracker", 40, SendMessageOptions.DontRequireReceiver);
 		}
 		Destroy (sprite);

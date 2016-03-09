@@ -114,7 +114,6 @@ public class GameManager : MonoBehaviour {
 		}
 		if(playerHealth <= 0){
             diedLevel = Application.loadedLevel;
-            
 			playerHealth = 100;
 			Debug.Log ("dead");
 			Application.LoadLevel("GameOver");
@@ -179,6 +178,7 @@ public class GameManager : MonoBehaviour {
 		}
 		if (Input.GetKeyDown (KeyCode.Return) && Application.loadedLevel == 4) {
             Application.LoadLevel (diedLevel);
+			score = 0;
 
 		}
 		if (shakeDuration > 0 && shake == true) {
