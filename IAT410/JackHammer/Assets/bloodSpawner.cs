@@ -16,7 +16,7 @@ public class bloodSpawner : MonoBehaviour {
 
 	void spawn(Vector3 pos){
 
-		GameObject newBlood = Instantiate (bloodObject, new Vector3 (pos.x, 0.38f, pos.z), transform.rotation) as GameObject;
+		GameObject newBlood = Instantiate (bloodObject, new Vector3 (pos.x-.5f, 1f, pos.z), transform.rotation) as GameObject;
 		newBlood.SendMessage ("play", SendMessageOptions.DontRequireReceiver);
 	}
 }
