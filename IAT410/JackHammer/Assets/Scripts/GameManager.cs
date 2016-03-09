@@ -7,6 +7,11 @@ public class GameManager : MonoBehaviour {
     //public Player_Movement movement;
     public GUIStyle Health_bar_GUI;
     public Camera main;
+	private bool shake = false;
+	private Vector3 cameraPos;
+	private float shakeAmount = 0.1f;
+	private float decreaseFactor = 1.0f;
+	private float shakeDuration = 0f;
     private GameObject player;
 	public GameObject playerBulletSpawner;// used to gset number of bullets remaining
 	private playerBulletSpawner spawner;
@@ -78,6 +83,8 @@ public class GameManager : MonoBehaviour {
 	void PlayerDamage(float damage){
 		if(playerHealth > 0){
 			playerHealth -= damage;
+			shake = true;
+			shakeDuration = .2f;
 		}
 		if(playerHealth <= 0){
 			playerHealth = 0;
@@ -105,6 +112,7 @@ public class GameManager : MonoBehaviour {
     }
 
 	void Update(){
+		cameraPos = main.transform.position;
 		stunCharger += 0.0003f;
 		time -= countDown;
 		if (time <= 0) {
@@ -140,6 +148,14 @@ public class GameManager : MonoBehaviour {
 		}
 		if (Input.GetKeyDown (KeyCode.Return) && Application.loadedLevel == 4) {
 			Application.LoadLevel (0);
+		}
+		if (shakeDuration > 0 && shake == true) {
+			main.transform.position = cameraPos + Random.insideUnitSphere * shakeAmount;
+			shakeDuration -= Time.deltaTime * decreaseFactor;
+		} else {
+			shakeDuration = 0f;
+			main.transform.position = cameraPos;
+			shake = false;
 		}
 	}
 
