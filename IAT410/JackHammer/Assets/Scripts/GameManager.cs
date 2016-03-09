@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour {
 	public Text shieldText;
 	public Text machineGunBulletText;
 	public Text shotGunBulletText;
+	public Image machineGunImage;
+	public Image ShotGunImage;
 	public static bool stunEnemies;
 	public Image health;
 	public Image stun;
@@ -52,13 +54,25 @@ public class GameManager : MonoBehaviour {
 			ScoreText.text = "Score: " + score;
 			if (spawner.machineGunBullets > 0) {
 				machineGunBulletText.text = spawner.machineGunBullets.ToString ();
+				Color c = machineGunImage.color;
+				c.a = 1;
+				machineGunImage.color= c;
 			} else {
 				machineGunBulletText.text = "";
+				Color c = machineGunImage.color;
+				c.a = 0.4f;
+				machineGunImage.color = c;
 			}
 			if (spawner.shotGunBullets > 0) {
 				shotGunBulletText.text = spawner.shotGunBullets.ToString ();
+				Color c = ShotGunImage.color;
+				c.a = 1;
+				ShotGunImage.color= c;
 			} else {
 				shotGunBulletText.text = "";
+				Color c = ShotGunImage.color;
+				c.a = 0.4f;
+				ShotGunImage.color= c;
 			}
 		} else if (Application.loadedLevel == 4 || Application.loadedLevel == 3) {
 			ScoreText.text = "Score: " + score;
