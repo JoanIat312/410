@@ -11,6 +11,9 @@ public class cutscene : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		StartCoroutine (LoadAfterAnim ());
+		if(Input.GetMouseButton (0)){
+			Application.LoadLevel (Application.loadedLevel+1);
+		}
 	}
 
 	IEnumerator LoadAfterAnim(){
