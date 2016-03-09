@@ -22,7 +22,7 @@ public class playerBulletSpawner : MonoBehaviour {
 		// Use this for initialization
 		void Start ()
 		{
-			transform.position = GameObject.Find ("jackhammer-gun").transform.position;
+			transform.position = GameObject.Find ("Player").transform.position;
 			//fireRate = .5f;
 		}
 

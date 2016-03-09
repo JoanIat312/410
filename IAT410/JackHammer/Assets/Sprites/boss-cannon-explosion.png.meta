@@ -1,0 +1,711 @@
+fileFormatVersion: 2
+guid: cada9d05b350cff4ebc396372945b1b8
+timeCreated: 1457468900
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: boss-cannon-explosion_0
+    21300002: boss-cannon-explosion_1
+    21300004: boss-cannon-explosion_2
+    21300006: boss-cannon-explosion_3
+    21300008: boss-cannon-explosion_4
+    21300010: boss-cannon-explosion_5
+    21300012: boss-cannon-explosion_6
+    21300014: boss-cannon-explosion_7
+    21300016: boss-cannon-explosion_8
+    21300018: boss-cannon-explosion_9
+    21300020: boss-cannon-explosion_10
+    21300022: boss-cannon-explosion_11
+    21300024: boss-cannon-explosion_12
+    21300026: boss-cannon-explosion_13
+    21300028: boss-cannon-explosion_14
+    21300030: boss-cannon-explosion_15
+    21300032: boss-cannon-explosion_16
+    21300034: boss-cannon-explosion_17
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: boss-cannon-explosion_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 149
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 18.5}
+        - {x: -15, y: 17.5}
+        - {x: -19, y: 12.5}
+        - {x: -21, y: 2.5}
+        - {x: -21, y: -3.5}
+        - {x: -18, y: -15.5}
+        - {x: 20, y: -15.5}
+        - {x: 23, y: -10.5}
+        - {x: 23, y: 12.5}
+        - {x: 14, y: 18.5}
+    - name: boss-cannon-explosion_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 150
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: -23}
+        - {x: -13.5, y: -22}
+        - {x: -13.5, y: -19}
+        - {x: -16.5, y: -18}
+        - {x: -18.5, y: -20}
+      - - {x: -8.5, y: -23}
+        - {x: -5.5, y: -22}
+        - {x: -5.5, y: -19}
+        - {x: -8.5, y: -18}
+        - {x: -10.5, y: -20}
+      - - {x: -18.5, y: 21}
+        - {x: -23.5, y: 12}
+        - {x: -23.5, y: -9}
+        - {x: -19.5, y: -6}
+        - {x: -19.5, y: 2}
+        - {x: -19.5, y: -18}
+        - {x: -11.5, y: -23}
+        - {x: 17.5, y: -23}
+        - {x: 22.5, y: -5}
+        - {x: 22.5, y: 16}
+        - {x: 18.5, y: 21}
+    - name: boss-cannon-explosion_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 150
+        width: 49
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.5, y: -21.5}
+        - {x: -15.5, y: -20.5}
+        - {x: -15.5, y: -17.5}
+        - {x: -18.5, y: -16.5}
+        - {x: -20.5, y: -18.5}
+      - - {x: -18.5, y: 21.5}
+        - {x: -24.5, y: 16.5}
+        - {x: -24.5, y: -1.5}
+        - {x: -22.5, y: -13.5}
+        - {x: -18.5, y: -21.5}
+        - {x: 15.5, y: -21.5}
+        - {x: 21.5, y: -19.5}
+        - {x: 21.5, y: 17.5}
+        - {x: 11.5, y: 21.5}
+    - name: boss-cannon-explosion_3
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 150
+        width: 54
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 25.5}
+        - {x: -27, y: 16.5}
+        - {x: -27, y: -25.5}
+        - {x: 25, y: -25.5}
+        - {x: 27, y: -19.5}
+        - {x: 27, y: 19.5}
+        - {x: 19, y: 25.5}
+    - name: boss-cannon-explosion_4
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 147
+        width: 67
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: 25.5}
+        - {x: -33.5, y: 18.5}
+        - {x: -33.5, y: -14.5}
+        - {x: -32.5, y: -16.5}
+        - {x: -27.5, y: -29.5}
+        - {x: 32.5, y: -29.5}
+        - {x: 32.5, y: 19.5}
+        - {x: 12.5, y: 25.5}
+    - name: boss-cannon-explosion_5
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 148
+        width: 67
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.5, y: 27.5}
+        - {x: -14.5, y: 27.5}
+        - {x: -33.5, y: 21.5}
+        - {x: -33.5, y: -29.5}
+        - {x: 25.5, y: -29.5}
+        - {x: 33.5, y: -17.5}
+        - {x: 33.5, y: 8.5}
+        - {x: 26.5, y: 16.5}
+    - name: boss-cannon-explosion_6
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 145
+        width: 74
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19, y: 25.5}
+        - {x: -5, y: 25.5}
+        - {x: -13, y: 24.5}
+        - {x: -29, y: 20.5}
+        - {x: -37, y: 11.5}
+        - {x: -37, y: -19.5}
+        - {x: -30, y: -30.5}
+        - {x: 26, y: -30.5}
+        - {x: 28, y: -29.5}
+        - {x: 37, y: -8.5}
+        - {x: 37, y: 5.5}
+    - name: boss-cannon-explosion_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 146
+        width: 69
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.5, y: 27}
+        - {x: -30.5, y: 27}
+        - {x: -34.5, y: 21}
+        - {x: -34.5, y: -21}
+        - {x: -24.5, y: -31}
+        - {x: 27.5, y: -31}
+        - {x: 34.5, y: -14}
+        - {x: 34.5, y: 8}
+        - {x: 29.5, y: 18}
+    - name: boss-cannon-explosion_8
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 145
+        width: 70
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: 27}
+        - {x: -35, y: 17}
+        - {x: -35, y: -17}
+        - {x: -20, y: -32}
+        - {x: 26, y: -32}
+        - {x: 35, y: -23}
+        - {x: 35, y: 15}
+        - {x: 31, y: 27}
+    - name: boss-cannon-explosion_9
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 76
+        width: 72
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 29}
+        - {x: -36, y: 27}
+        - {x: -36, y: -24}
+        - {x: -32, y: -34}
+        - {x: 22, y: -34}
+        - {x: 36, y: -29}
+        - {x: 36, y: 16}
+        - {x: 26, y: 29}
+    - name: boss-cannon-explosion_10
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 72
+        width: 72
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 25}
+        - {x: -36, y: 8}
+        - {x: -36, y: -12}
+        - {x: -35, y: -16}
+        - {x: -9, y: -36}
+        - {x: 20, y: -36}
+        - {x: 23, y: -35}
+        - {x: 36, y: -14}
+        - {x: 36, y: 19}
+        - {x: 22, y: 25}
+      - - {x: -13, y: -32}
+        - {x: -10, y: -35}
+        - {x: -7, y: -35}
+        - {x: -5, y: -33}
+        - {x: -6, y: -30}
+        - {x: -11, y: -29}
+      - - {x: -30, y: -23}
+        - {x: -27, y: -22}
+        - {x: -27, y: -19}
+        - {x: -30, y: -18}
+        - {x: -32, y: -20}
+    - name: boss-cannon-explosion_11
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 74
+        width: 71
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33.5, y: 27.5}
+        - {x: -33.5, y: 27.5}
+        - {x: -33.5, y: -30.5}
+        - {x: -17.5, y: -35.5}
+        - {x: 25.5, y: -35.5}
+        - {x: 32.5, y: -31.5}
+        - {x: 35.5, y: -17.5}
+        - {x: 35.5, y: 24.5}
+    - name: boss-cannon-explosion_12
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 75
+        width: 72
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 26}
+        - {x: -35, y: 18}
+        - {x: -35, y: -4}
+        - {x: -30, y: -22}
+        - {x: -14, y: -34}
+        - {x: 11, y: -34}
+        - {x: 20, y: -32}
+        - {x: 36, y: -10}
+        - {x: 36, y: 15}
+        - {x: 12, y: 26}
+      - - {x: 23, y: -21}
+        - {x: 24, y: -24}
+        - {x: 27, y: -24}
+        - {x: 29, y: -22}
+        - {x: 28, y: -19}
+        - {x: 25, y: -19}
+      - - {x: 33, y: 12}
+        - {x: 36, y: 13}
+        - {x: 36, y: 16}
+        - {x: 33, y: 17}
+        - {x: 31, y: 15}
+    - name: boss-cannon-explosion_13
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 75
+        width: 69
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31.5, y: 24}
+        - {x: -34.5, y: 22}
+        - {x: -34.5, y: -15}
+        - {x: -32.5, y: -24}
+        - {x: -15.5, y: -33}
+        - {x: 4.5, y: -33}
+        - {x: 34.5, y: -22}
+        - {x: 34.5, y: 24}
+      - - {x: 24.5, y: -24}
+        - {x: 27.5, y: -23}
+        - {x: 27.5, y: -20}
+        - {x: 24.5, y: -19}
+        - {x: 22.5, y: -21}
+      - - {x: 31.5, y: 12}
+        - {x: 33.5, y: 10}
+        - {x: 34.5, y: 10}
+        - {x: 34.5, y: 15}
+        - {x: 32.5, y: 15}
+    - name: boss-cannon-explosion_14
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 76
+        width: 74
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: -25.5}
+        - {x: -13, y: -28.5}
+        - {x: -10, y: -33.5}
+        - {x: -6, y: -33.5}
+        - {x: -5, y: -32.5}
+        - {x: -5, y: -27.5}
+        - {x: -9, y: -25.5}
+      - - {x: -3, y: -30.5}
+        - {x: -1, y: -32.5}
+        - {x: 2, y: -31.5}
+        - {x: 2, y: -28.5}
+        - {x: 0, y: -26.5}
+        - {x: -3, y: -27.5}
+      - - {x: 12, y: -24.5}
+        - {x: 14, y: -24.5}
+        - {x: 22, y: -26.5}
+        - {x: 36, y: -2.5}
+        - {x: 34, y: 0.5}
+        - {x: 30, y: 0.5}
+        - {x: 33, y: 0.5}
+        - {x: 36, y: 3.5}
+        - {x: 36, y: 6.5}
+        - {x: 33, y: 13.5}
+        - {x: 27, y: 14.5}
+        - {x: 25, y: 14.5}
+        - {x: 23, y: 12.5}
+        - {x: 24, y: 9.5}
+        - {x: 27, y: 9.5}
+        - {x: 26, y: 6.5}
+        - {x: 20, y: 18.5}
+        - {x: -37, y: 18.5}
+        - {x: -37, y: -2.5}
+        - {x: -30, y: -25.5}
+        - {x: -10, y: -28.5}
+        - {x: 11, y: -28.5}
+        - {x: 12, y: -26.5}
+        - {x: 12, y: -24.5}
+        - {x: 11, y: -23.5}
+      - - {x: 24, y: -24.5}
+        - {x: 27, y: -23.5}
+        - {x: 27, y: -20.5}
+        - {x: 24, y: -19.5}
+        - {x: 22, y: -21.5}
+      - - {x: 28, y: -15.5}
+        - {x: 31, y: -14.5}
+        - {x: 31, y: -11.5}
+        - {x: 28, y: -10.5}
+        - {x: 26, y: -12.5}
+      - - {x: 23, y: 17.5}
+        - {x: 24, y: 14.5}
+        - {x: 27, y: 14.5}
+        - {x: 29, y: 16.5}
+        - {x: 28, y: 19.5}
+        - {x: 25, y: 19.5}
+      - - {x: -19, y: 31.5}
+        - {x: -19, y: 33.5}
+        - {x: -24, y: 33.5}
+        - {x: -22, y: 30.5}
+    - name: boss-cannon-explosion_15
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 77
+        width: 78
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: -28.5}
+        - {x: -3, y: -29.5}
+        - {x: 0, y: -32.5}
+        - {x: 3, y: -31.5}
+        - {x: 3, y: -28.5}
+        - {x: 1, y: -26.5}
+        - {x: -1, y: -26.5}
+      - - {x: -13, y: -26.5}
+        - {x: -12, y: -29.5}
+        - {x: -9, y: -29.5}
+        - {x: -7, y: -27.5}
+        - {x: -8, y: -24.5}
+        - {x: -11, y: -24.5}
+      - - {x: 5, y: -22.5}
+        - {x: 2, y: -25.5}
+        - {x: 2, y: -26.5}
+        - {x: 4, y: -28.5}
+        - {x: 11, y: -28.5}
+        - {x: 13, y: -27.5}
+        - {x: 13, y: -24.5}
+        - {x: 12, y: -22.5}
+      - - {x: -20, y: -24.5}
+        - {x: -18, y: -25.5}
+        - {x: -15, y: -23.5}
+        - {x: -15, y: -18.5}
+        - {x: -17, y: -16.5}
+        - {x: -20, y: -17.5}
+      - - {x: -8, y: -22.5}
+        - {x: -7, y: -25.5}
+        - {x: -4, y: -25.5}
+        - {x: -2, y: -23.5}
+        - {x: -3, y: -20.5}
+        - {x: -6, y: -20.5}
+      - - {x: 24, y: -21.5}
+        - {x: 26, y: -23.5}
+        - {x: 29, y: -22.5}
+        - {x: 29, y: -19.5}
+        - {x: 27, y: -17.5}
+        - {x: 24, y: -18.5}
+      - - {x: 27, y: 18.5}
+        - {x: -36, y: 18.5}
+        - {x: -36, y: -22.5}
+        - {x: 33, y: -22.5}
+        - {x: 35, y: -14.5}
+        - {x: 35, y: 8.5}
+        - {x: 31, y: 15.5}
+      - - {x: 33, y: 7.5}
+        - {x: 31, y: 5.5}
+        - {x: 31, y: 3.5}
+        - {x: 33, y: 1.5}
+        - {x: 35, y: 1.5}
+        - {x: 37, y: 3.5}
+        - {x: 37, y: 4.5}
+        - {x: 34, y: 7.5}
+      - - {x: 31, y: 12.5}
+        - {x: 32, y: 9.5}
+        - {x: 35, y: 9.5}
+        - {x: 37, y: 11.5}
+        - {x: 36, y: 14.5}
+        - {x: 33, y: 14.5}
+    - name: boss-cannon-explosion_16
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 10
+        width: 72
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: -28.5}
+        - {x: 6, y: -27.5}
+        - {x: 6, y: -24.5}
+        - {x: 3, y: -23.5}
+        - {x: 1, y: -25.5}
+      - - {x: -8, y: -23.5}
+        - {x: -6, y: -25.5}
+        - {x: -3, y: -24.5}
+        - {x: -3, y: -21.5}
+        - {x: -5, y: -19.5}
+        - {x: -8, y: -20.5}
+      - - {x: 6, y: -23.5}
+        - {x: 8, y: -25.5}
+        - {x: 11, y: -24.5}
+        - {x: 11, y: -21.5}
+        - {x: 9, y: -19.5}
+        - {x: 6, y: -20.5}
+      - - {x: 11, y: -23.5}
+        - {x: 13, y: -25.5}
+        - {x: 16, y: -24.5}
+        - {x: 16, y: -21.5}
+        - {x: 14, y: -19.5}
+        - {x: 11, y: -20.5}
+      - - {x: -21, y: -19.5}
+        - {x: -20, y: -22.5}
+        - {x: -17, y: -22.5}
+        - {x: -15, y: -20.5}
+        - {x: -16, y: -17.5}
+        - {x: -19, y: -17.5}
+      - - {x: 23, y: -4.5}
+        - {x: 20, y: -4.5}
+        - {x: 18, y: -2.5}
+        - {x: 16, y: -1.5}
+        - {x: 16, y: 1.5}
+        - {x: 16, y: 0.5}
+        - {x: 17, y: -2.5}
+        - {x: 20, y: -3.5}
+        - {x: 25, y: 2.5}
+        - {x: 25, y: 16.5}
+        - {x: 20, y: 20.5}
+        - {x: -27, y: 20.5}
+        - {x: -30, y: 13.5}
+        - {x: -30, y: 8.5}
+        - {x: -23, y: 4.5}
+        - {x: -20, y: 4.5}
+        - {x: -25, y: 2.5}
+        - {x: -27, y: 0.5}
+        - {x: -26, y: -3.5}
+        - {x: -16, y: -18.5}
+        - {x: -13, y: -18.5}
+        - {x: -10, y: -17.5}
+        - {x: -4, y: -18.5}
+        - {x: 14, y: -18.5}
+        - {x: 25, y: -7.5}
+      - - {x: 19, y: -18.5}
+        - {x: 22, y: -17.5}
+        - {x: 22, y: -14.5}
+        - {x: 19, y: -13.5}
+        - {x: 17, y: -15.5}
+      - - {x: -7, y: -17.5}
+        - {x: -4, y: -16.5}
+        - {x: -4, y: -13.5}
+        - {x: -7, y: -12.5}
+        - {x: -9, y: -14.5}
+      - - {x: -23, y: -2.5}
+        - {x: -30, y: -2.5}
+        - {x: -32, y: -3.5}
+        - {x: -32, y: -6.5}
+        - {x: -31, y: -8.5}
+        - {x: -26, y: -13.5}
+        - {x: -23, y: -12.5}
+        - {x: -21, y: -9.5}
+        - {x: -21, y: -6.5}
+        - {x: -22, y: -3.5}
+      - - {x: -28, y: 2.5}
+        - {x: -25, y: 3.5}
+        - {x: -25, y: 6.5}
+        - {x: -28, y: 7.5}
+        - {x: -30, y: 5.5}
+    - name: boss-cannon-explosion_17
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 10
+        width: 72
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: -29}
+        - {x: -1, y: -30}
+        - {x: 3, y: -30}
+        - {x: 3, y: -27}
+        - {x: 1, y: -25}
+        - {x: -2, y: -26}
+      - - {x: -11, y: -24}
+        - {x: -10, y: -27}
+        - {x: -7, y: -27}
+        - {x: -5, y: -25}
+        - {x: -6, y: -22}
+        - {x: -9, y: -22}
+      - - {x: 4, y: -22}
+        - {x: 3, y: -24}
+        - {x: 4, y: -27}
+        - {x: 13, y: -27}
+        - {x: 13, y: -23}
+        - {x: 10, y: -22}
+      - - {x: -23, y: -23}
+        - {x: -21, y: -25}
+        - {x: -18, y: -24}
+        - {x: -18, y: -21}
+        - {x: -20, y: -19}
+        - {x: -23, y: -20}
+      - - {x: -28, y: 18}
+        - {x: -33, y: 13}
+        - {x: -33, y: 0}
+        - {x: -24, y: -13}
+        - {x: -21, y: -7}
+        - {x: -19, y: -6}
+        - {x: -21, y: -8}
+        - {x: -22, y: -13}
+        - {x: -19, y: -21}
+        - {x: 13, y: -21}
+        - {x: 22, y: -10}
+        - {x: 22, y: 17}
+        - {x: 21, y: 18}
+      - - {x: 14, y: -21}
+        - {x: 20, y: -21}
+        - {x: 20, y: -16}
+        - {x: 19, y: -15}
+        - {x: 15, y: -15}
+        - {x: 14, y: -17}
+      - - {x: -12, y: -18}
+        - {x: -10, y: -20}
+        - {x: -7, y: -19}
+        - {x: -7, y: -16}
+        - {x: -9, y: -14}
+        - {x: -12, y: -15}
+      - - {x: -29, y: -4}
+        - {x: -32, y: -4}
+        - {x: -34, y: -5}
+        - {x: -34, y: -8}
+        - {x: -30, y: -16}
+        - {x: -25, y: -16}
+        - {x: -24, y: -14}
+        - {x: -24, y: -8}
+        - {x: -25, y: -6}
+      - - {x: 18, y: -12}
+        - {x: 21, y: -11}
+        - {x: 21, y: -8}
+        - {x: 18, y: -7}
+        - {x: 16, y: -9}
+      - - {x: -33, y: 2}
+        - {x: -31, y: 0}
+        - {x: -28, y: 1}
+        - {x: -28, y: 4}
+        - {x: -30, y: 6}
+        - {x: -33, y: 5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
