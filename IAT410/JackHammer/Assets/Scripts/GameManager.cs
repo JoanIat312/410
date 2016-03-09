@@ -24,11 +24,12 @@ public class GameManager : MonoBehaviour {
 	public static bool stunEnemies;
 	public Image health;
 	public Image stun;
+    public Image view;
     public static int score = 0;
 	public GameObject pauseMenu;
-	private float stunDurationTimeStamp;
+	private float stunDurationTimeStamp = 1;
 	public static float stunDuration = 3f;
-	public static float stunUseDelay = 10f;
+	public static float stunUseDelay = 5f;
 	private float stunUseDelayTimeStamp;
 	private bool paused = false;
     public static bool shield = false;
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour {
     public float countDown = 0.0f;
 	private float stunCharger = 0;
 	private int level;
+    private static int diedLevel;
 
     void Start() {      
 		spawner = playerBulletSpawner.GetComponent<playerBulletSpawner>();
@@ -46,6 +48,9 @@ public class GameManager : MonoBehaviour {
 
 		if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 4 && Application.loadedLevel != 3) {
 			health.fillAmount = playerHealth / 100f ;
+               Color w = view.color;
+               w.a = 1 - (playerHealth / 100) - 0.7f;
+               view.color = w;
 			stun.fillAmount = stunCharger;
 			if (shield == true) {
 				Color c = shieldImage.color;
@@ -108,7 +113,9 @@ public class GameManager : MonoBehaviour {
 			shakeDuration = .2f;
 		}
 		if(playerHealth <= 0){
-			playerHealth = 0;
+            diedLevel = Application.loadedLevel;
+            
+			playerHealth = 100;
 			Debug.Log ("dead");
 			Application.LoadLevel("GameOver");
 			//Restart();
@@ -133,8 +140,11 @@ public class GameManager : MonoBehaviour {
     }
 
 	void Update(){
+  
 		cameraPos = main.transform.position;
-		stunCharger += 0.0003f;
+//		stunCharger += 0.0003f;
+  stunCharger = (stunUseDelayTimeStamp/Time.time);
+        //Debug.Log(stunCharger);
 		time -= countDown;
 		if (time <= 0) {
 			shield = false;
@@ -168,7 +178,8 @@ public class GameManager : MonoBehaviour {
 			Time.timeScale = 1;
 		}
 		if (Input.GetKeyDown (KeyCode.Return) && Application.loadedLevel == 4) {
-			Application.LoadLevel (0);
+            Application.LoadLevel (diedLevel);
+
 		}
 		if (shakeDuration > 0 && shake == true) {
 			main.transform.position = cameraPos + Random.insideUnitSphere * shakeAmount;

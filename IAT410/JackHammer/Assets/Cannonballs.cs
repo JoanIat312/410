@@ -49,7 +49,7 @@ public class Cannonballs : MonoBehaviour
 			anim.SetBool ("distroy", true);
 			anim.Play ("cannonExplosion", 0, 0);
 			AudioSource.PlayClipAtPoint (explosion, transform.position);         
-			Destroy (gameObject, .12f);
+			Destroy (gameObject, 2.3f);
 		}
 		if (col.gameObject.tag == "Player" && gameObject.name != "cannonBalls") {
 			col.gameObject.SendMessage ("Damaged", SendMessageOptions.DontRequireReceiver);
