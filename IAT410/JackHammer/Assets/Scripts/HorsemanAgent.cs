@@ -29,8 +29,7 @@ public class HorsemanAgent : MonoBehaviour
 		CHASE,
 		ATTACK
 	}
-
-
+		
 	// Use this for initialization
 	void Start ()
 	{
@@ -127,7 +126,9 @@ public class HorsemanAgent : MonoBehaviour
 	{
 		if (health - damage >= 0) {
 			health -= damage;
-			bloodSpawner.SendMessage ("spawn", transform.position, SendMessageOptions.DontRequireReceiver);
+			if (gameObject.name != "CannonAgent") {
+				bloodSpawner.SendMessage ("spawn", transform.position, SendMessageOptions.DontRequireReceiver);
+			}
 			sprite.SendMessage ("TakeDamage", SendMessageOptions.DontRequireReceiver);
 		} else {
 			alive = false;

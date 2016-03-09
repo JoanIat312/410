@@ -13,7 +13,7 @@ public class bullets : MonoBehaviour
 	private float angle;
 	private Rigidbody rb;
 	private bool hitWall;
-	public int defaultDamage = 20;
+	public int defaultDamage = 50;
     Animator anim;
 
 	void Start ()

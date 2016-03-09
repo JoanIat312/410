@@ -7,6 +7,7 @@ public class GeorgeWashingtonneAgent: MonoBehaviour
 	private GameObject player;
 	private Vector3 playerPos;
 	public GameManager gameManager;
+	public AudioClip sound;
 	private bool rescued = false;
 	// false is waiting to be found (does nothing), 1 is found (follows player and attacks enemies)
 	private float distanceToTrigger = .9f;
@@ -46,4 +47,9 @@ public class GeorgeWashingtonneAgent: MonoBehaviour
        //Debug.Log("WOWWWWWWW");
       }
      }
+	void OnCollisionEnter(Collision col){
+		Debug.Log ("played");
+		AudioSource.PlayClipAtPoint (sound, transform.position);
+		col.gameObject.SendMessage("TakeDamage", 10, SendMessageOptions.DontRequireReceiver);
+	}
 }

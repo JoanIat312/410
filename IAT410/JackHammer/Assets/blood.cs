@@ -4,6 +4,7 @@ using System.Collections;
 public class blood : MonoBehaviour {
 
 	Animator anim;
+	public AudioClip hurt;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent <Animator>();
@@ -15,9 +16,7 @@ public class blood : MonoBehaviour {
 	}
 
 	void play(){
-		Debug.Log (transform.position + " played");
-		//anim.Play("bloodSplash", 0, 0);
-		//anim.SetBool ("damage", true);
+		Debug.Log (transform.position + " played"); 
 		if (gameObject.name != "blood"){
 			Destroy (gameObject, .5f);
 		}

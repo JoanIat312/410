@@ -86,7 +86,7 @@ public class Player_Movement : MonoBehaviour
 			if (GameManager.shield == true) {
 				gameManager.SendMessage ("PlayerDamage", .1, SendMessageOptions.DontRequireReceiver);
 			} else {
-				gameManager.SendMessage ("PlayerDamage", .5, SendMessageOptions.DontRequireReceiver);
+				gameManager.SendMessage ("PlayerDamage", 1, SendMessageOptions.DontRequireReceiver);
 			}
 		}
 	}
