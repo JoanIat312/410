@@ -9,31 +9,31 @@ public class Swordsman : MonoBehaviour {
      //public int health;
      public GameManager gameManager;// need this but dont know why
     public NavMeshAgent myAgent;
-    private Animator animator;
+    private Animator anim;
 
 	// Use this for initialization
 	void Start () {
 	   //health = 100;
-       animator = GetComponent<Animator>();
+       anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
             if (myAgent.velocity.x == 0 && myAgent.velocity.z == 0)
             {
-               animator.SetInteger("Direction", 0);
+               anim.SetInteger("Direction", 0);
             }
           else if (myAgent.velocity.z > .5f) { // up
-           animator.SetInteger("Direction", 1);
+           anim.SetInteger("Direction", 1);
           }
           else if (myAgent.velocity.z < -.5f) { // down
-           animator.SetInteger("Direction", 3);
+           anim.SetInteger("Direction", 3);
           }
           else if (myAgent.velocity.x > .5f) { // right
-           animator.SetInteger("Direction", 2);
+           anim.SetInteger("Direction", 2);
           }
           else if (myAgent.velocity.x < -.5f) { // left
-           animator.SetInteger("Direction", 4);
+           anim.SetInteger("Direction", 4);
           }
 	}
 

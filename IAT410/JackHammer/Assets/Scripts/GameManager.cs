@@ -29,8 +29,8 @@ public class GameManager : MonoBehaviour {
     public float countDown = 0.0f;
 	private float stunCharger = 0;
 	private int level = 0;
-    void Start() {
-       
+
+    void Start() {      
 		spawner = playerBulletSpawner.GetComponent<playerBulletSpawner>();
     }
 

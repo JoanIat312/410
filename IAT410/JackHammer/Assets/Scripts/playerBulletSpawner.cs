@@ -36,7 +36,7 @@ public class playerBulletSpawner : MonoBehaviour {
 
 
 			if ((Input.GetMouseButton (0)) && (Time.time >= nextBulletSpawnTimestamp)) {
-				//Debug.Log ("left pressed");
+				Debug.Log ("left pressed");
 				Spawn ();
 			}
 		}
