@@ -5,6 +5,7 @@ public class ShotgunBullet : MonoBehaviour
 {
 
 	// Use this for initialization
+	public GameManager gameManager;
 	public AudioClip explosion;
 	public int moveSpeed = 5;
 	private Vector3 objectPos;
@@ -54,6 +55,9 @@ public class ShotgunBullet : MonoBehaviour
 		if (col.gameObject.tag == "Enemy" && gameObject.name != "shotgunBullets") {
 			col.gameObject.SendMessage ("TakeDamage", defaultDamage, SendMessageOptions.DontRequireReceiver);
 			Destroy (gameObject);
+		}
+		if(col.gameObject.tag == "Player" && gameObject.name != "shotgunBullets"){
+			gameManager.SendMessage ("PlayerDamange", defaultDamage, SendMessageOptions.DontRequireReceiver);
 		}
 	}
 

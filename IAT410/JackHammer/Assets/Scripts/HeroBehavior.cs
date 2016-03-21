@@ -3,9 +3,9 @@ using System.Collections;
 
 public class HeroBehavior : MonoBehaviour
 {
- public Transform target;
- public float zOffset;
- public float xOffset; // need this but dont know why
+	public Transform target;
+	public float zOffset;
+	public float xOffset; // need this but dont know why
     public GameManager gameManager;
     private Vector3 playerPos;
     private Vector3 playerDirection;
@@ -37,8 +37,9 @@ public class HeroBehavior : MonoBehaviour
     
 
      void LateUpdate() {
-        transform.localPosition = new Vector3(target.localPosition.x + xOffset, transform.localPosition.y, target.localPosition.z + zOffset);
-     }
+        //transform.localPosition = new Vector3(target.localPosition.x + xOffset, transform.localPosition.y, target.localPosition.z + zOffset);
+		transform.position = new Vector3(target.position.x, transform.position.y, target.position.z);
+	}
     void OnCollisionEnter(Collision collision)
     {
 //        if(collision.gameObject.tag == "Player")

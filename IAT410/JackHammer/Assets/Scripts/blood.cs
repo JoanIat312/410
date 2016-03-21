@@ -16,7 +16,6 @@ public class blood : MonoBehaviour {
 	}
 
 	void play(){
-		Debug.Log (transform.position + " played"); 
 		if (gameObject.name != "blood"){
 			Destroy (gameObject, .5f);
 		}
