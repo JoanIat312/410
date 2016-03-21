@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour {
 	public GameObject pauseMenu;
 	private float stunDurationTimeStamp = 1;
 	public static float stunDuration = 3f;
-	public static float stunUseDelay = 5f;
+	public static float stunUseDelay = 15f;
 	private float stunUseDelayTimeStamp;
 	private bool paused = false;
     public static bool shield = false;
@@ -48,10 +48,15 @@ public class GameManager : MonoBehaviour {
 
 		if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 4 && Application.loadedLevel != 3) {
 			health.fillAmount = playerHealth / 100f ;
-               Color w = view.color;
-               w.a = 1 - (playerHealth / 100) - 0.7f;
-               view.color = w;
-			stun.fillAmount = stunCharger;
+            Color w = view.color;
+            w.a = 1 - (playerHealth / 100) - 0.7f;
+            view.color = w;
+            
+            // stun bar fill
+            float elapsedSecs = Time.time - (stunUseDelayTimeStamp - stunUseDelay);
+            float percent = (elapsedSecs/stunUseDelay);
+            stun.fillAmount = percent;
+
 			if (shield == true) {
 				Color c = shieldImage.color;
 				c.a = 1;
@@ -142,7 +147,7 @@ public class GameManager : MonoBehaviour {
   
 		cameraPos = main.transform.position;
 //		stunCharger += 0.0003f;
-  stunCharger = (stunUseDelayTimeStamp/Time.time);
+        stunCharger = (stunUseDelayTimeStamp/Time.time);
         //Debug.Log(stunCharger);
 		time -= countDown;
 		if (time <= 0) {

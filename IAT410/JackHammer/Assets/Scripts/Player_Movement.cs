@@ -113,7 +113,7 @@ public class Player_Movement : MonoBehaviour
       //Debug.Log(degrees);
         anim.SetFloat("Direction", degrees);
         
-//        bool thisFrameStun = GameManager.stunEnemies;
+//    bool thisFrameStun = GameManager.stunEnemies;
       if (GameManager.stunEnemies == true && previousFrameStun == false)
       { 
        previousFrameStun = true;
