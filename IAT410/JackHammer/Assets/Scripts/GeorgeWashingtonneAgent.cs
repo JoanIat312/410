@@ -18,7 +18,7 @@ public class GeorgeWashingtonneAgent: MonoBehaviour
 		agent = GetComponent < NavMeshAgent > ();
 		player = GameObject.Find ("Player");
 		agent.updateRotation = false;
-		agent.Stop ();
+//		agent.Stop ();
 	}
 
 	// Update is called once per frame
@@ -27,17 +27,19 @@ public class GeorgeWashingtonneAgent: MonoBehaviour
 
 		playerPos = player.transform.position;
 
-		float distance = Vector3.Distance (playerPos, gameObject.transform.position);
-//  Debug.Log("distance:"+distance);
-		if (rescued == false) {
-			if (distance < distanceToTrigger) {
-				rescued = true;
-				gameManager.SendMessage ("ScoreTracker", 100, SendMessageOptions.DontRequireReceiver);
-			}
-		} else {
-			agent.Resume ();
-			agent.SetDestination (playerPos);
-		}
+//		float distance = Vector3.Distance (playerPos, gameObject.transform.position);
+////  Debug.Log("distance:"+distance);
+//		if (rescued == false) {
+//			if (distance < distanceToTrigger) {
+//				rescued = true;
+//				gameManager.SendMessage ("ScoreTracker", 100, SendMessageOptions.DontRequireReceiver);
+//			}
+//		} else {
+//			agent.Resume ();
+//			agent.SetDestination (playerPos);
+//		}
+        Debug.Log(GetClosestEnemy().transform.position);
+        agent.SetDestination (GetClosestEnemy().transform.position);
 	}
 
      void OnCollisionStay (Collision collision)
@@ -52,4 +54,24 @@ public class GeorgeWashingtonneAgent: MonoBehaviour
 		AudioSource.PlayClipAtPoint (sound, transform.position);
 		col.gameObject.SendMessage("TakeDamage", 10, SendMessageOptions.DontRequireReceiver);
 	}
+     GameObject GetClosestEnemy()
+     {
+      // get array of all Enemy Agent objects    
+      GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag("EnemyAgent");
+      GameObject closestObject = null;
+
+      for (int i = 0; i<objectsWithTag.Length; i++)
+      {
+       if(closestObject == null)
+       {
+        closestObject = objectsWithTag[i];
+       }
+       //compares distances
+       if(Vector3.Distance(transform.position, objectsWithTag[i].transform.position) <= Vector3.Distance(transform.position, closestObject.transform.position))
+       {
+        closestObject = objectsWithTag[i];
+       }
+      }
+      return closestObject;
+     }
 }
