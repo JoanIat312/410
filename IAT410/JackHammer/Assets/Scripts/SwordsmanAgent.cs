@@ -58,9 +58,6 @@ public class SwordsmanAgent : MonoBehaviour {
 				}
 			}
 		}
-        else {
-			state = SwordsmanAgent.State.IDLE;
-		}
 	}
 
 	IEnumerator FSM(){
@@ -106,6 +103,10 @@ public class SwordsmanAgent : MonoBehaviour {
 
 	void TakeDamage(float damage){
         Debug.Log(health);
+        if (state == SwordsmanAgent.State.IDLE)
+        {
+         state = SwordsmanAgent.State.CHASE;
+        }
 		if (health - damage >= 0) {
 			health -= damage;
 			bloodSpawner.SendMessage("spawn", transform.position, SendMessageOptions.DontRequireReceiver);
