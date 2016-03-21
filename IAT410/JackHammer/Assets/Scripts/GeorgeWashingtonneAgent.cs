@@ -11,6 +11,7 @@ public class GeorgeWashingtonneAgent: MonoBehaviour
 	private bool rescued = false;
 	// false is waiting to be found (does nothing), 1 is found (follows player and attacks enemies)
 	private float distanceToTrigger = .9f;
+    public float damagePerHit = 1f;
 
 	// Use this for initialization
 	void Start ()
@@ -38,21 +39,40 @@ public class GeorgeWashingtonneAgent: MonoBehaviour
 //			agent.Resume ();
 //			agent.SetDestination (playerPos);
 //		}
-        Debug.Log(GetClosestEnemy().transform.position);
-        agent.SetDestination (GetClosestEnemy().transform.position);
+//        Debug.Log(GetClosestEnemy().transform.position);
+        Vector3 closestEnemyPos = GetClosestEnemy().transform.position;
+        Debug.Log(Vector3.Distance(playerPos, closestEnemyPos));
+        if ((Vector3.Distance(playerPos, closestEnemyPos)) < 4.5f)
+        {
+         agent.SetDestination(closestEnemyPos);
+         agent.stoppingDistance = 0;
+        }
+        else
+        {
+         agent.SetDestination(playerPos);
+         agent.stoppingDistance = 1;
+        }
 	}
 
      void OnCollisionStay (Collision collision)
      {
-      if (collision.gameObject.tag == "Enemy") {
-       collision.gameObject.SendMessage("TakeDamage", 10, SendMessageOptions.DontRequireReceiver);
-       //Debug.Log("WOWWWWWWW");
+      if (collision.gameObject.tag == "EnemyAgent") {
+        Debug.Log("DAMAGED YOW!");
+
+        collision.gameObject.SendMessage("TakeDamage", damagePerHit, SendMessageOptions.DontRequireReceiver);
+      
       }
      }
 	void OnCollisionEnter(Collision col){
 		Debug.Log ("played");
 		AudioSource.PlayClipAtPoint (sound, transform.position);
-		col.gameObject.SendMessage("TakeDamage", 10, SendMessageOptions.DontRequireReceiver);
+        col.gameObject.SendMessage("TakeDamage", damagePerHit, SendMessageOptions.DontRequireReceiver);
+//      if (col.gameObject.tag == "EnemyAgent") {
+//       Debug.Log("DAMAGED YOW!");
+//
+//       col.gameObject.SendMessage("TakeDamage", 10, SendMessageOptions.DontRequireReceiver);
+//
+//      }
 	}
      GameObject GetClosestEnemy()
      {
@@ -66,8 +86,8 @@ public class GeorgeWashingtonneAgent: MonoBehaviour
        {
         closestObject = objectsWithTag[i];
        }
-       //compares distances
-       if(Vector3.Distance(transform.position, objectsWithTag[i].transform.position) <= Vector3.Distance(transform.position, closestObject.transform.position))
+       //compares distances from player to each of the enemies
+       if(Vector3.Distance(playerPos, objectsWithTag[i].transform.position) <= Vector3.Distance(transform.position, closestObject.transform.position))
        {
         closestObject = objectsWithTag[i];
        }

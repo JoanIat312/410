@@ -81,7 +81,7 @@ public class Player_Movement : MonoBehaviour
 
 	void OnCollisionStay (Collision collision)
 	{
-		if (collision.gameObject.tag == "Enemy") {
+		if (collision.gameObject.tag == "EnemyAgent") {
 			StartCoroutine (Damaged ());
 			if (GameManager.shield == true) {
 				gameManager.SendMessage ("PlayerDamage", .1, SendMessageOptions.DontRequireReceiver);

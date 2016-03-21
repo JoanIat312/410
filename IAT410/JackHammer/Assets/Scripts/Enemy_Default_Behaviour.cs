@@ -59,7 +59,7 @@ public class Enemy_Default_Behaviour : MonoBehaviour {
         {
             hit= false;
         }
-        else if (collision.gameObject.tag == "wall" || collision.gameObject.tag == "Enemy") 
+        else if (collision.gameObject.tag == "wall" || collision.gameObject.tag == "EnemyAgent") 
     		{
                 //Vector3 eulerAngles = transform.rotation.eulerAngles;          
 

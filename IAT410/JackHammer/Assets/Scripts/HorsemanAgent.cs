@@ -120,14 +120,13 @@ public class HorsemanAgent : MonoBehaviour
 		}
 	}
 
-	void TakeDamage (int damage)
+	void TakeDamage (float damage)
 	{
         if (state == HorsemanAgent.State.IDLE)
         {
          state = HorsemanAgent.State.CHASE;
         }
         if (health - damage >= 0) {
-   
 			health -= damage;
 			if (gameObject.name != "CannonAgent") {
 				bloodSpawner.SendMessage ("spawn", transform.position, SendMessageOptions.DontRequireReceiver);

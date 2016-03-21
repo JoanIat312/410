@@ -51,7 +51,7 @@ public class ShotgunBullet : MonoBehaviour
 			AudioSource.PlayClipAtPoint (explosion, transform.position);          
 			Destroy (gameObject, .4f);
 		}
-		if (col.gameObject.tag == "Enemy" && gameObject.name != "shotgunBullets") {
+		if (col.gameObject.tag == "EnemyAgent" && gameObject.name != "shotgunBullets") {
 			col.gameObject.SendMessage ("TakeDamage", defaultDamage, SendMessageOptions.DontRequireReceiver);
 			Destroy (gameObject);
 		}
