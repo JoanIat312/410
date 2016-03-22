@@ -13,6 +13,7 @@ public class Player_Movement : MonoBehaviour
 	Rigidbody rb;
     public bool playStunAnimation = false;
     bool previousFrameStun = false;
+    bool stunning = false;
 
 	public bool Shield = false;
 
@@ -93,7 +94,10 @@ public class Player_Movement : MonoBehaviour
 
 	void FixedUpdate ()
     {
-        Movement();
+      if (stunning == false)
+      {
+       Movement();
+      }
 	}
 //     static float Remap (this float value, float from1, float to1, float from2, float to2) {
 //      return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
@@ -112,49 +116,19 @@ public class Player_Movement : MonoBehaviour
 
       //Debug.Log(degrees);
         anim.SetFloat("Direction", degrees);
-        
-//    bool thisFrameStun = GameManager.stunEnemies;
-      if (GameManager.stunEnemies == true && previousFrameStun == false)
+
+      if (Input.GetKeyDown(KeyCode.Space) && Time.time >= gameManager.stunUseDelayTimeStamp)
       { 
-       previousFrameStun = true;
-       anim.SetBool("stun", true);
+           StartCoroutine(stunAnimation());
       }
-      else if (GameManager.stunEnemies == true && previousFrameStun == true) {
-       anim.SetBool("stun", false);
-      }
-      else if (GameManager.stunEnemies == false && previousFrameStun == true) {
-       previousFrameStun = false;
-      }
-
-//       if (degrees > 70 && degrees < 110) // up
-//      {
-////           anim.SetInteger("FacingDirection", 1); // up
-//            anim.Play("jh-face-up-right", 0);
-//
-//      }
-//      else if (degrees <= 70 && degrees >= 30) { // up and to the right
-////           anim.SetInteger("FacingDirection", 2);
-//           anim.Play("jh-face-up-right", 0);
-//      }
-//      else if ((degrees < 30 && degrees >= 0) || (degrees <= 360 && degrees >= 330)) { // right
-////            anim.SetInteger("FacingDirection", 3);
-//      }
-//      else if (degrees < 330 && degrees > 300) { // down and to the right
-////            anim.SetInteger("FacingDirection", 4);
-//      }
-//      else if (degrees > 260 && degrees <= 300) { // down
-////            anim.SetInteger("FacingDirection", 5);
-//      } 
-//      else if (degrees <= 260 && degrees > 220) { // down left
-////            anim.SetInteger("FacingDirection", 6);
-//      }
-//      else if (degrees > 150 && degrees <= 210) { // left
-////            anim.SetInteger("FacingDirection", 7);
-//      }
-//      else if (degrees <= 150 && degrees >= 110) { // up left
-////            anim.SetInteger("FacingDirection", 8);
-//      }
-	}
-
+    }
+    IEnumerator stunAnimation()
+    {
+      stunning = true;
+      Debug.Log("SHIT!");
+      anim.SetBool("stun", true);
+      yield return new WaitForSeconds(.5f); // wait for two seconds.
+      anim.SetBool("stun", false);
+      stunning = false;
+    }
 }
-
