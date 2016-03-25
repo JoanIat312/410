@@ -32,6 +32,7 @@ public class SubmarineAgent : MonoBehaviour {
 		alive = true;
 		state = SubmarineAgent.State.ATTACK;
 		StartCoroutine ("FSM");
+		defaultFireRate = 2f;
 	}
 	
 
@@ -67,7 +68,7 @@ public class SubmarineAgent : MonoBehaviour {
 	void Attack(){
 		if (Time.time >= nextBulletSpawnTimestamp && GameManager.stunEnemies == false) {
 			nextBulletSpawnTimestamp = Time.time + defaultFireRate;
-			GameObject newBullet = Instantiate (bObject, sprite.transform.position, sprite.transform.rotation) as GameObject;
+			GameObject newBullet = Instantiate (bObject, new Vector3(sprite.transform.position.x, 0.36f, sprite.transform.position.z), sprite.transform.rotation) as GameObject;
 			AudioSource.PlayClipAtPoint (shot, transform.position);
 			newBullet.tag = "bullets";
 		}
@@ -77,7 +78,7 @@ public class SubmarineAgent : MonoBehaviour {
 		dis = transform.position - player.transform.position;
 		Debug.DrawRay (transform.position, -dis, Color.green);
 		if (Physics.Raycast (transform.position, -dis, out hit, sightDist)) {
-			Debug.Log (hit.collider.gameObject.tag);
+			//Debug.Log (hit.collider.gameObject.tag);
 			if (hit.collider.gameObject.tag == "Player") {
 				//state = SubmarineAgent.State.POP;
 				if ((dis.z < firingRange && dis.z > -firingRange) && (dis.x < firingRange && dis.x > -firingRange)) {
