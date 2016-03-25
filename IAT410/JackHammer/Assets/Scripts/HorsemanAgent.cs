@@ -137,7 +137,7 @@ public class HorsemanAgent : MonoBehaviour
 
 			destory ();
 			if (this.name == "CannonAgent") {
-				gameManager.SendMessage ("loadNextScene", SendMessageOptions.DontRequireReceiver);
+				gameManager.SendMessage ("loadWinning", SendMessageOptions.DontRequireReceiver);
 			}
 		}
 	}

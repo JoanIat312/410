@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
     public Camera main;
 	private bool shake = false;
 	private Vector3 cameraPos;
-	private float shakeAmount = 0.1f;
+	private float shakeAmount = 0.2f;
 	private float decreaseFactor = 1.0f;
 	private float shakeDuration = 0f;
     private GameObject player;
@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour {
             diedLevel = Application.loadedLevel;
 			playerHealth = 100;
 			Debug.Log ("dead");
-			Application.LoadLevel("GameOver");
+			loadLose ();
 			//Restart();
 		}
 		
@@ -131,6 +131,13 @@ public class GameManager : MonoBehaviour {
 		Application.LoadLevel (level);
 	}
 		
+	void loadWin(){
+		Application.LoadLevel ("Winning");
+	}
+	void loadLose(){
+		Application.LoadLevel("GameOver");
+
+	}
 	void PlayerShield()
     {
         shield = true;
@@ -159,6 +166,8 @@ public class GameManager : MonoBehaviour {
 		//main.transform.position = new Vector3(player.transform.position.x +5, player.transform.position.y, player.transform.position.z -10);
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			if (Time.time >= stunUseDelayTimeStamp) {
+					shake = true;
+					shakeDuration = .8f;
 					stunEnemies = true;
 					stunCharger = 0;
 					Debug.Log ("SPACE by!");

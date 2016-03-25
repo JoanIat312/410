@@ -11,8 +11,8 @@ public class Player_Movement : MonoBehaviour
 	private int damage = 20;
 	float damaged = 0.1f;
 	Rigidbody rb;
-    bool previousFrameStun = false;
-    bool stunning = false;
+	bool previousFrameStun = false;
+	bool stunning = false;
 
 	public bool Shield = false;
 
@@ -27,32 +27,32 @@ public class Player_Movement : MonoBehaviour
 
 	void Movement ()
 	{
-        bool inputPressed = false;
+		bool inputPressed = false;
 		if (Input.GetAxisRaw ("Horizontal") > 0) {
-            inputPressed = true;
+			inputPressed = true;
 			transform.Translate (Vector3.right * speed * Time.deltaTime);
 			//transform.eulerAngles = new Vector2(0,0);
 		}
 		if (Input.GetAxisRaw ("Horizontal") < 0) {
 			transform.Translate (-Vector3.right * speed * Time.deltaTime);
-            inputPressed = true;
+			inputPressed = true;
 			//transform.eulerAngles = new Vector2(0,180);
 		}
 		if (Input.GetAxisRaw ("Vertical") > 0) {
 			transform.Translate (Vector3.up * speed * Time.deltaTime);
-            inputPressed = true;
+			inputPressed = true;
 		}
 		if (Input.GetAxisRaw ("Vertical") < 0) {
 			transform.Translate (-Vector3.up * speed * Time.deltaTime);
-            inputPressed = true;
+			inputPressed = true;
 		}
-        anim.SetBool("Moving", inputPressed);
+		anim.SetBool ("Moving", inputPressed);
 	}
 
 	
 	IEnumerator Damaged ()
 	{
-		bloodSpawner.SendMessage("spawn", transform.position, SendMessageOptions.DontRequireReceiver);
+		bloodSpawner.SendMessage ("spawn", transform.position, SendMessageOptions.DontRequireReceiver);
 		GetComponent<SpriteRenderer> ().color = new Color (255f, 0f, 0f);
 		yield return new WaitForSeconds (0.1f);
 		GetComponent<SpriteRenderer> ().color = new Color (255f, 255f, 255f);
@@ -92,42 +92,41 @@ public class Player_Movement : MonoBehaviour
 	}
 
 	void FixedUpdate ()
-    {
-      if (stunning == false)
-      {
-       Movement();
-      }
+	{
+		if (stunning == false) {
+			Movement ();
+		}
 	}
-//     static float Remap (this float value, float from1, float to1, float from2, float to2) {
-//      return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
-//     }
+	//     static float Remap (this float value, float from1, float to1, float from2, float to2) {
+	//      return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
+	//     }
 
 	void Update ()
 	{
-      // get angle to select sprite
-      Vector3 objectPos = Camera.main.WorldToScreenPoint(transform.position);
-      Vector3 dis = Input.mousePosition - objectPos;
-      Quaternion num = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dis.y, dis.x) * Mathf.Rad2Deg));
-      float degrees = num.eulerAngles.z+30;
-    //  degrees = Remap(degrees, 0, 360, 0, 40);
-        degrees = 0 + (degrees - 30) * (8 - 0) / (390 - 30);
+		// get angle to select sprite
+		Vector3 objectPos = Camera.main.WorldToScreenPoint (transform.position);
+		Vector3 dis = Input.mousePosition - objectPos;
+		Quaternion num = Quaternion.Euler (new Vector3 (0, 0, Mathf.Atan2 (dis.y, dis.x) * Mathf.Rad2Deg));
+		float degrees = num.eulerAngles.z + 30;
+		//  degrees = Remap(degrees, 0, 360, 0, 40);
+		degrees = 0 + (degrees - 30) * (8 - 0) / (390 - 30);
 //      low2 + (value - low1) * (high2 - low2) / (high1 - low1)
 
-      //Debug.Log(degrees);
-        anim.SetFloat("Direction", degrees);
+		//Debug.Log(degrees);
+		anim.SetFloat ("Direction", degrees);
 
-      if (Input.GetKeyDown(KeyCode.Space) && Time.time >= gameManager.stunUseDelayTimeStamp)
-      { 
-           StartCoroutine(stunAnimation());
-      }
-    }
-    IEnumerator stunAnimation()
-    {
-      stunning = true;
+		if (Input.GetKeyDown (KeyCode.Space) && Time.time >= gameManager.stunUseDelayTimeStamp) { 
+			StartCoroutine (stunAnimation ());
+		}
+	}
+
+	IEnumerator stunAnimation ()
+	{
+		stunning = true;
 //      Debug.Log("SHIT!");
-      anim.SetBool("stun", true);
-      yield return new WaitForSeconds(.5f); // wait for two seconds.
-      anim.SetBool("stun", false);
-      stunning = false;
-    }
+		anim.SetBool ("stun", true);
+		yield return new WaitForSeconds (.5f); // wait for two seconds.
+		anim.SetBool ("stun", false);
+		stunning = false;
+	}
 }

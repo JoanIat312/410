@@ -41,7 +41,6 @@ public class GeorgeWashingtonneAgent: MonoBehaviour
 //		}
 //        Debug.Log(GetClosestEnemy().transform.position);
         Vector3 closestEnemyPos = GetClosestEnemy().transform.position;
-        Debug.Log(Vector3.Distance(playerPos, closestEnemyPos));
         if ((Vector3.Distance(playerPos, closestEnemyPos)) < 4.5f)
         {
          agent.SetDestination(closestEnemyPos);
