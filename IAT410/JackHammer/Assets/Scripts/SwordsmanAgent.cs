@@ -102,7 +102,7 @@ public class SwordsmanAgent : MonoBehaviour {
 //	}
 
 	void TakeDamage(float damage){
-        Debug.Log(health);
+//        Debug.Log(health);
         if (state == SwordsmanAgent.State.IDLE)
         {
          state = SwordsmanAgent.State.CHASE;
