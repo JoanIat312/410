@@ -11,7 +11,6 @@ public class Player_Movement : MonoBehaviour
 	private int damage = 20;
 	float damaged = 0.1f;
 	Rigidbody rb;
-    public bool playStunAnimation = false;
     bool previousFrameStun = false;
     bool stunning = false;
 
@@ -125,7 +124,7 @@ public class Player_Movement : MonoBehaviour
     IEnumerator stunAnimation()
     {
       stunning = true;
-      Debug.Log("SHIT!");
+//      Debug.Log("SHIT!");
       anim.SetBool("stun", true);
       yield return new WaitForSeconds(.5f); // wait for two seconds.
       anim.SetBool("stun", false);
