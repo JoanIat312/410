@@ -1,0 +1,27 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class blood : MonoBehaviour {
+
+	Animator anim;
+	public AudioClip hurt;
+	// Use this for initialization
+	void Start () {
+		anim = GetComponent <Animator>();
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+	void play(){
+<<<<<<< HEAD
+//		Debug.Log (transform.position + " played"); 
+=======
+>>>>>>> f3ccb0d489aa2636dbff8815664afcfa8b4306f6
+		if (gameObject.name != "blood"){
+			Destroy (gameObject, .5f);
+		}
+	}
+}
