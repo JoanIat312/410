@@ -164,13 +164,15 @@ public class GameManager : MonoBehaviour {
 			time = 5;
 		}
 		//main.transform.position = new Vector3(player.transform.position.x +5, player.transform.position.y, player.transform.position.z -10);
+		//Debug.Log(stunUseDelayTimeStamp + "gM");
 		if (Input.GetKeyDown (KeyCode.Space)) {
+			
 			if (Time.time >= stunUseDelayTimeStamp) {
 					shake = true;
 					shakeDuration = .8f;
 					stunEnemies = true;
 					stunCharger = 0;
-					Debug.Log ("SPACE by!");
+					//Debug.Log ("SPACE by!");
 					stunDurationTimeStamp = Time.time + stunDuration;
 					stunUseDelayTimeStamp = Time.time + stunUseDelay;
 			}

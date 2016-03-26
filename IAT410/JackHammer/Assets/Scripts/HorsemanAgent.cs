@@ -109,8 +109,10 @@ public class HorsemanAgent : MonoBehaviour
 
 		agent.speed = chaseSpeed;
 		agent.SetDestination (player.transform.position);
-		if (hit.collider.gameObject.tag == "wall") {
-			state = HorsemanAgent.State.CHASE;
+		if (Physics.Raycast (transform.position, -dis, out hit, sightDist)) {
+			if (hit.collider.gameObject.tag == "wall") {
+				state = HorsemanAgent.State.CHASE;
+			}
 		}
 		if (Time.time >= nextBulletSpawnTimestamp && GameManager.stunEnemies == false) {
 			nextBulletSpawnTimestamp = Time.time + defaultFireRate;

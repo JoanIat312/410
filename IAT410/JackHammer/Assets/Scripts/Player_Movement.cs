@@ -96,6 +96,7 @@ public class Player_Movement : MonoBehaviour
 		if (stunning == false) {
 			Movement ();
 		}
+
 	}
 	//     static float Remap (this float value, float from1, float to1, float from2, float to2) {
 	//      return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
@@ -115,15 +116,26 @@ public class Player_Movement : MonoBehaviour
 		//Debug.Log(degrees);
 		anim.SetFloat ("Direction", degrees);
 
-		if (Input.GetKeyDown (KeyCode.Space) && Time.time >= gameManager.stunUseDelayTimeStamp) { 
-			StartCoroutine (stunAnimation ());
+		/*
+		if ( (Time.time > gameManager.stunUseDelayTimeStamp) && Input.GetKeyDown (KeyCode.Space)) { 
+			
+			StartCoroutine (stunAnimation());
+		}*/
+		//Time.time >= gameManager.stunUseDelayTimeStamp
+		Debug.Log( (Time.time > gameManager.stunUseDelayTimeStamp) + ", " + Input.GetKeyDown (KeyCode.Space));
+		if (Time.time >= gameManager.stunUseDelayTimeStamp) {
+			
+			if (Input.GetKeyDown (KeyCode.Space)) {
+				
+				StartCoroutine (stunAnimation());
+			}
 		}
 	}
 
 	IEnumerator stunAnimation ()
 	{
 		stunning = true;
-//      Debug.Log("SHIT!");
+      	Debug.Log("SHIT!");
 		anim.SetBool ("stun", true);
 		yield return new WaitForSeconds (.5f); // wait for two seconds.
 		anim.SetBool ("stun", false);
