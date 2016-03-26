@@ -97,6 +97,27 @@ public class Player_Movement : MonoBehaviour
       {
        Movement();
       }
+      // get angle to select sprite
+      Vector3 objectPos = Camera.main.WorldToScreenPoint(transform.position);
+      Vector3 dis = Input.mousePosition - objectPos;
+      Quaternion num = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dis.y, dis.x) * Mathf.Rad2Deg));
+      float degrees = num.eulerAngles.z+30;
+      //  degrees = Remap(degrees, 0, 360, 0, 40);
+      degrees = 0 + (degrees - 30) * (8 - 0) / (390 - 30);
+      //      low2 + (value - low1) * (high2 - low2) / (high1 - low1)
+
+      //Debug.Log(degrees);
+      anim.SetFloat("Direction", degrees);
+
+      if (Input.GetKeyDown(KeyCode.Space)) {
+       Debug.Log("SPACE PRESSED GOOD JAB");
+       Debug.Log(Time.time);
+       Debug.Log(gameManager.stunUseDelayTimeStamp);
+       if (Time.time >= gameManager.stunUseDelayTimeStamp) 
+       {
+        StartCoroutine(stunAnimation());
+       }
+      }
 	}
 //     static float Remap (this float value, float from1, float to1, float from2, float to2) {
 //      return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
@@ -104,30 +125,15 @@ public class Player_Movement : MonoBehaviour
 
 	void Update ()
 	{
-      // get angle to select sprite
-      Vector3 objectPos = Camera.main.WorldToScreenPoint(transform.position);
-      Vector3 dis = Input.mousePosition - objectPos;
-      Quaternion num = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dis.y, dis.x) * Mathf.Rad2Deg));
-      float degrees = num.eulerAngles.z+30;
-    //  degrees = Remap(degrees, 0, 360, 0, 40);
-        degrees = 0 + (degrees - 30) * (8 - 0) / (390 - 30);
-//      low2 + (value - low1) * (high2 - low2) / (high1 - low1)
 
-      //Debug.Log(degrees);
-        anim.SetFloat("Direction", degrees);
-
-      if (Input.GetKeyDown(KeyCode.Space) && Time.time >= gameManager.stunUseDelayTimeStamp)
-      { 
-           StartCoroutine(stunAnimation());
-      }
     }
     IEnumerator stunAnimation()
     {
       stunning = true;
-//      Debug.Log("SHIT!");
+    //      Debug.Log("SHIT!");
       anim.SetBool("stun", true);
       yield return new WaitForSeconds(.5f); // wait for two seconds.
       anim.SetBool("stun", false);
       stunning = false;
     }
-}
+    }
