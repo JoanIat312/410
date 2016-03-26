@@ -52,7 +52,7 @@ public class playerBulletSpawner : MonoBehaviour {
 					// go back to default gun
 					SetWeapon (0);
 				}
-				GameObject newBullet = Instantiate (bObject, new Vector3 (transform.position.x, 0, transform.position.z), transform.rotation) as GameObject;
+				GameObject newBullet = Instantiate (bObject, new Vector3 (transform.position.x, 0.38f, transform.position.z), transform.rotation) as GameObject;
 				newBullet.tag = "bullets";      
 			}
 
@@ -65,11 +65,11 @@ public class playerBulletSpawner : MonoBehaviour {
 				}
 				// spawn 6 bullets
 				for (int i = 0; i < 6; i++) {
-					GameObject newBullet = Instantiate (shotGunBulletObject, new Vector3 (transform.position.x, 0, transform.position.z), transform.rotation) as GameObject;
+					GameObject newBullet = Instantiate (shotGunBulletObject, new Vector3 (transform.position.x, 0.38f, transform.position.z), transform.rotation) as GameObject;
 					newBullet.tag = "bullets";
 				}
 			} else {
-				GameObject newBullet = Instantiate (bObject, new Vector3 (transform.position.x, 0, transform.position.z), transform.rotation) as GameObject;
+				GameObject newBullet = Instantiate (bObject, new Vector3 (transform.position.x, 0.38f, transform.position.z), transform.rotation) as GameObject;
 				newBullet.tag = "bullets";    
 			}
 
