@@ -122,7 +122,7 @@ public class Player_Movement : MonoBehaviour
 			StartCoroutine (stunAnimation());
 		}*/
 		//Time.time >= gameManager.stunUseDelayTimeStamp
-		Debug.Log( (Time.time > gameManager.stunUseDelayTimeStamp) + ", " + Input.GetKeyDown (KeyCode.Space));
+		//Debug.Log( (Time.time > gameManager.stunUseDelayTimeStamp) + ", " + Input.GetKeyDown (KeyCode.Space));
 		if (Time.time >= gameManager.stunUseDelayTimeStamp) {
 			
 			if (Input.GetKeyDown (KeyCode.Space)) {

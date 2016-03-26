@@ -22,9 +22,9 @@ public class MusketMan : MonoBehaviour {
 			animator.SetInteger ("Direction", 1);
 		} else if (myAgent.velocity.z < -.2f) { // down
 			animator.SetInteger ("Direction", 3);
-		} else if (myAgent.velocity.x > .2f) { // left
+		} else if (myAgent.velocity.x < .2f) { // left
 			animator.SetInteger ("Direction", 4);
-		} else if (myAgent.velocity.x < -.2f) { //right
+		} else if (myAgent.velocity.x > -.2f) { //right
 			animator.SetInteger ("Direction", 2);
 		}
 	}

@@ -3,50 +3,51 @@ using System.Collections;
 
 public class HeroBehavior : MonoBehaviour
 {
+
+	public NavMeshAgent myAgent;
 	public Transform target;
-	public float zOffset;
-	public float xOffset; // need this but dont know why
-    public GameManager gameManager;
-    private Vector3 playerPos;
-    private Vector3 playerDirection;
-    private bool found;
-    public int speed;
-    //private Rigidbody rb;
-    float xDif, yDif;
-    // Use this for initialization
+	private GameObject player;
+	private Vector3 playerPos;
+	public GameManager gameManager;
+	private Animator anim;
+	private bool rescued = false;
     void Start()
     {
         
-        found = false;
-        speed = 1;
+		anim = GetComponent<Animator>();
         //rb = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-//        if(found == true)
-//        {
-//            Debug.Log("found hero");
-//            playerPos = GameObject.Find("Player").transform.position;
-//            playerDirection = new Vector3(playerPos.x - transform.position.x + 2, playerPos.y - transform.position.y + 2, playerPos.z);
-//            transform.Translate(playerDirection *speed * Time.deltaTime);
-//            //rb.velocity += targetDirection * speed;
-//        }
+		if (myAgent.velocity.x == 0 && myAgent.velocity.z == 0)
+		{
+			anim.SetInteger("Direction", 0);
+		}
+		else if (myAgent.velocity.z > .5f) { // up
+			anim.SetInteger("Direction", 1);
+		}
+		else if (myAgent.velocity.z < -.5f) { // down
+			anim.SetInteger("Direction", 3);
+		}
+		else if (myAgent.velocity.x > .5f) { // right
+			anim.SetInteger("Direction", 2);
+		}
+		else if (myAgent.velocity.x < -.5f) { // left
+			anim.SetInteger("Direction", 4);
+		}
+		transform.position = new Vector3(target.position.x, transform.position.y, target.position.z);
     }
     
+	void burgerSpawn(){
+		anim.SetBool ("burger", true);
 
-     void LateUpdate() {
-        //transform.localPosition = new Vector3(target.localPosition.x + xOffset, transform.localPosition.y, target.localPosition.z + zOffset);
-		transform.position = new Vector3(target.position.x, transform.position.y, target.position.z);
 	}
-    void OnCollisionEnter(Collision collision)
-    {
-//        if(collision.gameObject.tag == "Player")
-//        {
-//            found = true;
-//            gameManager.SendMessage("ScoreTracker", 100, SendMessageOptions.DontRequireReceiver);
-//        }
-    }
 
+	IEnumerator burgerStop(){
+		Debug.Log ("enter");
+		yield return new WaitForSeconds(9f); 
+		anim.SetBool ("burger", false);
+	}
 }

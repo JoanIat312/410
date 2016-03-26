@@ -9,7 +9,7 @@ public class DogeAgent : MonoBehaviour {
 	private Vector3 playerPos;
 	public GameManager gameManager;
 	public GameObject burger;
-	private float spawnDelay = 15f;
+	private float spawnDelay = 10f;
 	void Start () {
 		agent = GetComponent < NavMeshAgent > ();
 		player = GameObject.Find ("Player");
@@ -30,12 +30,15 @@ public class DogeAgent : MonoBehaviour {
 
 	}
 	void spawn(){
-
+		//sprite.SendMessage ("burgerStop", SendMessageOptions.DontRequireReceiver);
+		sprite.SendMessage ("burgerSpawn", SendMessageOptions.DontRequireReceiver);
 		Vector3 objPos = new Vector3 (transform.position.x , 0.39f, sprite.transform.position.z);
 		if (true) {
 			GameObject newBurger = Instantiate(burger, objPos, sprite.transform.rotation) as GameObject;
 			newBurger.tag = "clone";
 			Debug.Log ("spawn enter");
 		}
+
+		sprite.SendMessage ("burgerStop", SendMessageOptions.DontRequireReceiver);
 	}
 }

@@ -14,7 +14,7 @@ public class Rockets : MonoBehaviour {
 	private bool hitWall;
 	public int defaultDamage;
 	Animator anim;
-	float chaseTimer = 15f;
+	float chaseTimer = 5f;
 	public GameManager gameManager;
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody> ();
@@ -43,6 +43,9 @@ public class Rockets : MonoBehaviour {
 			chaseTimer -= 0.1f;
 		} else {
 			rb.velocity = new Vector3 (0, 0, 0); 
+			if (gameObject.name != "Rockets") {
+				Destroy ();
+			}
 		}
 		//dis = targetPos - objectPos;
 		//dis.Normalize ();
@@ -81,6 +84,14 @@ public class Rockets : MonoBehaviour {
 			gameManager.SendMessage ("PlayerDamage", defaultDamage, SendMessageOptions.DontRequireReceiver);
 			Destroy (gameObject);
 		}
+	}
+
+	void Destroy (){
+			anim.SetBool ("distroy", true);
+			anim.Play ("cannonExplosion", 0, 0);
+			AudioSource.PlayClipAtPoint (explosion, transform.position);         
+			Destroy (gameObject, 0.7f);
+
 	}
 
 }
