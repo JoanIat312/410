@@ -17,12 +17,15 @@ public class SubmarineAgent : MonoBehaviour {
 	public float defaultFireRate = .8f;
 	public GameObject bObject;
 	public AudioClip shot;
+	public float health;
+	private float defaultStoppingDist;
 
 	public enum State
 	{
 		HIDE,
 		POP,
-		ATTACK
+		ATTACK,
+		CHASE
 	}
 	void Start () {
 		agent = GetComponent<NavMeshAgent> ();
@@ -30,9 +33,10 @@ public class SubmarineAgent : MonoBehaviour {
 		agent.updatePosition = true;
 		agent.updateRotation = false;
 		alive = true;
-		state = SubmarineAgent.State.ATTACK;
+		state = SubmarineAgent.State.HIDE;
 		StartCoroutine ("FSM");
 		defaultFireRate = 2f;
+		defaultStoppingDist = agent.stoppingDistance;
 	}
 	
 
@@ -49,6 +53,9 @@ public class SubmarineAgent : MonoBehaviour {
 			case State.ATTACK:
 				Attack ();
 				break;
+			case State.CHASE:
+				Chase ();
+				break;
 			}
 
 			yield return null;
@@ -57,10 +64,24 @@ public class SubmarineAgent : MonoBehaviour {
 
 	void Hide(){
 		agent.speed = 0;
+
 		sprite.SetActive (false);
 
 	}
 
+	void Chase(){
+
+		agent.SetDestination (player.transform.position);
+		if (Physics.Raycast (transform.position, -dis, out hit, sightDist)) {
+			if (hit.collider.gameObject.tag != "Player") { // if the enemy still cant see the player
+				//go right up to him
+				agent.stoppingDistance = .7f;
+			} else {
+				agent.stoppingDistance = defaultStoppingDist; // reset the stopping distance
+			}
+		}
+
+	}
 	void Pop(){
 		sprite.SetActive (true);
 	}
@@ -80,13 +101,36 @@ public class SubmarineAgent : MonoBehaviour {
 		if (Physics.Raycast (transform.position, -dis, out hit, sightDist)) {
 			//Debug.Log (hit.collider.gameObject.tag);
 			if (hit.collider.gameObject.tag == "Player") {
-				//state = SubmarineAgent.State.POP;
+				state = SubmarineAgent.State.POP;
 				if ((dis.z < firingRange && dis.z > -firingRange) && (dis.x < firingRange && dis.x > -firingRange)) {
 					state = SubmarineAgent.State.ATTACK;
 				}
 			} else {
-				//state = SubmarineAgent.State.HIDE;
+				state = SubmarineAgent.State.CHASE;
 			}
 		}
+	}
+
+	void TakeDamage (int damage)
+	{
+		if (health - damage >= 0) {
+
+			health -= damage;
+			state = SubmarineAgent.State.HIDE;
+			sprite.SendMessage ("TakeDamage", SendMessageOptions.DontRequireReceiver);
+		} else {
+			alive = false;
+
+			destory ();
+			//gameManager.SendMessage ("loadNextScene", SendMessageOptions.DontRequireReceiver);
+		}
+	}
+
+	void destory ()
+	{
+		gameManager.SendMessage ("ScoreTracker", 150, SendMessageOptions.DontRequireReceiver);
+		Destroy (sprite);
+		Destroy (this.gameObject);
+
 	}
 }
