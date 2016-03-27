@@ -61,7 +61,7 @@ public class enemyFlames : MonoBehaviour
         if (col.gameObject.tag == "Player" && gameObject.name != "enemyFlames")
         {
 			col.gameObject.SendMessage("Damaged", SendMessageOptions.DontRequireReceiver);
-            Debug.Log("defaultDamage:" + defaultDamage);
+//            Debug.Log("defaultDamage:" + defaultDamage);
 			gameManager.SendMessage("PlayerDamage", defaultDamage, SendMessageOptions.DontRequireReceiver);
             Destroy(gameObject);
         }

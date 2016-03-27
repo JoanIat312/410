@@ -50,7 +50,7 @@ public class GeorgeWashingtonneAgent: MonoBehaviour
 	void OnCollisionStay (Collision collision)
 	{
 		if (collision.gameObject.tag == "EnemyAgent") {
-			Debug.Log ("DAMAGED YOW!");
+//			Debug.Log ("DAMAGED YOW!");
 
 			collision.gameObject.SendMessage ("TakeDamage", damagePerHit, SendMessageOptions.DontRequireReceiver);
       
