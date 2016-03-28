@@ -18,6 +18,7 @@ public class Tank : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		if (myAgent.velocity.x == 0 && myAgent.velocity.z == 0) {
 			animator.SetInteger ("Direction", 0);
 		} else if (myAgent.velocity.z > .2f && myAgent.velocity.x > .2f) { // up and to the right

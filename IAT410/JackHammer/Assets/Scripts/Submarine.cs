@@ -7,7 +7,7 @@ public class Submarine : MonoBehaviour {
 	public Transform target;
 	// need this but dont know why
 	public NavMeshAgent myAgent;
-	private Animator animator;
+	public Animator animator;
 	void Start () {
 		animator = GetComponent<Animator> ();
 	}
@@ -39,6 +39,8 @@ public class Submarine : MonoBehaviour {
 		{
 			transform.position = new Vector3 (target.position.x, transform.position.y, target.position.z);
 		}
+		
+
 
 		IEnumerator TakeDamage ()
 		{

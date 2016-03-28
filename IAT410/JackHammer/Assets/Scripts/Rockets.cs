@@ -73,7 +73,6 @@ public class Rockets : MonoBehaviour {
 			Destroy (gameObject, 0.5f);
 		}
 		if (col.gameObject.name == "Player" && gameObject.name != "Rockets"){
-			Debug.Log (col.gameObject.tag);
 			col.gameObject.SendMessage ("Damaged", SendMessageOptions.DontRequireReceiver);
 			gameManager.SendMessage ("PlayerDamage", defaultDamage, SendMessageOptions.DontRequireReceiver);
 			Destroy (gameObject);

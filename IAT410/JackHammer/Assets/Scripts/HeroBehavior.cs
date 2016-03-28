@@ -37,7 +37,7 @@ public class HeroBehavior : MonoBehaviour
 		else if (myAgent.velocity.x < -.5f) { // left
 			anim.SetInteger("Direction", 4);
 		}
-		transform.position = new Vector3(target.position.x, transform.position.y, target.position.z);
+		transform.position = new Vector3(target.position.x, 0.38f, target.position.z);
     }
     
 	void burgerSpawn(){
