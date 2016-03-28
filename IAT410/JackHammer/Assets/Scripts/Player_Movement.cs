@@ -136,4 +136,4 @@ public class Player_Movement : MonoBehaviour
       anim.SetBool("stun", false);
       stunning = false;
     }
-    }
+}

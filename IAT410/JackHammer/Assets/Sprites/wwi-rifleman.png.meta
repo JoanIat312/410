@@ -1,0 +1,574 @@
+fileFormatVersion: 2
+guid: e18d834617ebc493a9258a01af70817c
+timeCreated: 1459192359
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: wwi-rifleman_0
+    21300002: wwi-rifleman_1
+    21300004: wwi-rifleman_2
+    21300006: wwi-rifleman_3
+    21300008: wwi-rifleman_4
+    21300010: wwi-rifleman_5
+    21300012: wwi-rifleman_6
+    21300014: wwi-rifleman_7
+    21300016: wwi-rifleman_8
+    21300018: wwi-rifleman_9
+    21300020: wwi-rifleman_10
+    21300022: wwi-rifleman_11
+    21300024: wwi-rifleman_12
+    21300026: wwi-rifleman_13
+    21300028: wwi-rifleman_14
+    21300030: wwi-rifleman_15
+    21300032: wwi-rifleman_16
+    21300034: wwi-rifleman_17
+    21300036: wwi-rifleman_18
+    21300038: wwi-rifleman_19
+    21300040: wwi-rifleman_20
+    21300042: wwi-rifleman_21
+    21300044: wwi-rifleman_22
+    21300046: wwi-rifleman_23
+    21300048: wwi-rifleman_24
+    21300050: wwi-rifleman_25
+    21300052: wwi-rifleman_26
+    21300054: wwi-rifleman_27
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: wwi-rifleman_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 264
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wwi-rifleman_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 264
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wwi-rifleman_2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 264
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wwi-rifleman_3
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 262
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wwi-rifleman_4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 209
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 26}
+        - {x: -8, y: 26}
+        - {x: -14, y: 20}
+        - {x: -14, y: -20}
+        - {x: -13, y: -26}
+        - {x: 6, y: -26}
+        - {x: 18, y: -13}
+        - {x: 18, y: 5}
+        - {x: 13, y: 25}
+    - name: wwi-rifleman_5
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 209
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wwi-rifleman_6
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 209
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wwi-rifleman_7
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 211
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: wwi-rifleman_8
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 162
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 23.5}
+        - {x: -23, y: -1.5}
+        - {x: -23, y: -23.5}
+        - {x: 15, y: -23.5}
+        - {x: 23, y: -16.5}
+        - {x: 23, y: 13.5}
+        - {x: 9, y: 23.5}
+    - name: wwi-rifleman_9
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 162
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 23.5}
+        - {x: -22.5, y: -23.5}
+        - {x: 22.5, y: -23.5}
+        - {x: 22.5, y: 18.5}
+        - {x: 9.5, y: 23.5}
+      - - {x: -19.5, y: 11.5}
+        - {x: -15.5, y: 11.5}
+        - {x: -13.5, y: 14.5}
+        - {x: -13.5, y: 18.5}
+        - {x: -15.5, y: 20.5}
+        - {x: -18.5, y: 18.5}
+        - {x: -19.5, y: 14.5}
+    - name: wwi-rifleman_10
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 162
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 23.5}
+        - {x: -22, y: 10.5}
+        - {x: -22, y: -23.5}
+        - {x: 22, y: -23.5}
+        - {x: 22, y: 23.5}
+    - name: wwi-rifleman_11
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 112
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 25}
+        - {x: -5, y: 24}
+        - {x: -20, y: 10}
+        - {x: -21, y: 9}
+        - {x: -21, y: -10}
+        - {x: -18, y: -13}
+        - {x: -15, y: -12}
+        - {x: -12, y: -18}
+        - {x: -9, y: -25}
+        - {x: 3, y: -25}
+        - {x: 6, y: -23}
+        - {x: 9, y: -25}
+        - {x: 21, y: -25}
+        - {x: 21, y: 14}
+        - {x: 14, y: 25}
+    - name: wwi-rifleman_12
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 113
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 16.5}
+        - {x: 13, y: 23.5}
+        - {x: -22, y: 23.5}
+        - {x: -22, y: -19.5}
+        - {x: -21, y: -23.5}
+        - {x: 1, y: -23.5}
+        - {x: 2, y: -21.5}
+        - {x: 6, y: -23.5}
+        - {x: 22, y: -23.5}
+    - name: wwi-rifleman_13
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 113
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4.5, y: 23.5}
+        - {x: -20.5, y: 20.5}
+        - {x: -22.5, y: 16.5}
+        - {x: -22.5, y: -17.5}
+        - {x: -16.5, y: -23.5}
+        - {x: 22.5, y: -23.5}
+        - {x: 22.5, y: 14.5}
+        - {x: 13.5, y: 23.5}
+      - - {x: 13.5, y: 20.5}
+        - {x: 13.5, y: 13.5}
+        - {x: 16.5, y: 11.5}
+        - {x: 19.5, y: 12.5}
+        - {x: 19.5, y: 15.5}
+        - {x: 17.5, y: 20.5}
+    - name: wwi-rifleman_14
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 113
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.5, y: 0.5}
+        - {x: -16.5, y: -23.5}
+        - {x: 21.5, y: -23.5}
+        - {x: 21.5, y: 0.5}
+        - {x: 17.5, y: 23.5}
+        - {x: -7.5, y: 23.5}
+        - {x: -21.5, y: 14.5}
+    - name: wwi-rifleman_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 37
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.5, y: 23}
+        - {x: -10.5, y: 14}
+        - {x: -18.5, y: -2}
+        - {x: -18.5, y: -11}
+        - {x: -17.5, y: -13}
+        - {x: -13.5, y: -23}
+        - {x: 11.5, y: -23}
+        - {x: 18.5, y: -21}
+        - {x: 18.5, y: 12}
+        - {x: 8.5, y: 23}
+    - name: wwi-rifleman_16
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 60
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 24}
+        - {x: -7, y: 15}
+        - {x: -18, y: 12}
+        - {x: -18, y: 1}
+        - {x: -17, y: 0}
+        - {x: 0, y: -24}
+        - {x: 14, y: -24}
+        - {x: 18, y: -15}
+        - {x: 18, y: 9}
+        - {x: 12, y: 24}
+    - name: wwi-rifleman_17
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 58
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.5, y: 24.5}
+        - {x: -18.5, y: 7.5}
+        - {x: -14.5, y: -20.5}
+        - {x: -3.5, y: -24.5}
+        - {x: 18.5, y: -24.5}
+        - {x: 18.5, y: -8.5}
+        - {x: 10.5, y: 24.5}
+    - name: wwi-rifleman_18
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 60
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 25}
+        - {x: -20, y: -23}
+        - {x: -15, y: -25}
+        - {x: 14, y: -25}
+        - {x: 20, y: -23}
+        - {x: 20, y: -1}
+        - {x: 9, y: 25}
+    - name: wwi-rifleman_19
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 60
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6.5, y: 25}
+        - {x: -1.5, y: 25}
+        - {x: -5.5, y: 21}
+        - {x: -9.5, y: 25}
+        - {x: -19.5, y: 25}
+        - {x: -19.5, y: 10}
+        - {x: -9.5, y: -25}
+        - {x: 19.5, y: -25}
+        - {x: 19.5, y: 6}
+        - {x: 16.5, y: 22}
+    - name: wwi-rifleman_20
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 57
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 24.5}
+        - {x: -18, y: 22.5}
+        - {x: -18, y: -5.5}
+        - {x: 0, y: -24.5}
+        - {x: 18, y: -24.5}
+        - {x: 18, y: 24.5}
+    - name: wwi-rifleman_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 24.5}
+        - {x: -18, y: 16.5}
+        - {x: -18, y: -22.5}
+        - {x: -16, y: -24.5}
+        - {x: 5, y: -24.5}
+        - {x: 18, y: -10.5}
+        - {x: 18, y: 16.5}
+        - {x: 7, y: 24.5}
+    - name: wwi-rifleman_22
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 3
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.5, y: 25}
+        - {x: -16.5, y: 10}
+        - {x: -19.5, y: -2}
+        - {x: -19.5, y: -25}
+        - {x: 10.5, y: -25}
+        - {x: 19.5, y: 8}
+        - {x: 19.5, y: 25}
+    - name: wwi-rifleman_23
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 3
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 25}
+        - {x: 0, y: 25}
+        - {x: -9, y: 23}
+        - {x: -20, y: -2}
+        - {x: -20, y: -20}
+        - {x: -7, y: -25}
+        - {x: 13, y: -25}
+        - {x: 18, y: -22}
+        - {x: 17, y: -18}
+        - {x: 20, y: 2}
+    - name: wwi-rifleman_24
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17.5, y: 24.5}
+        - {x: -7.5, y: 24.5}
+        - {x: -11.5, y: 20.5}
+        - {x: -18.5, y: -10.5}
+        - {x: -18.5, y: -24.5}
+        - {x: 11.5, y: -24.5}
+        - {x: 18.5, y: 6.5}
+        - {x: 18.5, y: 23.5}
+    - name: wwi-rifleman_25
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 3
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 24}
+        - {x: -18, y: -21}
+        - {x: -17, y: -24}
+        - {x: 6, y: -24}
+        - {x: 18, y: -1}
+        - {x: 18, y: 24}
+    - name: wwi-rifleman_26
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 3
+        width: 37
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8.5, y: 23}
+        - {x: -15.5, y: 23}
+        - {x: -18.5, y: 14}
+        - {x: -18.5, y: -21}
+        - {x: -11.5, y: -23}
+        - {x: 10.5, y: -23}
+        - {x: 13.5, y: -21}
+        - {x: 18.5, y: -16}
+        - {x: 18.5, y: 5}
+    - name: wwi-rifleman_27
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 161
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 23.5}
+        - {x: -22, y: -23.5}
+        - {x: 22, y: -23.5}
+        - {x: 22, y: 22.5}
+        - {x: 17, y: 23.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

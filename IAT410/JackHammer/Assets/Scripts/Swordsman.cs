@@ -19,22 +19,23 @@ public class Swordsman : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-            if (myAgent.velocity.x == 0 && myAgent.velocity.z == 0)
-            {
-               anim.SetInteger("Direction", 0);
-            }
-          else if (myAgent.velocity.z > .5f) { // up
-           anim.SetInteger("Direction", 1);
+          if (myAgent.velocity.x == 0 && myAgent.velocity.z == 0)
+          {
+             anim.SetInteger("Direction", 0);
           }
-          else if (myAgent.velocity.z < -.5f) { // down
-           anim.SetInteger("Direction", 3);
-          }
-          else if (myAgent.velocity.x > .5f) { // right
+          else if (myAgent.velocity.x > .3f) { // right
            anim.SetInteger("Direction", 2);
           }
-          else if (myAgent.velocity.x < -.5f) { // left
+          else if (myAgent.velocity.x < -.3f) { // left
            anim.SetInteger("Direction", 4);
           }
+          else if (myAgent.velocity.z > .3f) { // up
+           anim.SetInteger("Direction", 1);
+          }
+          else if (myAgent.velocity.z < -.3f) { // down
+           anim.SetInteger("Direction", 3);
+          }
+
 	}
 
     void LateUpdate() {

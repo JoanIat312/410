@@ -23,7 +23,7 @@ public class Machinegunner : MonoBehaviour {
       {
        angle += 360;
       }
-      Debug.Log(angle);
+//      Debug.Log(angle);
 //    degrees = 0 + (degrees - 30) * (8 - 0) / (390 - 30);
 
   animator.SetFloat("Direction", angle);
