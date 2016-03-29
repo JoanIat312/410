@@ -24,11 +24,7 @@ public class DogeAgent : MonoBehaviour {
 	
 
 	}
-
-	void OnCollisionEnter (Collision col){
 		
-
-	}
 	void spawn(){
 		//sprite.SendMessage ("burgerStop", SendMessageOptions.DontRequireReceiver);
 		sprite.SendMessage ("burgerSpawn", SendMessageOptions.DontRequireReceiver);

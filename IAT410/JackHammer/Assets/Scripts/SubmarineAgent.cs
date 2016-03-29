@@ -17,12 +17,14 @@ public class SubmarineAgent : MonoBehaviour {
 	public float defaultFireRate = .8f;
 	public GameObject bObject;
 	public AudioClip shot;
-
+	public float health;
+	private float defaultStoppingDist;
 	public enum State
 	{
 		HIDE,
 		POP,
-		ATTACK
+		ATTACK,
+		CHASE
 	}
 	void Start () {
 		agent = GetComponent<NavMeshAgent> ();
@@ -30,9 +32,10 @@ public class SubmarineAgent : MonoBehaviour {
 		agent.updatePosition = true;
 		agent.updateRotation = false;
 		alive = true;
-		state = SubmarineAgent.State.ATTACK;
+		state = SubmarineAgent.State.HIDE;
 		StartCoroutine ("FSM");
 		defaultFireRate = 2f;
+		defaultStoppingDist = agent.stoppingDistance;
 	}
 	
 
@@ -49,6 +52,9 @@ public class SubmarineAgent : MonoBehaviour {
 			case State.ATTACK:
 				Attack ();
 				break;
+			case State.CHASE:
+				Chase ();
+				break;
 			}
 
 			yield return null;
@@ -56,16 +62,39 @@ public class SubmarineAgent : MonoBehaviour {
 	}
 
 	void Hide(){
+		Debug.Log ("hide");
 		agent.speed = 0;
+		//sprite.SendMessage ("setHide", SendMessageOptions.DontRequireReceiver);
 		sprite.SetActive (false);
+		//a.SetInteger ("Direction", -2);
+
 
 	}
 
-	void Pop(){
+	void Chase(){
 		sprite.SetActive (true);
+		agent.speed = 10;
+		//Debug.Log("startChase");
+		agent.SetDestination (player.transform.position);
+		if (Physics.Raycast (transform.position, -dis, out hit, sightDist)) {
+			if (hit.collider.gameObject.tag != "Player") { // if the enemy still cant see the player
+				//go right up to him
+				agent.stoppingDistance = .7f;
+			} else {
+				agent.stoppingDistance = defaultStoppingDist; // reset the stopping distance
+			}
+		}
+
+	}
+	void Pop(){
+		Debug.Log ("pop");
+		agent.speed = 0;
+		sprite.SetActive (true);
+		//sprite.SendMessage ("setPop", SendMessageOptions.DontRequireReceiver);
 	}
 
 	void Attack(){
+		sprite.SetActive (true);
 		if (Time.time >= nextBulletSpawnTimestamp && GameManager.stunEnemies == false) {
 			nextBulletSpawnTimestamp = Time.time + defaultFireRate;
 			GameObject newBullet = Instantiate (bObject, new Vector3(sprite.transform.position.x, 0.36f, sprite.transform.position.z), sprite.transform.rotation) as GameObject;
@@ -79,14 +108,42 @@ public class SubmarineAgent : MonoBehaviour {
 		Debug.DrawRay (transform.position, -dis, Color.green);
 		if (Physics.Raycast (transform.position, -dis, out hit, sightDist)) {
 			//Debug.Log (hit.collider.gameObject.tag);
-			if (hit.collider.gameObject.tag == "Player") {
-				//state = SubmarineAgent.State.POP;
+			if (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.name == "bullets(Clone)") {
+				state = SubmarineAgent.State.POP;
 				if ((dis.z < firingRange && dis.z > -firingRange) && (dis.x < firingRange && dis.x > -firingRange)) {
 					state = SubmarineAgent.State.ATTACK;
+				} else {
+					state = SubmarineAgent.State.CHASE;
 				}
 			} else {
-				//state = SubmarineAgent.State.HIDE;
+				state = SubmarineAgent.State.HIDE;
 			}
+		} else {
+			//state = SubmarineAgent.State.HIDE;
 		}
+	}
+
+	void TakeDamage (int damage)
+	{
+		if (health - damage >= 0) {
+
+			health -= damage;
+
+			sprite.SendMessage ("TakeDamage", SendMessageOptions.DontRequireReceiver);
+			//state = SubmarineAgent.State.HIDE;
+		} else {
+			alive = false;
+
+			destory ();
+			//gameManager.SendMessage ("loadNextScene", SendMessageOptions.DontRequireReceiver);
+		}
+	}
+
+	void destory ()
+	{
+		gameManager.SendMessage ("ScoreTracker", 150, SendMessageOptions.DontRequireReceiver);
+		Destroy (sprite);
+		Destroy (this.gameObject);
+
 	}
 }

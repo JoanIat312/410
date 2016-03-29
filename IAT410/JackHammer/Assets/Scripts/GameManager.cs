@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour {
 				c.a = 0;
 				shieldImage.color = c;
 				shieldText.text = "";
+
 			}
 			ScoreText.text = "Score: " + score;
 			if (spawner.machineGunBullets > 0) {
@@ -158,10 +159,15 @@ public class GameManager : MonoBehaviour {
         //Debug.Log(stunCharger);
 		time -= countDown;
 		if (time <= 0) {
+			player.SendMessage ("Normal",  SendMessageOptions.DontRequireReceiver);
 			shield = false;
 			print ("shield end");
 			countDown = 0.0f;
 			time = 5;
+		}
+		if(shield == true){
+			//player.GetComponent<SpriteRenderer> ().color = new Color (Random.Range(70,220), Random.Range(70,220), Random.Range(70,220));
+			player.SendMessage ("Blink", SendMessageOptions.DontRequireReceiver);
 		}
 		//main.transform.position = new Vector3(player.transform.position.x +5, player.transform.position.y, player.transform.position.z -10);
 		//Debug.Log(stunUseDelayTimeStamp + "gM");
