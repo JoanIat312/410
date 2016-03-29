@@ -141,7 +141,7 @@ public class FlamethrowerAgent : MonoBehaviour
 			sprite.SendMessage ("TakeDamage", SendMessageOptions.DontRequireReceiver);
 		} else {
 			alive = false;
-
+			bloodSpawner.SendMessage ("spawnBigger", transform.position, SendMessageOptions.DontRequireReceiver);
 			destroy ();
 			if (this.name == "CannonAgent") {
 				gameManager.SendMessage ("loadNextScene", SendMessageOptions.DontRequireReceiver);

@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour {
 	public Image ShotGunImage;
 	public static bool stunEnemies;
 	public Image health;
+	public Image healthIcon;
 	public Image stun;
     public Image view;
     public static int score = 0;
@@ -50,6 +51,11 @@ public class GameManager : MonoBehaviour {
             Color w = view.color;
             w.a = 1 - (playerHealth / 100) - 0.7f;
             view.color = w;
+
+			/*Color n = healthIcon.color;
+			n.g = 1 - (playerHealth / 100);
+			n.b = 1 - (playerHealth / 100);
+			healthIcon.color = n;*/
             
             // stun bar fill
             float elapsedSecs = Time.time - (stunUseDelayTimeStamp - stunUseDelay);
@@ -112,9 +118,12 @@ public class GameManager : MonoBehaviour {
 
 	void PlayerDamage(float damage){
 		if(playerHealth > 0){
-			playerHealth -= damage;
-			shake = true;
-			shakeDuration = .2f;
+			if (shield == false) {
+				playerHealth -= damage;
+				shake = true;
+				shakeDuration = .2f;
+			}
+
 		}
 		if(playerHealth <= 0){
             diedLevel = Application.loadedLevel;
@@ -150,6 +159,7 @@ public class GameManager : MonoBehaviour {
     }
 
 	void Update(){
+		Debug.Log (255f * (playerHealth/100));
 		cameraPos = main.transform.position;
 //		stunCharger += 0.0003f;
         stunCharger = (stunUseDelayTimeStamp/Time.time);

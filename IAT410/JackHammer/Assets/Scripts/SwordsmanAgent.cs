@@ -96,6 +96,7 @@ public class SwordsmanAgent : MonoBehaviour {
 			sprite.SendMessage("TakeDamage", SendMessageOptions.DontRequireReceiver);
 		} else {
 			alive = false;
+			bloodSpawner.SendMessage("spawnBigger", transform.position, SendMessageOptions.DontRequireReceiver);
 			destroy ();
 		}
 	}

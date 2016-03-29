@@ -6,6 +6,7 @@ public class SubmarineAgent : MonoBehaviour {
 	private NavMeshAgent agent;
 	public GameManager gameManager;
 	private GameObject player;
+	public GameObject bloodSpawner;
 	public State state;
 	private bool alive;
 	public GameObject sprite;
@@ -133,7 +134,7 @@ public class SubmarineAgent : MonoBehaviour {
 			//state = SubmarineAgent.State.HIDE;
 		} else {
 			alive = false;
-
+			bloodSpawner.SendMessage ("spawnDead", transform.position, SendMessageOptions.DontRequireReceiver);
 			destory ();
 			//gameManager.SendMessage ("loadNextScene", SendMessageOptions.DontRequireReceiver);
 		}

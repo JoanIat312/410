@@ -136,10 +136,11 @@ public class HorsemanAgent : MonoBehaviour
 			sprite.SendMessage ("TakeDamage", SendMessageOptions.DontRequireReceiver);
 		} else {
 			alive = false;
-
+			bloodSpawner.SendMessage ("spawnBigger", transform.position, SendMessageOptions.DontRequireReceiver);
 			destory ();
 			if (this.name == "CannonAgent") {
-				gameManager.SendMessage ("loadWinning", SendMessageOptions.DontRequireReceiver);
+				bloodSpawner.SendMessage ("spawnDead", transform.position, SendMessageOptions.DontRequireReceiver);
+				gameManager.SendMessage ("loadNextScene", SendMessageOptions.DontRequireReceiver);
 			}
 		}
 	}

@@ -5,6 +5,7 @@ public class TankAgent : MonoBehaviour {
 
 	private NavMeshAgent agent;
 	public GameManager gameManager;
+	public GameObject bloodSpawner;
 	private GameObject player;
 	public float chaseSpeed = 2f;
 	public State state;
@@ -137,7 +138,7 @@ public class TankAgent : MonoBehaviour {
 			sprite.SendMessage ("TakeDamage", SendMessageOptions.DontRequireReceiver);
 		} else {
 			alive = false;
-
+			bloodSpawner.SendMessage ("spawnDead", transform.position, SendMessageOptions.DontRequireReceiver);
 			destory ();
 			//gameManager.SendMessage ("loadNextScene", SendMessageOptions.DontRequireReceiver);
 		}

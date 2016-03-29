@@ -3,7 +3,7 @@ using System.Collections;
 
 public class bloodSpawner : MonoBehaviour {
 
-	public GameObject bloodObject;
+	public GameObject[] bGameObjectSet;
 	// Use this for initialization
 	void Start () {
 	
@@ -15,8 +15,17 @@ public class bloodSpawner : MonoBehaviour {
 	}
 
 	void spawn(Vector3 pos){
+		GameObject newBlood = Instantiate (bGameObjectSet[1], new Vector3 (pos.x-.1f, pos.y+1f, pos.z), transform.rotation) as GameObject;
+		newBlood.SendMessage ("play", SendMessageOptions.DontRequireReceiver);
+	}
 
-		GameObject newBlood = Instantiate (bloodObject, new Vector3 (pos.x-.1f, 1f, pos.z), transform.rotation) as GameObject;
+	void spawnBigger(Vector3 pos){
+		GameObject newBlood = Instantiate (bGameObjectSet[0], new Vector3 (pos.x-.1f, pos.y+1f, pos.z), transform.rotation) as GameObject;
+		newBlood.SendMessage ("play", SendMessageOptions.DontRequireReceiver);
+	}
+
+	void spawnDead(Vector3 pos){
+		GameObject newBlood = Instantiate (bGameObjectSet[2], new Vector3 (pos.x-.1f, pos.y+1f, pos.z), transform.rotation) as GameObject;
 		newBlood.SendMessage ("play", SendMessageOptions.DontRequireReceiver);
 	}
 }

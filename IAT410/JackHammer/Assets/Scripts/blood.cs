@@ -4,7 +4,6 @@ using System.Collections;
 public class blood : MonoBehaviour {
 
 	Animator anim;
-	public AudioClip hurt;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent <Animator>();
@@ -12,11 +11,10 @@ public class blood : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 
 	void play(){
-		if (gameObject.name != "blood"){
+		if (gameObject.name != "blood" || gameObject.name != "bloodSmall" || gameObject.name != "deadExpo"){
 			Destroy (gameObject, .5f);
 		}
 	}
