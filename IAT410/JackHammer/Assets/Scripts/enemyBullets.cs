@@ -23,7 +23,7 @@ public class enemyBullets : MonoBehaviour
 		rb = gameObject.GetComponent<Rigidbody> ();
         anim = GetComponent<Animator>();
 		hitWall = false;
-		defaultDamage = 20;
+//		defaultDamage = 20;
         objectPos = transform.position;
         targetPos = GameObject.Find("Player").transform.position;
         //Vector3 zConvertedObjectPos = new Vector3(objectPos.x, 1, objectPos.y);
