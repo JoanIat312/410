@@ -1,0 +1,136 @@
+fileFormatVersion: 2
+guid: 85662694ba30bb2468ada9bd67f9c4cf
+timeCreated: 1459286140
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: new-lifebar_0
+    21300002: new-lifebar_1
+    21300004: new-lifebar_2
+    21300006: new-lifebar_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: new-lifebar_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 15
+        width: 141
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41.5, y: 70}
+        - {x: -70.5, y: 62}
+        - {x: -70.5, y: -34}
+        - {x: -66.5, y: -40}
+        - {x: -37.5, y: -70}
+        - {x: 52.5, y: -70}
+        - {x: 70.5, y: -30}
+        - {x: 70.5, y: 49}
+        - {x: 54.5, y: 70}
+    - name: new-lifebar_1
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 15
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -66, y: 70}
+        - {x: -70, y: 51}
+        - {x: -70, y: -59}
+        - {x: -58, y: -70}
+        - {x: 41, y: -70}
+        - {x: 70, y: -61}
+        - {x: 70, y: 40}
+        - {x: 42, y: 70}
+    - name: new-lifebar_2
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 15
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -61, y: 70}
+        - {x: -70, y: 67}
+        - {x: -70, y: -44}
+        - {x: -48, y: -70}
+        - {x: 42, y: -70}
+        - {x: 70, y: -62}
+        - {x: 70, y: 36}
+        - {x: 58, y: 70}
+    - name: new-lifebar_3
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 15
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -70, y: 70}
+        - {x: -70, y: -41}
+        - {x: -52, y: -70}
+        - {x: 64, y: -70}
+        - {x: 70, y: -48}
+        - {x: 70, y: 70}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

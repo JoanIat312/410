@@ -32,13 +32,6 @@ public class Rockets : MonoBehaviour {
 			targetPos = GameObject.Find ("Player").transform.position;
 			float xDif = targetPos.x - transform.position.x;
 			float zDif = targetPos.z - transform.position.z;
-			if (gameObject.name != "Rockets") {
-				if (hitWall == true) {
-					rb.velocity = new Vector3 (0, 0, 0);   
-				} else {
-					rb.velocity = (dis.normalized * moveSpeed);
-				}
-			}
 			dis = new Vector3 (xDif, 0.38f, zDif);
 
 		//dis = targetPos - objectPos;
@@ -52,13 +45,13 @@ public class Rockets : MonoBehaviour {
 	void FixedUpdate ()
 	{
 		
-		/*if (gameObject.name != "Rockets") {
+		if (gameObject.name != "Rockets") {
 			if (hitWall == true) {
 				rb.velocity = new Vector3 (0, 0, 0);   
 			} else {
 				rb.velocity = (dis.normalized * moveSpeed);
 			}
-		}*/
+		}
 
 	}
 

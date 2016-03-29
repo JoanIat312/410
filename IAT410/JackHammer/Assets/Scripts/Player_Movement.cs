@@ -77,8 +77,7 @@ public class Player_Movement : MonoBehaviour
 			StartCoroutine (Damaged ());
 
 			if (GameManager.shield == true) {
-				
-				gameManager.SendMessage ("PlayerDamage", 0, SendMessageOptions.DontRequireReceiver);
+				gameManager.SendMessage ("PlayerDamage", 0f, SendMessageOptions.DontRequireReceiver);
 			} else {
 				gameManager.SendMessage ("PlayerDamage", damage, SendMessageOptions.DontRequireReceiver);
 			}
@@ -94,7 +93,8 @@ public class Player_Movement : MonoBehaviour
 		if (collision.gameObject.tag == "EnemyAgent") {
 			StartCoroutine (Damaged ());
 			if (GameManager.shield == true) {
-				gameManager.SendMessage ("PlayerDamage", 0, SendMessageOptions.DontRequireReceiver);
+				Debug.Log ("no damage");
+				gameManager.SendMessage ("PlayerDamage", 0f, SendMessageOptions.DontRequireReceiver);
 			} else {
 				gameManager.SendMessage ("PlayerDamage", 1, SendMessageOptions.DontRequireReceiver);
 			}
@@ -105,7 +105,7 @@ public class Player_Movement : MonoBehaviour
     {
       if (stunning == false)
       {
-       Movement();
+       	Movement();
       }
       // get angle to select sprite
       Vector3 objectPos = Camera.main.WorldToScreenPoint(transform.position);

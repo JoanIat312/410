@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class SubmarineAgent : MonoBehaviour {
@@ -6,6 +6,7 @@ public class SubmarineAgent : MonoBehaviour {
 	private NavMeshAgent agent;
 	public GameManager gameManager;
 	private GameObject player;
+	public GameObject bloodSpawner;
 	public State state;
 	private bool alive;
 	public GameObject sprite;
@@ -162,7 +163,7 @@ public class SubmarineAgent : MonoBehaviour {
 			//state = SubmarineAgent.State.HIDE;
 		} else {
 			alive = false;
-
+			bloodSpawner.SendMessage ("spawnDead", transform.position, SendMessageOptions.DontRequireReceiver);
 			destroy ();
 			//gameManager.SendMessage ("loadNextScene", SendMessageOptions.DontRequireReceiver);
 		}
