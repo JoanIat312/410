@@ -56,7 +56,18 @@ public class Player_Movement : MonoBehaviour
 		GetComponent<SpriteRenderer> ().color = new Color (255f, 0f, 0f);
 		yield return new WaitForSeconds (0.1f);
 		GetComponent<SpriteRenderer> ().color = new Color (255f, 255f, 255f);
+	}
 
+	void Blink ()
+	{
+		Debug.Log ("enter");
+		GetComponent<SpriteRenderer> ().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+
+	}
+		
+
+	void Normal(){
+		GetComponent<SpriteRenderer> ().color = new Color (255f, 255f, 255f);
 	}
 
 	void OnCollisionEnter (Collision collision)
@@ -125,7 +136,6 @@ public class Player_Movement : MonoBehaviour
 
 	void Update ()
 	{
-
     }
     IEnumerator stunAnimation()
     {

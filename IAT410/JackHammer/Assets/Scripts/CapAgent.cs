@@ -33,7 +33,7 @@ public class CapAgent : MonoBehaviour {
 	void spawn(){
 		//sprite.SendMessage ("shieldSpawn", SendMessageOptions.DontRequireReceiver);
 		nextBulletSpawnTimestamp = Time.time + 1f;
-		Vector3 objPos = new Vector3 (transform.position.x , 0.38f, sprite.transform.position.z);
+		Vector3 objPos = new Vector3 (sprite.transform.position.x , 0.38f, sprite.transform.position.z);
 		if (true) {
 			GameObject newShield = Instantiate(shieldAgent, objPos, sprite.transform.rotation) as GameObject;
 			newShield.tag = "clone";

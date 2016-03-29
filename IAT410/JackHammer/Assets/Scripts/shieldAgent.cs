@@ -10,6 +10,7 @@ public class shieldAgent : MonoBehaviour {
 	public int defaultDamage = 50;
 
 	void Start () {
+		
 		agent = GetComponent < NavMeshAgent > ();
 		agent.updateRotation = false;
 	
@@ -18,18 +19,17 @@ public class shieldAgent : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		agent.stoppingDistance = 0;
-		if (gameObject.name != "shieldA") {
-			sprite.active = true;
+		transform.position = new Vector3 (transform.position.x, 0.38f, transform.position.z);
+		Debug.Log (transform.position.y);
+		if (gameObject.name != "shieldAgent") {
 			Vector3 closestEnemyPos = GetClosestEnemy ().transform.position;
 			if ((Vector3.Distance (transform.position, closestEnemyPos)) < 10f) {
-				agent.SetDestination (closestEnemyPos);
+				agent.SetDestination (new Vector3(closestEnemyPos.x, 0.38f, closestEnemyPos.z));
 				agent.stoppingDistance = 0;
 			} else {
-				agent.SetDestination (cap.transform.position);
+				agent.SetDestination (new Vector3(cap.transform.position.x,0.38f, cap.transform.position.z));
 			}
 		} else {
-			agent.SetDestination (cap.transform.position);
-			sprite.active = false;
 		}
 	}
 
@@ -56,7 +56,7 @@ public class shieldAgent : MonoBehaviour {
 	void OnTriggerEnter (Collider col)
 
 	{
-		if (gameObject.name != "shieldA") {
+		if (gameObject.name != "shieldAgent") {
 			if (col.gameObject.tag == "wall") {	
 				Destroy (gameObject, .4f);
 			}
