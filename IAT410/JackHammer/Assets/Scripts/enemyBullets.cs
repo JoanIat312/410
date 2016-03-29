@@ -17,6 +17,7 @@ public class enemyBullets : MonoBehaviour
 	public int defaultDamage;
     Animator anim;
 	public GameManager gameManager;
+ private string[] explosionArray = {"bulletExplosion", "explosion3-big", "explosion6", "explosion7"};
 
 	void Start ()
 	{
@@ -46,8 +47,11 @@ public class enemyBullets : MonoBehaviour
 	{
         if (col.gameObject.tag == "wall" && gameObject.name != "enemyBullets")
         {
+            int randomExplosion = Random.Range(0,3);
 			hitWall = true;
-			anim.Play("bulletExplosion", 0, 0);
+            anim.Play(explosionArray[randomExplosion], 0, 0);
+//            anim.Play("explosion3-big", 0, 0);
+
 			AudioSource.PlayClipAtPoint(explosion, transform.position);			
             Destroy(gameObject, .4f);
         }

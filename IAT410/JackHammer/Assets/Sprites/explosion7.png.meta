@@ -1,0 +1,606 @@
+fileFormatVersion: 2
+guid: 24e6a2022a69444c79640824929771cc
+timeCreated: 1459283387
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: explosion7_0
+    21300002: explosion7_1
+    21300004: explosion7_2
+    21300006: explosion7_3
+    21300008: explosion7_4
+    21300010: explosion7_5
+    21300012: explosion7_6
+    21300014: explosion7_7
+    21300016: explosion7_8
+    21300018: explosion7_9
+    21300020: explosion7_10
+    21300022: explosion7_11
+    21300024: explosion7_12
+    21300026: explosion7_13
+    21300028: explosion7_14
+    21300030: explosion7_15
+    21300032: explosion7_16
+    21300034: explosion7_17
+    21300036: explosion7_18
+    21300038: explosion7_19
+    21300040: explosion7_20
+    21300042: explosion7_21
+    21300044: explosion7_22
+    21300046: explosion7_23
+    21300048: explosion7_24
+    21300050: explosion7_25
+    21300052: explosion7_26
+    21300054: explosion7_27
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: explosion7_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 43
+        width: 110
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.451283, y: 22.802565}
+        - {x: -12.5487175, y: 22.802565}
+        - {x: -23.548717, y: 19.802565}
+        - {x: -23.548717, y: -17.197435}
+        - {x: -9.5487175, y: -22.197435}
+        - {x: 16.451283, y: -22.197435}
+        - {x: 20.451283, y: -18.197435}
+        - {x: 24.451283, y: -7.1974354}
+        - {x: 24.451283, y: 17.802565}
+    - name: explosion7_1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 34
+        width: 129
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.65641, y: 25.971794}
+        - {x: -27.65641, y: 17.971794}
+        - {x: -27.65641, y: -11.028206}
+        - {x: -22.65641, y: -25.028206}
+        - {x: 20.34359, y: -25.028206}
+        - {x: 28.34359, y: -8.028206}
+        - {x: 28.34359, y: 18.971794}
+        - {x: 19.34359, y: 25.971794}
+    - name: explosion7_2
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 29
+        width: 145
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.912811, y: 27.34359}
+        - {x: -30.912811, y: 23.34359}
+        - {x: -30.912811, y: -13.65641}
+        - {x: -23.912811, y: -26.65641}
+        - {x: 25.087189, y: -26.65641}
+        - {x: 31.087189, y: -6.65641}
+        - {x: 31.087189, y: 26.34359}
+        - {x: 30.087189, y: 27.34359}
+    - name: explosion7_3
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 22
+        width: 150
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.541016, y: 29.864101}
+        - {x: -26.541016, y: 27.864101}
+        - {x: -31.541016, y: 18.864101}
+        - {x: -31.541016, y: -11.135899}
+        - {x: -9.541016, y: -29.135899}
+        - {x: 18.458984, y: -29.135899}
+        - {x: 33.458984, y: -11.135899}
+        - {x: 33.458984, y: 20.864101}
+        - {x: 24.458984, y: 29.864101}
+    - name: explosion7_4
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 15
+        width: 160
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.946136, y: 31.884615}
+        - {x: -27.946136, y: 26.884615}
+        - {x: -33.946136, y: 15.884615}
+        - {x: -33.946136, y: -8.115385}
+        - {x: -23.946136, y: -26.115385}
+        - {x: -13.946136, y: -31.115385}
+        - {x: 20.053864, y: -31.115385}
+        - {x: 35.053864, y: -15.115385}
+        - {x: 35.053864, y: 25.884615}
+        - {x: 26.053864, y: 31.884615}
+    - name: explosion7_5
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 20
+        width: 167
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 34.42566, y: 30.512821}
+        - {x: 32.42566, y: 31.512821}
+        - {x: -22.57434, y: 31.512821}
+        - {x: -35.57434, y: 23.512821}
+        - {x: -35.57434, y: -6.487179}
+        - {x: -32.57434, y: -12.487179}
+        - {x: -20.57434, y: -21.487179}
+        - {x: -3.5743408, y: -30.487179}
+        - {x: 16.42566, y: -30.487179}
+        - {x: 36.42566, y: -9.487179}
+        - {x: 36.42566, y: 24.512821}
+    - name: explosion7_6
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 15
+        width: 169
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25.648712, y: 32.384613}
+        - {x: -33.351288, y: 32.384613}
+        - {x: -36.351288, y: 23.384615}
+        - {x: -36.351288, y: -22.615385}
+        - {x: -34.351288, y: -29.615385}
+        - {x: -25.351288, y: -31.615385}
+        - {x: 30.648712, y: -31.615385}
+        - {x: 36.648712, y: -1.615385}
+        - {x: 36.648712, y: 23.384615}
+        - {x: 35.648712, y: 30.384615}
+    - name: explosion7_7
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 15
+        width: 171
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.479492, y: 32.384613}
+        - {x: -36.479492, y: 24.384615}
+        - {x: -36.479492, y: -19.615385}
+        - {x: -27.479492, y: -24.615385}
+        - {x: -5.479492, y: -31.615385}
+        - {x: 18.520508, y: -31.615385}
+        - {x: 36.520508, y: -12.615385}
+        - {x: 36.520508, y: 23.384615}
+        - {x: 28.520508, y: 32.384613}
+    - name: explosion7_8
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 13
+        width: 174
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.756409, y: 33.533333}
+        - {x: -35.75641, y: 31.533333}
+        - {x: -35.75641, y: -13.466667}
+        - {x: -32.75641, y: -26.466667}
+        - {x: -18.756409, y: -32.466667}
+        - {x: 34.24359, y: -32.466667}
+        - {x: 38.24359, y: -31.466667}
+        - {x: 38.24359, y: 33.533333}
+    - name: explosion7_9
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 13
+        width: 178
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36.7359, y: 33.533333}
+        - {x: -36.7359, y: -32.466667}
+        - {x: 22.2641, y: -32.466667}
+        - {x: 39.2641, y: -29.466667}
+        - {x: 39.2641, y: 30.533333}
+        - {x: 36.2641, y: 33.533333}
+    - name: explosion7_10
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 15
+        width: 178
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.012817, y: 33.884617}
+        - {x: -37.012817, y: 24.884617}
+        - {x: -37.012817, y: -20.115383}
+        - {x: -10.012817, y: -33.115383}
+        - {x: 25.987183, y: -33.115383}
+        - {x: 38.987183, y: -16.115383}
+        - {x: 38.987183, y: 23.884617}
+        - {x: 28.987183, y: 33.884617}
+    - name: explosion7_11
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 15
+        width: 178
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.789734, y: 33.884617}
+        - {x: -36.789734, y: 20.884617}
+        - {x: -36.789734, y: 0.88461685}
+        - {x: -33.789734, y: -15.115383}
+        - {x: -14.789734, y: -33.115383}
+        - {x: 23.210266, y: -33.115383}
+        - {x: 38.210266, y: -23.115383}
+        - {x: 38.210266, y: 33.884617}
+    - name: explosion7_12
+      rect:
+        serializedVersion: 2
+        x: 2312
+        y: 15
+        width: 181
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.917969, y: 33.884617}
+        - {x: -30.917969, y: 26.884617}
+        - {x: -37.91797, y: 19.884617}
+        - {x: -37.91797, y: -10.115383}
+        - {x: -20.917969, y: -33.115383}
+        - {x: 28.082031, y: -33.115383}
+        - {x: 39.08203, y: -22.115383}
+        - {x: 39.08203, y: 33.884617}
+    - name: explosion7_13
+      rect:
+        serializedVersion: 2
+        x: 2504
+        y: 15
+        width: 181
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.194824, y: 33.884617}
+        - {x: -32.194824, y: 31.884617}
+        - {x: -36.194824, y: 18.884617}
+        - {x: -36.194824, y: -9.115383}
+        - {x: -27.194824, y: -17.115383}
+        - {x: -8.194824, y: -33.115383}
+        - {x: 23.805176, y: -33.115383}
+        - {x: 38.805176, y: -28.115383}
+        - {x: 39.805176, y: -20.115383}
+        - {x: 39.805176, y: 25.884617}
+        - {x: 22.805176, y: 33.884617}
+    - name: explosion7_14
+      rect:
+        serializedVersion: 2
+        x: 2696
+        y: 15
+        width: 179
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6.9718018, y: 33.884617}
+        - {x: -29.971802, y: 27.884617}
+        - {x: -35.9718, y: 14.884617}
+        - {x: -35.9718, y: 1.8846169}
+        - {x: -34.9718, y: -24.115383}
+        - {x: -1.9718018, y: -33.115383}
+        - {x: 31.028198, y: -33.115383}
+        - {x: 39.0282, y: -14.115383}
+        - {x: 39.0282, y: 23.884617}
+        - {x: 25.028198, y: 33.884617}
+    - name: explosion7_15
+      rect:
+        serializedVersion: 2
+        x: 2891
+        y: 20
+        width: 176
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.471802, y: 32.01282}
+        - {x: -35.4718, y: 24.012821}
+        - {x: -35.4718, y: -11.987179}
+        - {x: -28.471802, y: -28.987179}
+        - {x: -22.471802, y: -30.987179}
+        - {x: 29.528198, y: -30.987179}
+        - {x: 38.5282, y: -28.987179}
+        - {x: 38.5282, y: 32.01282}
+    - name: explosion7_16
+      rect:
+        serializedVersion: 2
+        x: 3083
+        y: 20
+        width: 176
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.748657, y: 32.01282}
+        - {x: -29.748657, y: 24.012821}
+        - {x: -35.748657, y: 17.012821}
+        - {x: -35.748657, y: -22.987179}
+        - {x: -13.748657, y: -30.987179}
+        - {x: 30.251343, y: -30.987179}
+        - {x: 38.251343, y: -15.987179}
+        - {x: 38.251343, y: 28.012821}
+        - {x: 30.251343, y: 32.01282}
+    - name: explosion7_17
+      rect:
+        serializedVersion: 2
+        x: 3275
+        y: 20
+        width: 176
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.025635, y: 32.01282}
+        - {x: -34.025635, y: 27.012821}
+        - {x: -34.025635, y: -14.987179}
+        - {x: -8.025635, y: -30.987179}
+        - {x: 23.974365, y: -30.987179}
+        - {x: 38.974365, y: -22.987179}
+        - {x: 38.974365, y: 31.012821}
+        - {x: 33.974365, y: 32.01282}
+    - name: explosion7_18
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 20
+        width: 178
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.65381, y: 31.512821}
+        - {x: -34.65381, y: 23.512821}
+        - {x: -34.65381, y: -12.487179}
+        - {x: -10.653809, y: -30.487179}
+        - {x: 26.346191, y: -30.487179}
+        - {x: 39.34619, y: -13.487179}
+        - {x: 39.34619, y: 31.512821}
+    - name: explosion7_19
+      rect:
+        serializedVersion: 2
+        x: 3657
+        y: 20
+        width: 179
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.930786, y: 31.512821}
+        - {x: -34.930786, y: 27.512821}
+        - {x: -34.930786, y: -17.487179}
+        - {x: -17.930786, y: -30.487179}
+        - {x: 23.069214, y: -30.487179}
+        - {x: 39.069214, y: -23.487179}
+        - {x: 39.069214, y: 22.512821}
+        - {x: 31.069214, y: 31.512821}
+    - name: explosion7_20
+      rect:
+        serializedVersion: 2
+        x: 3854
+        y: 11
+        width: 174
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28.920532, y: 31.68205}
+        - {x: -7.079468, y: 31.68205}
+        - {x: -20.079468, y: 25.68205}
+        - {x: -22.079468, y: 23.68205}
+        - {x: -34.079468, y: 19.68205}
+        - {x: -34.079468, y: -13.317949}
+        - {x: -5.079468, y: -30.31795}
+        - {x: 29.920532, y: -30.31795}
+        - {x: 36.920532, y: -23.31795}
+        - {x: 37.920532, y: -19.31795}
+        - {x: 37.920532, y: 26.68205}
+    - name: explosion7_21
+      rect:
+        serializedVersion: 2
+        x: 4049
+        y: 107
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: explosion7_22
+      rect:
+        serializedVersion: 2
+        x: 4058
+        y: 29
+        width: 155
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.248657, y: 26.34359}
+        - {x: -30.248657, y: 12.34359}
+        - {x: -30.248657, y: -25.65641}
+        - {x: 30.751343, y: -25.65641}
+        - {x: 33.751343, y: -16.65641}
+        - {x: 33.751343, y: 24.34359}
+        - {x: 28.751343, y: 26.34359}
+      - - {x: -33.248657, y: 15.34359}
+        - {x: -33.248657, y: 6.34359}
+        - {x: -29.248657, y: 6.34359}
+        - {x: -26.248657, y: 10.34359}
+        - {x: -26.248657, y: 13.34359}
+        - {x: -27.248657, y: 15.34359}
+    - name: explosion7_23
+      rect:
+        serializedVersion: 2
+        x: 4253
+        y: 32
+        width: 152
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.248657, y: 26.120514}
+        - {x: -29.248657, y: 2.120514}
+        - {x: -29.248657, y: -15.879486}
+        - {x: -13.248657, y: -24.879486}
+        - {x: 23.751343, y: -24.879486}
+        - {x: 32.751343, y: -15.879486}
+        - {x: 32.751343, y: 20.120514}
+        - {x: 26.751343, y: 26.120514}
+    - name: explosion7_24
+      rect:
+        serializedVersion: 2
+        x: 4454
+        y: 41
+        width: 139
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2.8051758, y: 23.451283}
+        - {x: -25.194824, y: 7.4512825}
+        - {x: -25.194824, y: -8.5487175}
+        - {x: -17.194824, y: -22.548717}
+        - {x: 29.805176, y: -22.548717}
+        - {x: 30.805176, y: -14.5487175}
+        - {x: 30.805176, y: 19.451283}
+        - {x: 23.805176, y: 23.451283}
+    - name: explosion7_25
+      rect:
+        serializedVersion: 2
+        x: 4707
+        y: 86
+        width: 50
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: explosion7_26
+      rect:
+        serializedVersion: 2
+        x: 4705
+        y: 83
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: explosion7_27
+      rect:
+        serializedVersion: 2
+        x: 4145
+        y: 11
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
