@@ -14,7 +14,6 @@ public class playerBulletSpawner : MonoBehaviour {
 		public float currentFireRate = .5f;
 		public float machineGunFireRate = .2f;
 		public float shotGunFireRate = .6f;
-
 		public int machineGunBullets = 0;
 		public int shotGunBullets = 0;
 
@@ -85,10 +84,10 @@ public class playerBulletSpawner : MonoBehaviour {
 			if (equippedGun == 0) {
 				currentFireRate = defaultFireRate;
 			} else if (equippedGun == 1) {
-				machineGunBullets = 30;
+				machineGunBullets += 30;
 				currentFireRate = machineGunFireRate;
 			} else if (equippedGun == 2) {
-				shotGunBullets = 10;
+				shotGunBullets += 10;
 				currentFireRate = shotGunFireRate;
 			}
 

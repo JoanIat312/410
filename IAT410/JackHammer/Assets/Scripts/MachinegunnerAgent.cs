@@ -26,7 +26,6 @@ public class MachinegunnerAgent : MonoBehaviour
 	public enum State
 	{
 		IDLE,
-//		CHASE,
 		ATTACK
 	}
 		
@@ -48,6 +47,7 @@ public class MachinegunnerAgent : MonoBehaviour
 	{
 		if (GameManager.stunEnemies == true) {
 //			agent.Stop ();
+			sprite.SendMessage("Stunned", SendMessageOptions.DontRequireReceiver);
 
 		} else {
 //			agent.Resume ();

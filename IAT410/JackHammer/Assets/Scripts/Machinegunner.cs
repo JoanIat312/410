@@ -40,6 +40,13 @@ public class Machinegunner : MonoBehaviour {
 		GetComponent<SpriteRenderer> ().color = new Color (255f, 255f, 255f);
 	}
 
+	IEnumerator Stunned() {
+		// flash enemy when hit
+		GetComponent<SpriteRenderer> ().color = new Color (0f, 213f, 244f);
+		yield return new WaitForSeconds(0.8f); 
+		GetComponent<SpriteRenderer> ().color = new Color (255f, 255f, 255f);
+	}
+
      float SignedAngleBetween(Vector3 a, Vector3 b, Vector3 n){
       // angle in [0,180]
       float angle = Vector3.Angle(a,b);

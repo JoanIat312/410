@@ -45,8 +45,7 @@ public class GameManager : MonoBehaviour {
     }
 
 	void OnGUI() {
-
-		if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 4 && Application.loadedLevel != 3) {
+		if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 4 && Application.loadedLevel != 5) {
 			health.fillAmount = playerHealth / 100f ;
             Color w = view.color;
             w.a = 1 - (playerHealth / 100) - 0.7f;
@@ -151,11 +150,6 @@ public class GameManager : MonoBehaviour {
     }
 
 	void Update(){
-		float elapsedSecs = Time.time - (stunUseDelayTimeStamp - stunUseDelay);
-		float percent = (elapsedSecs/stunUseDelay);
-		stun.fillAmount = percent;
-		Debug.Log (percent);
-
 		cameraPos = main.transform.position;
 //		stunCharger += 0.0003f;
         stunCharger = (stunUseDelayTimeStamp/Time.time);
@@ -164,7 +158,6 @@ public class GameManager : MonoBehaviour {
 		if (time <= 0) {
 			player.SendMessage ("Normal",  SendMessageOptions.DontRequireReceiver);
 			shield = false;
-			print ("shield end");
 			countDown = 0.0f;
 			time = 5;
 		}

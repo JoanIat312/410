@@ -60,14 +60,13 @@ public class Player_Movement : MonoBehaviour
 
 	void Blink ()
 	{
-		Debug.Log ("enter");
 		GetComponent<SpriteRenderer> ().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
 
 	}
 		
 
 	void Normal(){
-		GetComponent<SpriteRenderer> ().color = new Color (255f, 255f, 255f);
+		GetComponent<SpriteRenderer> ().material.color = new Color (255f, 255f, 255f);
 	}
 
 	void OnCollisionEnter (Collision collision)
@@ -121,9 +120,6 @@ public class Player_Movement : MonoBehaviour
       anim.SetFloat("Direction", degrees);
 
       if (Input.GetKeyDown(KeyCode.Space)) {
-       Debug.Log("SPACE PRESSED GOOD JAB");
-       Debug.Log(Time.time);
-       Debug.Log(gameManager.stunUseDelayTimeStamp);
        if (Time.time >= gameManager.stunUseDelayTimeStamp) 
        {
         StartCoroutine(stunAnimation());
