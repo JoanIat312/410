@@ -25,16 +25,16 @@ public class HeroBehavior : MonoBehaviour
 		{
 			anim.SetInteger("Direction", 0);
 		}
-		else if (myAgent.velocity.z > .5f) { // up
+		else if (myAgent.velocity.z > .3f) { // up
 			anim.SetInteger("Direction", 1);
 		}
-		else if (myAgent.velocity.z < -.5f) { // down
+		else if (myAgent.velocity.z < -.3f) { // down
 			anim.SetInteger("Direction", 3);
 		}
-		else if (myAgent.velocity.x > .5f) { // right
+		else if (myAgent.velocity.x > .3f) { // right
 			anim.SetInteger("Direction", 2);
 		}
-		else if (myAgent.velocity.x < -.5f) { // left
+		else if (myAgent.velocity.x < -.3f) { // left
 			anim.SetInteger("Direction", 4);
 		}
 		transform.position = new Vector3(target.position.x, 0.38f, target.position.z);

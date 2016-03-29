@@ -1,0 +1,441 @@
+fileFormatVersion: 2
+guid: e1a2dbea1405849338402bb0ae0512d7
+timeCreated: 1459287973
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: cap_0
+    21300002: cap_1
+    21300004: cap_2
+    21300006: cap_3
+    21300008: cap_4
+    21300010: cap_5
+    21300012: cap_6
+    21300014: cap_7
+    21300016: cap_8
+    21300018: cap_9
+    21300020: cap_10
+    21300022: cap_11
+    21300024: cap_12
+    21300026: cap_13
+    21300028: cap_14
+    21300030: cap_15
+    21300032: cap_16
+    21300034: cap_17
+    21300036: cap_18
+    21300038: cap_19
+    21300040: cap_20
+    21300042: cap_21
+    21300044: cap_22
+    21300046: cap_23
+    21300048: cap_24
+    21300050: cap_25
+    21300052: cap_26
+    21300054: cap_27
+    21300056: cap_28
+    21300058: cap_29
+    21300060: cap_30
+    21300062: cap_31
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: cap_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 268
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 268
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 268
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 268
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_4
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 259
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_5
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 268
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_6
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 236
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_7
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 236
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_8
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 236
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_9
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 244
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_10
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 204
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_11
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 204
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_12
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 204
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_13
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 201
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_14
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 172
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_15
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 172
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_16
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 172
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_17
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 167
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_18
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 167
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_19
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 167
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_20
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 138
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_21
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 138
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_22
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 138
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_23
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 143
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_24
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 137
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_25
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 137
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_26
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 102
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_27
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 102
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_28
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 108
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_29
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 103
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_30
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 103
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: cap_31
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 103
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
