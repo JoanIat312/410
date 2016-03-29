@@ -19,7 +19,15 @@ public class SubmarineAgent : MonoBehaviour {
 	public AudioClip shot;
 	public float health;
 	private float defaultStoppingDist;
-	public enum State
+    private float timeForNextAttack = 0;
+    private float timeForHide = 0;
+ private float timeToAttack = 5f;
+ private float timeToHide = 3f;
+ private bool popAnimationPlayed = false;
+ private bool hideAnimationPlayed = false;
+
+ public enum State
+
 	{
 		HIDE,
 		POP,
@@ -73,17 +81,17 @@ public class SubmarineAgent : MonoBehaviour {
 
 	void Chase(){
 		sprite.SetActive (true);
-		agent.speed = 10;
+		agent.speed = 1;
 		//Debug.Log("startChase");
 		agent.SetDestination (player.transform.position);
-		if (Physics.Raycast (transform.position, -dis, out hit, sightDist)) {
-			if (hit.collider.gameObject.tag != "Player") { // if the enemy still cant see the player
+		//if (Physics.Raycast (transform.position, -dis, out hit, sightDist)) {
+			//if (hit.collider.gameObject.tag != "Player") { // if the enemy still cant see the player
 				//go right up to him
-				agent.stoppingDistance = .7f;
-			} else {
-				agent.stoppingDistance = defaultStoppingDist; // reset the stopping distance
-			}
-		}
+				agent.stoppingDistance = 2f;
+//			} else {
+//				agent.stoppingDistance = defaultStoppingDist; // reset the stopping distance
+//			}
+//		}
 
 	}
 	void Pop(){
@@ -94,6 +102,9 @@ public class SubmarineAgent : MonoBehaviour {
 	}
 
 	void Attack(){
+        agent.speed = 1;
+        agent.SetDestination (player.transform.position);
+        agent.stoppingDistance = 2f;
 		sprite.SetActive (true);
 		if (Time.time >= nextBulletSpawnTimestamp && GameManager.stunEnemies == false) {
 			nextBulletSpawnTimestamp = Time.time + defaultFireRate;
@@ -106,22 +117,40 @@ public class SubmarineAgent : MonoBehaviour {
 	void Update () {
 		dis = transform.position - player.transform.position;
 		Debug.DrawRay (transform.position, -dis, Color.green);
-		if (Physics.Raycast (transform.position, -dis, out hit, sightDist)) {
+
+		//if (Physics.Raycast (transform.position, -dis, out hit, sightDist)) {
 			//Debug.Log (hit.collider.gameObject.tag);
-			if (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.name == "bullets(Clone)") {
-				state = SubmarineAgent.State.POP;
+			//if (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.name == "bullets(Clone)") {
+              if (Time.time >= timeForNextAttack && Time.time < timeForNextAttack + timeToAttack) {
+                timeForHide = Time.time + timeToHide;
+                if (!popAnimationPlayed)
+                {
+                     sprite.SendMessage("hideAnimation", SendMessageOptions.DontRequireReceiver);
+                     popAnimationPlayed = true;
+                     hideAnimationPlayed = false;
+                }
+				//state = SubmarineAgent.State.POP;
 				if ((dis.z < firingRange && dis.z > -firingRange) && (dis.x < firingRange && dis.x > -firingRange)) {
 					state = SubmarineAgent.State.ATTACK;
 				} else {
 					state = SubmarineAgent.State.CHASE;
 				}
-			} else {
-				state = SubmarineAgent.State.HIDE;
-			}
-		} else {
+              } else if (Time.time >= timeForHide && Time.time < timeForHide + timeToHide){
+                    if (!hideAnimationPlayed)
+                    {
+                         sprite.SendMessage("hideAnimation", SendMessageOptions.DontRequireReceiver);
+                         hideAnimationPlayed = true;
+                         popAnimationPlayed = false;
+                    }
+                   // sprite.SendMessage ("hideAnimation", SendMessageOptions.DontRequireReceiver);
+            	    state = SubmarineAgent.State.HIDE;
+                    timeForNextAttack = Time.time + timeToAttack;
+			    }   
+//		} else {
 			//state = SubmarineAgent.State.HIDE;
-		}
+//		}
 	}
+    
 
 	void TakeDamage (int damage)
 	{
@@ -134,16 +163,18 @@ public class SubmarineAgent : MonoBehaviour {
 		} else {
 			alive = false;
 
-			destory ();
+			destroy ();
 			//gameManager.SendMessage ("loadNextScene", SendMessageOptions.DontRequireReceiver);
 		}
 	}
 
-	void destory ()
+	void destroy ()
 	{
 		gameManager.SendMessage ("ScoreTracker", 150, SendMessageOptions.DontRequireReceiver);
 		Destroy (sprite);
 		Destroy (this.gameObject);
 
 	}
+
+
 }

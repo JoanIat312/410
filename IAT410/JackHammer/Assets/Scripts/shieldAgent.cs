@@ -20,12 +20,12 @@ public class shieldAgent : MonoBehaviour {
 	void Update () {
 		agent.stoppingDistance = 0;
 		transform.position = new Vector3 (transform.position.x, 0.38f, transform.position.z);
-		Debug.Log (transform.position.y);
+//		Debug.Log (transform.position.y);
 		if (gameObject.name != "shieldAgent") {
 			Vector3 closestEnemyPos = GetClosestEnemy ().transform.position;
-			if ((Vector3.Distance (transform.position, closestEnemyPos)) < 10f) {
+			if ((Vector3.Distance (transform.position, closestEnemyPos)) < 17f) {
 				agent.SetDestination (new Vector3(closestEnemyPos.x, 0.38f, closestEnemyPos.z));
-				agent.stoppingDistance = 0;
+				//agent.stoppingDistance = 0;
 			} else {
 				agent.SetDestination (new Vector3(cap.transform.position.x,0.38f, cap.transform.position.z));
 			}

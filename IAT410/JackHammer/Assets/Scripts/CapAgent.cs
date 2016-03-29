@@ -23,7 +23,9 @@ public class CapAgent : MonoBehaviour {
 		playerPos = player.transform.position;
 		agent.SetDestination (playerPos);
 		Vector3 closestEnemyPos = GetClosestEnemy ().transform.position;
-		if ((Vector3.Distance (transform.position, closestEnemyPos)) < 10f) {
+         Debug.Log(Vector3.Distance (transform.position, closestEnemyPos));
+
+		if ((Vector3.Distance (transform.position, closestEnemyPos)) < 17f) {
 			if (Time.time >= nextBulletSpawnTimestamp) {
 				spawn ();
 			}

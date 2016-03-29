@@ -49,4 +49,26 @@ public class Submarine : MonoBehaviour {
 			yield return new WaitForSeconds (0.1f); 
 			GetComponent<SpriteRenderer> ().color = new Color (255f, 255f, 255f);
 		}
+        public IEnumerator popAnimation()
+        {
+            //     stunning = true;
+            //      Debug.Log("SHIT!");
+            //     anim.SetBool("stun", true);
+            animator.SetInteger ("Direction", -1);
+            yield return new WaitForSeconds(1f); // wait
+            animator.SetInteger ("Direction", 5);
+            //     anim.SetBool("stun", false);
+            //     stunning = false;
+        }
+         public IEnumerator hideAnimation()
+         {
+          //     stunning = true;
+          //      Debug.Log("SHIT!");
+          //     anim.SetBool("stun", true);
+          animator.SetInteger ("Direction", -2);
+          yield return new WaitForSeconds(1f); // wait
+          animator.SetInteger ("Direction", 5);
+          //     anim.SetBool("stun", false);
+          //     stunning = false;
+         }
 }
