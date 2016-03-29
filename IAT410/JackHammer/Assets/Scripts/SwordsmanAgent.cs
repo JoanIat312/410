@@ -22,8 +22,7 @@ public class SwordsmanAgent : MonoBehaviour {
 	public enum State
 	{
 		IDLE,
-		CHASE//,
-		//ATTACK
+		CHASE
 	}
 
 
@@ -43,7 +42,7 @@ public class SwordsmanAgent : MonoBehaviour {
 	void Update () {
 		if (GameManager.stunEnemies == true) {
 			agent.Stop ();
-
+			sprite.SendMessage("Stunned", SendMessageOptions.DontRequireReceiver);
 		}
 		else {
 			agent.Resume ();
@@ -69,9 +68,6 @@ public class SwordsmanAgent : MonoBehaviour {
 				case State.IDLE:
 					Idle ();
 					break;
-//				case State.ATTACK:
-//					Attack ();
-//					break;
 			}
 
 			yield return null;
@@ -86,20 +82,7 @@ public class SwordsmanAgent : MonoBehaviour {
 		agent.speed = chaseSpeed;
 		agent.SetDestination (player.transform.position);
 	}
-//	void Attack(){
-//        agent.speed = chaseSpeed;
-//        agent.SetDestination (player.transform.position);
-   
-//		if (hit.collider.gameObject.tag == "wall") {
-//			state = SwordsmanAgent.State.CHASE;
-//		}
-//		if (Time.time >= nextBulletSpawnTimestamp) {
-//			nextBulletSpawnTimestamp = Time.time + defaultFireRate;
-//			GameObject newBullet = Instantiate (bObject, sprite.transform.position, sprite.transform.rotation) as GameObject;
-//			AudioSource.PlayClipAtPoint (shot, transform.position);
-//			newBullet.tag = "bullets";
-//		}
-//	}
+
 
 	void TakeDamage(float damage){
 //        Debug.Log(health);

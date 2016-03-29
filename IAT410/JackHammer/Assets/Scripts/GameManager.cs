@@ -56,7 +56,6 @@ public class GameManager : MonoBehaviour {
             float elapsedSecs = Time.time - (stunUseDelayTimeStamp - stunUseDelay);
             float percent = (elapsedSecs/stunUseDelay);
             stun.fillAmount = percent;
-
 			if (shield == true) {
 				Color c = shieldImage.color;
 				c.a = 1;
@@ -152,7 +151,11 @@ public class GameManager : MonoBehaviour {
     }
 
 	void Update(){
-  
+		float elapsedSecs = Time.time - (stunUseDelayTimeStamp - stunUseDelay);
+		float percent = (elapsedSecs/stunUseDelay);
+		stun.fillAmount = percent;
+		Debug.Log (percent);
+
 		cameraPos = main.transform.position;
 //		stunCharger += 0.0003f;
         stunCharger = (stunUseDelayTimeStamp/Time.time);
