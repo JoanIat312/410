@@ -48,4 +48,12 @@ public class Swordsman : MonoBehaviour {
 		yield return new WaitForSeconds(0.1f); 
 		GetComponent<SpriteRenderer> ().color = new Color (255f, 255f, 255f);
     }
+
+
+	IEnumerator Stunned() {
+		// flash enemy when hit
+		GetComponent<SpriteRenderer> ().color = new Color (0f, 213f, 244f);
+		yield return new WaitForSeconds(0.8f); 
+		GetComponent<SpriteRenderer> ().color = new Color (255f, 255f, 255f);
+	}
 }

@@ -48,7 +48,7 @@ public class HorsemanAgent : MonoBehaviour
 	{
 		if (GameManager.stunEnemies == true) {
 			agent.Stop ();
-
+			sprite.SendMessage("Stunned", SendMessageOptions.DontRequireReceiver);
 		} else {
 			agent.Resume ();
 		}
