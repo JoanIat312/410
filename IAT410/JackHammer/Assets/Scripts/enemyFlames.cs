@@ -5,7 +5,6 @@ public class enemyFlames : MonoBehaviour
 {
 
 	// Use this for initialization
-    public AudioClip explosion;
     public float moveSpeed = 0;
     private Vector3 objectPos;
     private Vector3 targetPos;
@@ -55,7 +54,6 @@ public class enemyFlames : MonoBehaviour
         {
 			hitWall = true;
 			anim.Play("bulletExplosion", 0, 0);
-			AudioSource.PlayClipAtPoint(explosion, transform.position);
             Destroy(gameObject, .4f);
         }
         if (col.gameObject.tag == "Player" && gameObject.name != "enemyFlames")
