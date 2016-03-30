@@ -116,7 +116,7 @@ public class HorsemanAgent : MonoBehaviour
 		}
 		if (Time.time >= nextBulletSpawnTimestamp && GameManager.stunEnemies == false) {
 			nextBulletSpawnTimestamp = Time.time + defaultFireRate;
-			GameObject newBullet = Instantiate (bObject, sprite.transform.position, sprite.transform.rotation) as GameObject;
+			GameObject newBullet = Instantiate (bObject, new Vector3 (sprite.transform.position.x, 0.38f, sprite.transform.position.z), sprite.transform.rotation) as GameObject;
 			AudioSource.PlayClipAtPoint (shot, transform.position);
 			newBullet.tag = "bullets";
 		}

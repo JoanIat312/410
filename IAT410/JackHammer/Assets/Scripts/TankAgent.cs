@@ -140,14 +140,10 @@ public class TankAgent : MonoBehaviour {
 			alive = false;
 			bloodSpawner.SendMessage ("spawnDead", transform.position, SendMessageOptions.DontRequireReceiver);
 			destory ();
-			waitAndLoad ();
+			gameManager.SendMessage ("loadNextScene", SendMessageOptions.DontRequireReceiver);
 		}
 	}
-
-	IEnumerator waitAndLoad(){
-		yield return new WaitForSeconds(.5f);
-		gameManager.SendMessage ("loadNextScene", SendMessageOptions.DontRequireReceiver);
-	}
+		
 	void destory ()
 	{
 		gameManager.SendMessage ("ScoreTracker", 150, SendMessageOptions.DontRequireReceiver);

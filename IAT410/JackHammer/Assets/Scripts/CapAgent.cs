@@ -8,7 +8,7 @@ public class CapAgent : MonoBehaviour {
 	private Vector3 playerPos;
 	public GameManager gameManager;
 	public GameObject shieldAgent;
-	private float spawnDelay = 1f;
+	private float spawnDelay = 15f;
 	private float nextBulletSpawnTimestamp;
 	// Use this for initialization
 	void Start () {
@@ -25,7 +25,7 @@ public class CapAgent : MonoBehaviour {
 		Vector3 closestEnemyPos = GetClosestEnemy ().transform.position;
          Debug.Log(Vector3.Distance (transform.position, closestEnemyPos));
 
-		if ((Vector3.Distance (transform.position, closestEnemyPos)) < 17f) {
+		if ((Vector3.Distance (transform.position, closestEnemyPos)) < 5f) {
 			if (Time.time >= nextBulletSpawnTimestamp) {
 				spawn ();
 			}

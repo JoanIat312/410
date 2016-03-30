@@ -59,10 +59,13 @@ public class shieldAgent : MonoBehaviour {
 		if (gameObject.name != "shieldAgent") {
 			if (col.gameObject.tag == "wall") {	
 				Destroy (gameObject, .4f);
+				Destroy (sprite);
 			}
 			if (col.gameObject.tag == "EnemyAgent") {	
 				col.gameObject.SendMessage ("TakeDamage", defaultDamage, SendMessageOptions.DontRequireReceiver);
+				Debug.Log ("entered");
 				Destroy (gameObject);
+				Destroy (sprite);
 			}
 		}
 	}
