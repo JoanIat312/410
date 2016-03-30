@@ -138,7 +138,7 @@ public class HorsemanAgent : MonoBehaviour
 			alive = false;
 			bloodSpawner.SendMessage ("spawnBigger", transform.position, SendMessageOptions.DontRequireReceiver);
 			destory ();
-			if (this.name == "CannonAgent") {
+			if (gameObject.name == "CannonAgent") {
 				bloodSpawner.SendMessage ("spawnDead", transform.position, SendMessageOptions.DontRequireReceiver);
 				waitAndLoad ();
 			}

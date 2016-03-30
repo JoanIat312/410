@@ -112,10 +112,11 @@ public class FlamethrowerAgent : MonoBehaviour
         
 //        if (hit.collider != null)
 //        {
-         if (hit.collider.gameObject.tag == "wall")
-         {
-          state = FlamethrowerAgent.State.CHASE;
-         }
+		if (Physics.Raycast (transform.position, -dis, out hit, sightDist)) {
+			if (hit.collider.gameObject.tag == "wall") {
+				state = FlamethrowerAgent.State.CHASE;
+			}
+		}
 //        }
 		if (Time.time >= nextBulletSpawnTimestamp && GameManager.stunEnemies == false) {
 			nextBulletSpawnTimestamp = Time.time + defaultFireRate;
