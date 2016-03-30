@@ -15,8 +15,10 @@ public class SubmarineAgent : MonoBehaviour {
 	public float firingRange = 2.5f;
 	public float sightDist = 10;
 	private float nextBulletSpawnTimestamp;
+	private float nextRocketSpawnTimestamp;
 	public float defaultFireRate = .8f;
 	public GameObject bObject;
+	public GameObject shotGunBulletObject;
 	public AudioClip shot;
 	public float health;
 	private float defaultStoppingDist;
@@ -71,7 +73,6 @@ public class SubmarineAgent : MonoBehaviour {
 	}
 
 	void Hide(){
-		Debug.Log ("hide");
 		agent.speed = 0;
 		//sprite.SendMessage ("setHide", SendMessageOptions.DontRequireReceiver);
 		sprite.SetActive (false);
@@ -107,11 +108,18 @@ public class SubmarineAgent : MonoBehaviour {
         agent.SetDestination (player.transform.position);
         agent.stoppingDistance = 2f;
 		sprite.SetActive (true);
-		if (Time.time >= nextBulletSpawnTimestamp && GameManager.stunEnemies == false) {
-			nextBulletSpawnTimestamp = Time.time + defaultFireRate;
+		if (Time.time >= nextRocketSpawnTimestamp && GameManager.stunEnemies == false) {
+			nextRocketSpawnTimestamp = Time.time + defaultFireRate*3;
 			GameObject newBullet = Instantiate (bObject, new Vector3(sprite.transform.position.x, 0.36f, sprite.transform.position.z), sprite.transform.rotation) as GameObject;
 			AudioSource.PlayClipAtPoint (shot, transform.position);
 			newBullet.tag = "bullets";
+		}
+		if (Time.time >= nextBulletSpawnTimestamp && GameManager.stunEnemies == false) {
+			nextBulletSpawnTimestamp = Time.time + defaultFireRate;
+			for (int i = 0; i < 8; i++) {
+				GameObject newShotBullet = Instantiate (shotGunBulletObject, sprite.transform.position, sprite.transform.rotation) as GameObject;
+				newShotBullet.tag = "bullets";
+			}
 		}
 	}
 

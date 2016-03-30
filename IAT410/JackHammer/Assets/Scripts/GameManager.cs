@@ -159,7 +159,6 @@ public class GameManager : MonoBehaviour {
     }
 
 	void Update(){
-		Debug.Log (255f * (playerHealth/100));
 		cameraPos = main.transform.position;
 //		stunCharger += 0.0003f;
         stunCharger = (stunUseDelayTimeStamp/Time.time);

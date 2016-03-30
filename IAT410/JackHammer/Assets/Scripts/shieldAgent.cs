@@ -7,8 +7,9 @@ public class shieldAgent : MonoBehaviour {
 	public GameObject sprite;
 	public GameObject cap;
 	public GameManager gameManager;
-	public int defaultDamage = 50;
-
+	public int defaultDamage = 30;
+	GameObject[] objectsWithTag;
+	GameObject closestObject = null;
 	void Start () {
 		
 		agent = GetComponent < NavMeshAgent > ();
@@ -22,49 +23,37 @@ public class shieldAgent : MonoBehaviour {
 		transform.position = new Vector3 (transform.position.x, 0.38f, transform.position.z);
 //		Debug.Log (transform.position.y);
 		if (gameObject.name != "shieldAgent") {
-			Vector3 closestEnemyPos = GetClosestEnemy ().transform.position;
-			if ((Vector3.Distance (transform.position, closestEnemyPos)) < 17f) {
-				agent.SetDestination (new Vector3(closestEnemyPos.x, 0.38f, closestEnemyPos.z));
+			objectsWithTag = GameObject.FindGameObjectsWithTag ("EnemyAgent");
+			closestObject = objectsWithTag [0];
+			for (int i = 0; i < objectsWithTag.Length; i++) {
+				//Debug.Log (objectsWithTag [i].name + ", " + Vector3.Distance (transform.position, objectsWithTag [i].transform.position));
+
+				if (Vector3.Distance (transform.position, objectsWithTag [i].transform.position) <= Vector3.Distance (transform.position, closestObject.transform.position)) {
+					closestObject = objectsWithTag [i];
+				}
+			}
+			if ((Vector3.Distance (transform.position, closestObject.transform.position)) < 5f) {
+				agent.SetDestination (new Vector3(closestObject.transform.position.x, 0.38f, closestObject.transform.position.z));
 				//agent.stoppingDistance = 0;
 			} else {
 				agent.SetDestination (new Vector3(cap.transform.position.x,0.38f, cap.transform.position.z));
 			}
-		} else {
 		}
 	}
-
-	GameObject GetClosestEnemy ()
-	{
-		// get array of all Enemy Agent objects    
-		GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag ("EnemyAgent");
-		GameObject closestObject = null;
-
-		for (int i = 0; i < objectsWithTag.Length; i++) {
-			if (closestObject == null) {
-				closestObject = objectsWithTag [i];
-				if (Vector3.Distance (transform.position, objectsWithTag [i].transform.position) <= Vector3.Distance (transform.position, closestObject.transform.position)) {
-					closestObject = objectsWithTag [i];
-				} 
-			}
-			//compares distances from player to each of the enemies
-
-		}
-
-		return closestObject;
-	}
+		
 
 	void OnTriggerEnter (Collider col)
 
 	{
+		Debug.Log ("entered" + col.gameObject.name);
 		if (gameObject.name != "shieldAgent") {
 			if (col.gameObject.tag == "wall") {	
-				Destroy (gameObject, .4f);
+				Destroy(gameObject);
 				Destroy (sprite);
 			}
 			if (col.gameObject.tag == "EnemyAgent") {	
 				col.gameObject.SendMessage ("TakeDamage", defaultDamage, SendMessageOptions.DontRequireReceiver);
-				Debug.Log ("entered");
-				Destroy (gameObject);
+				Destroy(gameObject);
 				Destroy (sprite);
 			}
 		}

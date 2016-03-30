@@ -8,24 +8,36 @@ public class CapAgent : MonoBehaviour {
 	private Vector3 playerPos;
 	public GameManager gameManager;
 	public GameObject shieldAgent;
-	private float spawnDelay = 15f;
 	private float nextBulletSpawnTimestamp;
+	GameObject[] objectsWithTag;
+	GameObject closestObject = null;
 	// Use this for initialization
 	void Start () {
 		agent = GetComponent < NavMeshAgent > ();
 		player = GameObject.Find ("Player");
 		agent.updateRotation = false;
+	
 		//InvokeRepeating("spawn", spawnDelay, spawnDelay);
+	}
+
+	void awake(){
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		objectsWithTag = GameObject.FindGameObjectsWithTag ("EnemyAgent");
+		closestObject = objectsWithTag [0];
+		for (int i = 0; i < objectsWithTag.Length; i++) {
+			//Debug.Log (objectsWithTag [i].name + ", " + Vector3.Distance (transform.position, objectsWithTag [i].transform.position));
+	
+			if (Vector3.Distance (transform.position, objectsWithTag [i].transform.position) <= Vector3.Distance (transform.position, closestObject.transform.position)) {
+				closestObject = objectsWithTag [i];
+			}
+		}
 		playerPos = player.transform.position;
 		agent.SetDestination (playerPos);
-		Vector3 closestEnemyPos = GetClosestEnemy ().transform.position;
-         Debug.Log(Vector3.Distance (transform.position, closestEnemyPos));
-
-		if ((Vector3.Distance (transform.position, closestEnemyPos)) < 5f) {
+		//Vector3 closestEnemyPos = GetClosestEnemy ().transform.position;
+			if ((Vector3.Distance (transform.position, closestObject.transform.position)) < 5f) {
 			if (Time.time >= nextBulletSpawnTimestamp) {
 				spawn ();
 			}
@@ -43,24 +55,5 @@ public class CapAgent : MonoBehaviour {
 
 		//sprite.SendMessage ("shieldStop", SendMessageOptions.DontRequireReceiver);
 	}
-
-	GameObject GetClosestEnemy ()
-	{
-		// get array of all Enemy Agent objects    
-		GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag ("EnemyAgent");
-		GameObject closestObject = null;
-
-		for (int i = 0; i < objectsWithTag.Length; i++) {
-			if (closestObject == null) {
-				closestObject = objectsWithTag [i];
-				if (Vector3.Distance (transform.position, objectsWithTag [i].transform.position) <= Vector3.Distance (transform.position, closestObject.transform.position)) {
-					closestObject = objectsWithTag [i];
-				} 
-			}
-			//compares distances from player to each of the enemies
-
-		}
-
-		return closestObject;
-	}
+		
 }
