@@ -140,9 +140,14 @@ public class HorsemanAgent : MonoBehaviour
 			destory ();
 			if (this.name == "CannonAgent") {
 				bloodSpawner.SendMessage ("spawnDead", transform.position, SendMessageOptions.DontRequireReceiver);
-				gameManager.SendMessage ("loadNextScene", SendMessageOptions.DontRequireReceiver);
+				waitAndLoad ();
 			}
 		}
+	}
+
+	IEnumerator waitAndLoad(){
+		yield return new WaitForSeconds(.5f);
+		gameManager.SendMessage ("loadNextScene", SendMessageOptions.DontRequireReceiver);
 	}
 
 	void destory ()

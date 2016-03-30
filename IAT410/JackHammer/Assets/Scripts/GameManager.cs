@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour {
     }
 
 	void OnGUI() {
-		if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 4 && Application.loadedLevel != 5) {
+		if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 7 && Application.loadedLevel != 8) {
 			health.fillAmount = playerHealth / 100f ;
             Color w = view.color;
             w.a = 1 - (playerHealth / 100) - 0.7f;
@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour {
 				c.a = 0.4f;
 				ShotGunImage.color= c;
 			}
-		} else if (Application.loadedLevel == 4 || Application.loadedLevel == 3) {
+		} else if (Application.loadedLevel == 7 || Application.loadedLevel == 8) {
 			ScoreText.text = "Score: " + score;
 		}
 	}
@@ -204,7 +204,7 @@ public class GameManager : MonoBehaviour {
 			paused = false;
 			Time.timeScale = 1;
 		}
-		if (Input.GetKeyDown (KeyCode.Return) && Application.loadedLevel == 4) {
+		if (Input.GetKeyDown (KeyCode.Return) && Application.loadedLevel == 8) {
             Application.LoadLevel (diedLevel);
 			score = 0;
 

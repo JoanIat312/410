@@ -165,10 +165,13 @@ public class SubmarineAgent : MonoBehaviour {
 			alive = false;
 			bloodSpawner.SendMessage ("spawnDead", transform.position, SendMessageOptions.DontRequireReceiver);
 			destroy ();
-			//gameManager.SendMessage ("loadNextScene", SendMessageOptions.DontRequireReceiver);
+			waitAndLoad ();
 		}
 	}
-
+	IEnumerator waitAndLoad(){
+		yield return new WaitForSeconds(.5f);
+		gameManager.SendMessage ("loadWin", SendMessageOptions.DontRequireReceiver);
+	}
 	void destroy ()
 	{
 		gameManager.SendMessage ("ScoreTracker", 150, SendMessageOptions.DontRequireReceiver);
