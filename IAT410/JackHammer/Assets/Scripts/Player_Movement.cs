@@ -55,7 +55,7 @@ public class Player_Movement : MonoBehaviour
 		bloodSpawner.SendMessage("spawn", transform.position, SendMessageOptions.DontRequireReceiver);
   GetComponent<SpriteRenderer> ().material.color = new Color (255f, 0f, 0f);
 		yield return new WaitForSeconds (0.1f);
-  GetComponent<SpriteRenderer> ().material.color = new Color (255f, 255f, 255f);
+  GetComponent<SpriteRenderer> ().material.color = new Color (1f, 1f, 1f);
 	}
 
 	void Blink ()
@@ -66,7 +66,7 @@ public class Player_Movement : MonoBehaviour
 		
 
 	void Normal(){
-		GetComponent<SpriteRenderer> ().material.color = new Color (255f, 255f, 255f);
+		GetComponent<SpriteRenderer> ().material.color = new Color (1f, 1f, 1f);
 	}
 
 	void OnCollisionEnter (Collision collision)
