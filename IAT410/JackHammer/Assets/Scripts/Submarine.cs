@@ -7,7 +7,7 @@ public class Submarine : MonoBehaviour {
 	public Transform target;
 	// need this but dont know why
 	public NavMeshAgent myAgent;
-	public Animator animator;
+	private Animator animator;
 	void Start () {
 		animator = GetComponent<Animator> ();
 	}
@@ -54,9 +54,10 @@ public class Submarine : MonoBehaviour {
             //     stunning = true;
             //      Debug.Log("SHIT!");
             //     anim.SetBool("stun", true);
-            animator.SetInteger ("Direction", -1);
-            yield return new WaitForSeconds(1f); // wait
-            animator.SetInteger ("Direction", 5);
+			// waits
+		gameObject.SetActive(true);
+			animator.SetInteger ("Direction", -1);
+			yield return new WaitForSeconds(0.5f);
             //     anim.SetBool("stun", false);
             //     stunning = false;
         }
@@ -65,9 +66,10 @@ public class Submarine : MonoBehaviour {
           //     stunning = true;
           //      Debug.Log("SHIT!");
           //     anim.SetBool("stun", true);
-          animator.SetInteger ("Direction", -2);
-          yield return new WaitForSeconds(1f); // wait
-          animator.SetInteger ("Direction", 5);
+			animator.SetInteger ("Direction", -2);
+	          yield return new WaitForSeconds(0.5f); // wait
+			  gameObject.SetActive(false);
+          //animator.SetInteger ("Direction", 5);
           //     anim.SetBool("stun", false);
           //     stunning = false;
          }

@@ -33,7 +33,9 @@ public class Rockets : MonoBehaviour {
 			float xDif = targetPos.x - transform.position.x;
 			float zDif = targetPos.z - transform.position.z;
 			dis = new Vector3 (xDif, 0.38f, zDif);
-
+			float angle = Mathf.Atan2(xDif, zDif) * Mathf.Rad2Deg;
+			Debug.Log (angle);
+			transform.rotation = Quaternion.Euler(new Vector3 (90, angle, transform.rotation.z)); 
 		//dis = targetPos - objectPos;
 		//dis.Normalize ();
 		//rb.velocity = (targetPos.normalized * moveSpeed);
@@ -60,7 +62,7 @@ public class Rockets : MonoBehaviour {
 		
 		if (col.gameObject.tag == "wall" && gameObject.name != "Rockets") {
 			hitWall = true;
-			anim.SetBool ("distroy", true);
+			anim.SetBool ("Distroy", true);
 			anim.Play ("cannonExplosion", 0, 0);
 			AudioSource.PlayClipAtPoint (explosion, transform.position);         
 			Destroy (gameObject, 0.5f);

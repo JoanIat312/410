@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class HorsemanAgent : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class HorsemanAgent : MonoBehaviour
 	public GameObject bObject;
 	public AudioClip shot;
 	private Vector3 dis;
+	public Image bossHealth;
 	public float defaultFireRate = .8f;
 	private RaycastHit hit;
 	private Vector3 shootingLocation;
@@ -23,6 +25,11 @@ public class HorsemanAgent : MonoBehaviour
 	public float firingRange = 2.5f;
 	private float defaultStoppingDist;
 
+	public void OnGUI(){
+		if (this.name == "CannonAgent") {
+			bossHealth.fillAmount = health / 1000f;
+		}
+	}
 	public enum State
 	{
 		IDLE,

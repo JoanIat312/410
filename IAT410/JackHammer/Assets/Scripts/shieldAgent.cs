@@ -45,7 +45,6 @@ public class shieldAgent : MonoBehaviour {
 	void OnTriggerEnter (Collider col)
 
 	{
-		Debug.Log ("entered" + col.gameObject.name);
 		if (gameObject.name != "shieldAgent") {
 			if (col.gameObject.tag == "wall") {	
 				Destroy(gameObject);

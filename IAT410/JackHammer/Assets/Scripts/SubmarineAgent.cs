@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SubmarineAgent : MonoBehaviour {
 
@@ -12,7 +13,8 @@ public class SubmarineAgent : MonoBehaviour {
 	public GameObject sprite;
 	private Vector3 dis;
 	private RaycastHit hit;
-	public float firingRange = 2.5f;
+	public Image bossHealth;
+	public float firingRange = 1f;
 	public float sightDist = 10;
 	private float nextBulletSpawnTimestamp;
 	private float nextRocketSpawnTimestamp;
@@ -25,7 +27,7 @@ public class SubmarineAgent : MonoBehaviour {
     private float timeForNextAttack = 0;
     private float timeForHide = 0;
  private float timeToAttack = 5f;
- private float timeToHide = 3f;
+ private float timeToHide = 5f;
  private bool popAnimationPlayed = false;
  private bool hideAnimationPlayed = false;
 
@@ -36,6 +38,9 @@ public class SubmarineAgent : MonoBehaviour {
 		POP,
 		ATTACK,
 		CHASE
+	}
+	public void OnGUI(){
+		bossHealth.fillAmount = health / 2000f;
 	}
 	void Start () {
 		agent = GetComponent<NavMeshAgent> ();
@@ -57,9 +62,6 @@ public class SubmarineAgent : MonoBehaviour {
 			case State.HIDE:
 				Hide ();
 				break;
-			case State.POP:
-				Pop ();
-				break;
 			case State.ATTACK:
 				Attack ();
 				break;
@@ -74,15 +76,17 @@ public class SubmarineAgent : MonoBehaviour {
 
 	void Hide(){
 		agent.speed = 0;
+		sprite.SendMessage("hideAnimation", SendMessageOptions.DontRequireReceiver);
 		//sprite.SendMessage ("setHide", SendMessageOptions.DontRequireReceiver);
-		sprite.SetActive (false);
+		//sprite.SetActive (false);
 		//a.SetInteger ("Direction", -2);
 
 
 	}
 
 	void Chase(){
-		sprite.SetActive (true);
+		Pop ();
+		//sprite.SetActive (true);
 		agent.speed = 1;
 		//Debug.Log("startChase");
 		agent.SetDestination (player.transform.position);
@@ -100,6 +104,8 @@ public class SubmarineAgent : MonoBehaviour {
 		Debug.Log ("pop");
 		agent.speed = 0;
 		sprite.SetActive (true);
+		sprite.SendMessage("popAnimation", SendMessageOptions.DontRequireReceiver);
+		//sprite.SetActive (true);
 		//sprite.SendMessage ("setPop", SendMessageOptions.DontRequireReceiver);
 	}
 
@@ -107,7 +113,6 @@ public class SubmarineAgent : MonoBehaviour {
         agent.speed = 1;
         agent.SetDestination (player.transform.position);
         agent.stoppingDistance = 2f;
-		sprite.SetActive (true);
 		if (Time.time >= nextRocketSpawnTimestamp && GameManager.stunEnemies == false) {
 			nextRocketSpawnTimestamp = Time.time + defaultFireRate*3;
 			GameObject newBullet = Instantiate (bObject, new Vector3(sprite.transform.position.x, 0.36f, sprite.transform.position.z), sprite.transform.rotation) as GameObject;
@@ -130,27 +135,27 @@ public class SubmarineAgent : MonoBehaviour {
 		//if (Physics.Raycast (transform.position, -dis, out hit, sightDist)) {
 			//Debug.Log (hit.collider.gameObject.tag);
 			//if (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.name == "bullets(Clone)") {
-              if (Time.time >= timeForNextAttack && Time.time < timeForNextAttack + timeToAttack) {
-                timeForHide = Time.time + timeToHide;
-                if (!popAnimationPlayed)
+              if (Time.time >= timeForNextAttack && Time.time < timeForNextAttack + timeToAttack) {    
+				timeForHide = Time.time + timeToHide;
+				Pop ();
+                /*if (!popAnimationPlayed)
                 {
-                     sprite.SendMessage("hideAnimation", SendMessageOptions.DontRequireReceiver);
+                     //sprite.SendMessage("hideAnimation", SendMessageOptions.DontRequireReceiver);
                      popAnimationPlayed = true;
                      hideAnimationPlayed = false;
-                }
-				//state = SubmarineAgent.State.POP;
+                }*/
 				if ((dis.z < firingRange && dis.z > -firingRange) && (dis.x < firingRange && dis.x > -firingRange)) {
-					state = SubmarineAgent.State.ATTACK;
+				state = SubmarineAgent.State.ATTACK;
 				} else {
 					state = SubmarineAgent.State.CHASE;
 				}
               } else if (Time.time >= timeForHide && Time.time < timeForHide + timeToHide){
-                    if (!hideAnimationPlayed)
+                    /*if (!hideAnimationPlayed)
                     {
-                         sprite.SendMessage("hideAnimation", SendMessageOptions.DontRequireReceiver);
+                         //sprite.SendMessage("hideAnimation", SendMessageOptions.DontRequireReceiver);
                          hideAnimationPlayed = true;
                          popAnimationPlayed = false;
-                    }
+                    }*/
                    // sprite.SendMessage ("hideAnimation", SendMessageOptions.DontRequireReceiver);
             	    state = SubmarineAgent.State.HIDE;
                     timeForNextAttack = Time.time + timeToAttack;

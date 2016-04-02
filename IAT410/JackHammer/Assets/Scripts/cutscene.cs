@@ -15,10 +15,6 @@ public class cutscene : MonoBehaviour {
 			Application.LoadLevel (Application.loadedLevel+1);
 		}
 	}
-
-	IEnumerator LoadAfterAnim(){
-		yield return new WaitForSeconds (45);
-		Application.LoadLevel (Application.loadedLevel+1);
-	}
+		
 		
 }

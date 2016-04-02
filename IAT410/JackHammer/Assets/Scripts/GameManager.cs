@@ -46,12 +46,12 @@ public class GameManager : MonoBehaviour {
     }
 
 	void OnGUI() {
-		if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 7 && Application.loadedLevel != 8) {
-			health.fillAmount = playerHealth / 100f ;
+		if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 9 && Application.loadedLevel != 8) {
+			health.fillAmount = playerHealth / 100f;
             Color w = view.color;
             w.a = 1 - (playerHealth / 100) - 0.7f;
             view.color = w;
-
+			ScoreText.text = "Score: " + score;
 			/*Color n = healthIcon.color;
 			n.g = 1 - (playerHealth / 100);
 			n.b = 1 - (playerHealth / 100);
@@ -96,8 +96,6 @@ public class GameManager : MonoBehaviour {
 				c.a = 0.4f;
 				ShotGunImage.color= c;
 			}
-		} else if (Application.loadedLevel == 7 || Application.loadedLevel == 8) {
-			ScoreText.text = "Score: " + score;
 		}
 	}
 

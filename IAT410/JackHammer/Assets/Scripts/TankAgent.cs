@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class TankAgent : MonoBehaviour {
 
@@ -14,6 +15,7 @@ public class TankAgent : MonoBehaviour {
 	public GameObject bObject;
 	public GameObject shotGunBulletObject;
 	public AudioClip shot;
+	public Image bossHealth;
 	private Vector3 dis;
 	public float defaultFireRate = .8f;
 	private RaycastHit hit;
@@ -30,7 +32,9 @@ public class TankAgent : MonoBehaviour {
 		CHASE,
 		ATTACK
 	}
-
+	public void OnGUI(){
+			bossHealth.fillAmount = health / 1500f;
+	}
 	void Start () {
 		agent = GetComponent<NavMeshAgent> ();
 		player = GameObject.Find ("Player");
