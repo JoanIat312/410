@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour {
     }
 
 	void OnGUI() {
-		if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevel != 9 && Application.loadedLevel != 8) {
+		if (playerHealth > 0 && playerHealth <= 100 && Application.loadedLevelName != "Winning"  && Application.loadedLevelName != "GameOver") {
 			health.fillAmount = playerHealth / 100f;
             Color w = view.color;
             w.a = 1 - (playerHealth / 100) - 0.7f;
@@ -132,7 +132,7 @@ public class GameManager : MonoBehaviour {
 		}
 		
 	}
-	void loadNextScene(){
+	public void loadNextScene(){
 		level++;
 		Application.LoadLevel (level);
 	}
@@ -143,6 +143,10 @@ public class GameManager : MonoBehaviour {
 	void loadLose(){
 		Application.LoadLevel("GameOver");
 
+	}
+
+	public void loadQuit(){
+		Application.Quit();
 	}
 	void PlayerShield()
     {
@@ -201,10 +205,9 @@ public class GameManager : MonoBehaviour {
 			paused = false;
 			Time.timeScale = 1;
 		}
-		if (Input.GetKeyDown (KeyCode.Return) && Application.loadedLevel == 8) {
+		if (Input.GetKeyDown (KeyCode.Return) && Application.loadedLevelName == "GameOver") {
             Application.LoadLevel (diedLevel);
 			score = 0;
-
 		}
 		if (shakeDuration > 0 && shake == true) {
 			main.transform.position = cameraPos + Random.insideUnitSphere * shakeAmount;

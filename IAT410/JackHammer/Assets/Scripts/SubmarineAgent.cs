@@ -169,11 +169,12 @@ public class SubmarineAgent : MonoBehaviour {
 	void TakeDamage (int damage)
 	{
 		if (health - damage >= 0) {
+			if(state != SubmarineAgent.State.HIDE){
+				health -= damage;
 
-			health -= damage;
-
-			sprite.SendMessage ("TakeDamage", SendMessageOptions.DontRequireReceiver);
-			//state = SubmarineAgent.State.HIDE;
+				sprite.SendMessage ("TakeDamage", SendMessageOptions.DontRequireReceiver);
+				//state = SubmarineAgent.State.HIDE;
+			}
 		} else {
 			alive = false;
 			bloodSpawner.SendMessage ("spawnDead", transform.position, SendMessageOptions.DontRequireReceiver);
@@ -183,7 +184,7 @@ public class SubmarineAgent : MonoBehaviour {
 	void destroy ()
 	{
 		gameManager.SendMessage ("loadWin", SendMessageOptions.DontRequireReceiver);
-		gameManager.SendMessage ("ScoreTracker", 150, SendMessageOptions.DontRequireReceiver);
+		gameManager.SendMessage ("ScoreTracker", 200, SendMessageOptions.DontRequireReceiver);
 		Destroy (sprite);
 		Destroy (this.gameObject);
 
