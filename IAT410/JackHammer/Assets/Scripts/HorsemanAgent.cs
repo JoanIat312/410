@@ -158,7 +158,7 @@ public class HorsemanAgent : MonoBehaviour
 			gameManager.SendMessage ("ScoreTracker", 100, SendMessageOptions.DontRequireReceiver);
 		} else if (this.name == "HorsemanAgent") {
 			gameManager.SendMessage ("ScoreTracker", 20, SendMessageOptions.DontRequireReceiver);
-		} else if (this.name == "MusketManAgent") {
+		} else {
 			gameManager.SendMessage ("ScoreTracker", 40, SendMessageOptions.DontRequireReceiver);
 		}
 		Destroy (sprite);
