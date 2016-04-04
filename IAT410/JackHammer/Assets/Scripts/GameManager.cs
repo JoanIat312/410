@@ -132,7 +132,7 @@ public class GameManager : MonoBehaviour {
 		}
 		
 	}
-	void loadNextScene(){
+	public void loadNextScene(){
 		level++;
 		Application.LoadLevel (level);
 	}
@@ -143,6 +143,10 @@ public class GameManager : MonoBehaviour {
 	void loadLose(){
 		Application.LoadLevel("GameOver");
 
+	}
+
+	public void loadQuit(){
+		Application.Quit();
 	}
 	void PlayerShield()
     {

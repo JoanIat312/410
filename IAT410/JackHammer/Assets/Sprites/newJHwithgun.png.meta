@@ -1,0 +1,1471 @@
+fileFormatVersion: 2
+guid: e7742000da6c45e4eaa8359a2f5428b5
+timeCreated: 1459734037
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: newJHwithgun_0
+    21300002: newJHwithgun_1
+    21300004: newJHwithgun_2
+    21300006: newJHwithgun_3
+    21300008: newJHwithgun_4
+    21300010: newJHwithgun_5
+    21300012: newJHwithgun_6
+    21300014: newJHwithgun_7
+    21300016: newJHwithgun_8
+    21300018: newJHwithgun_9
+    21300020: newJHwithgun_10
+    21300022: newJHwithgun_11
+    21300024: newJHwithgun_12
+    21300026: newJHwithgun_13
+    21300028: newJHwithgun_14
+    21300030: newJHwithgun_15
+    21300032: newJHwithgun_16
+    21300034: newJHwithgun_17
+    21300036: newJHwithgun_18
+    21300038: newJHwithgun_19
+    21300040: newJHwithgun_20
+    21300042: newJHwithgun_21
+    21300044: newJHwithgun_22
+    21300046: newJHwithgun_23
+    21300048: newJHwithgun_24
+    21300050: newJHwithgun_25
+    21300052: newJHwithgun_26
+    21300054: newJHwithgun_27
+    21300056: newJHwithgun_28
+    21300058: newJHwithgun_29
+    21300060: newJHwithgun_30
+    21300062: newJHwithgun_31
+    21300064: newJHwithgun_32
+    21300066: newJHwithgun_33
+    21300068: newJHwithgun_34
+    21300070: newJHwithgun_35
+    21300072: newJHwithgun_36
+    21300074: newJHwithgun_37
+    21300076: newJHwithgun_38
+    21300078: newJHwithgun_39
+    21300080: newJHwithgun_40
+    21300082: newJHwithgun_41
+    21300084: newJHwithgun_42
+    21300086: newJHwithgun_43
+    21300088: newJHwithgun_44
+    21300090: newJHwithgun_45
+    21300092: newJHwithgun_46
+    21300094: newJHwithgun_47
+    21300096: newJHwithgun_48
+    21300098: newJHwithgun_49
+    21300100: newJHwithgun_50
+    21300102: newJHwithgun_51
+    21300104: newJHwithgun_52
+    21300106: newJHwithgun_53
+    21300108: newJHwithgun_54
+    21300110: newJHwithgun_55
+    21300112: newJHwithgun_56
+    21300114: newJHwithgun_57
+    21300116: newJHwithgun_58
+    21300118: newJHwithgun_59
+    21300120: newJHwithgun_60
+    21300122: newJHwithgun_61
+    21300124: newJHwithgun_62
+    21300126: newJHwithgun_63
+    21300128: newJHwithgun_64
+    21300130: newJHwithgun_65
+    21300132: newJHwithgun_66
+    21300134: newJHwithgun_67
+    21300136: newJHwithgun_68
+    21300138: newJHwithgun_69
+    21300140: newJHwithgun_70
+    21300142: newJHwithgun_71
+    21300144: newJHwithgun_72
+    21300146: newJHwithgun_73
+    21300148: newJHwithgun_74
+    21300150: newJHwithgun_75
+    21300152: newJHwithgun_76
+    21300154: newJHwithgun_77
+    21300156: newJHwithgun_78
+    21300158: newJHwithgun_79
+    21300160: newJHwithgun_80
+    21300162: newJHwithgun_81
+    21300164: newJHwithgun_82
+    21300166: newJHwithgun_83
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: newJHwithgun_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 610
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 26.5}
+        - {x: -10, y: 26.5}
+        - {x: -20, y: 20.5}
+        - {x: -20, y: -26.5}
+        - {x: 20, y: -26.5}
+        - {x: 20, y: -9.5}
+        - {x: 15, y: 16.5}
+    - name: newJHwithgun_1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 610
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 26.5}
+        - {x: -13, y: 26.5}
+        - {x: -21, y: 12.5}
+        - {x: -21, y: -15.5}
+        - {x: -12, y: -26.5}
+        - {x: 18, y: -26.5}
+        - {x: 21, y: -25.5}
+        - {x: 21, y: 7.5}
+        - {x: 18, y: 17.5}
+    - name: newJHwithgun_2
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 609
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 27}
+        - {x: -20.5, y: 16}
+        - {x: -20.5, y: -17}
+        - {x: -12.5, y: -27}
+        - {x: 20.5, y: -27}
+        - {x: 20.5, y: 3}
+        - {x: 9.5, y: 27}
+    - name: newJHwithgun_3
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 608
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 27}
+        - {x: -11, y: 27}
+        - {x: -21, y: 14}
+        - {x: -21, y: -21}
+        - {x: -11, y: -27}
+        - {x: 21, y: -27}
+        - {x: 21, y: 11}
+        - {x: 18, y: 18}
+    - name: newJHwithgun_4
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 609
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: -23}
+        - {x: -15.5, y: -27}
+        - {x: 18.5, y: -27}
+        - {x: 20.5, y: -26}
+        - {x: 20.5, y: -1}
+        - {x: 14.5, y: 16}
+        - {x: 4.5, y: 27}
+        - {x: -6.5, y: 27}
+        - {x: -20.5, y: 21}
+    - name: newJHwithgun_5
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 610
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 26.5}
+        - {x: -11, y: 26.5}
+        - {x: -20, y: 20.5}
+        - {x: -20, y: -22.5}
+        - {x: -14, y: -26.5}
+        - {x: 20, y: -26.5}
+        - {x: 20, y: -10.5}
+        - {x: 14, y: 15.5}
+    - name: newJHwithgun_6
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 609
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.5, y: 27}
+        - {x: -19.5, y: -15}
+        - {x: -12.5, y: -27}
+        - {x: 19.5, y: -27}
+        - {x: 19.5, y: 13}
+        - {x: 8.5, y: 27}
+    - name: newJHwithgun_7
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 608
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3.5, y: 27}
+        - {x: -5.5, y: 27}
+        - {x: -18.5, y: 17}
+        - {x: -20.5, y: 12}
+        - {x: -20.5, y: -13}
+        - {x: -13.5, y: -27}
+        - {x: 17.5, y: -27}
+        - {x: 20.5, y: -24}
+        - {x: 20.5, y: -10}
+        - {x: 14.5, y: 16}
+    - name: newJHwithgun_8
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 609
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5.5, y: 27}
+        - {x: -13.5, y: 27}
+        - {x: -19.5, y: 22}
+        - {x: -19.5, y: -19}
+        - {x: -12.5, y: -27}
+        - {x: 17.5, y: -27}
+        - {x: 19.5, y: -25}
+        - {x: 19.5, y: -3}
+        - {x: 10.5, y: 24}
+    - name: newJHwithgun_9
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 545
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_10
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 545
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_11
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 546
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_12
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 546
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_13
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 545
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_14
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 545
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_15
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 545
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_16
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 545
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_17
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 545
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_18
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 469
+        width: 42
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: -14.5}
+        - {x: 1, y: -15.5}
+        - {x: 5, y: -19.5}
+        - {x: 12, y: -23.5}
+        - {x: 21, y: -4.5}
+        - {x: 21, y: 18.5}
+        - {x: 19, y: 23.5}
+        - {x: 13, y: 29.5}
+        - {x: -13, y: 29.5}
+        - {x: -21, y: 19.5}
+        - {x: -21, y: -22.5}
+        - {x: -8, y: -29.5}
+        - {x: 8, y: -29.5}
+        - {x: 2, y: -17.5}
+        - {x: 1, y: -16.5}
+    - name: newJHwithgun_19
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 469
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 29.5}
+        - {x: -22, y: 25.5}
+        - {x: -22, y: -19.5}
+        - {x: -11, y: -29.5}
+        - {x: 6, y: -29.5}
+        - {x: 22, y: -0.5}
+        - {x: 22, y: 29.5}
+    - name: newJHwithgun_20
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 469
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 29.5}
+        - {x: -16, y: 29.5}
+        - {x: -22, y: 11.5}
+        - {x: -22, y: -17.5}
+        - {x: -7, y: -29.5}
+        - {x: 5, y: -29.5}
+        - {x: 15, y: -19.5}
+        - {x: 22, y: 4.5}
+        - {x: 22, y: 23.5}
+    - name: newJHwithgun_21
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 465
+        width: 42
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 31}
+        - {x: -21, y: -25}
+        - {x: -9, y: -31}
+        - {x: 5, y: -31}
+        - {x: 21, y: -6}
+        - {x: 21, y: 19}
+        - {x: 12, y: 31}
+    - name: newJHwithgun_22
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 467
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: 30.5}
+        - {x: -21.5, y: 14.5}
+        - {x: -21.5, y: -16.5}
+        - {x: -7.5, y: -30.5}
+        - {x: 6.5, y: -30.5}
+        - {x: 21.5, y: -0.5}
+        - {x: 21.5, y: 23.5}
+        - {x: 18.5, y: 30.5}
+    - name: newJHwithgun_23
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 469
+        width: 42
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 29.5}
+        - {x: -21, y: 23.5}
+        - {x: -21, y: -20.5}
+        - {x: -15, y: -29.5}
+        - {x: 7, y: -29.5}
+        - {x: 21, y: -1.5}
+        - {x: 21, y: 22.5}
+        - {x: 18, y: 29.5}
+    - name: newJHwithgun_24
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 469
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.5, y: 29.5}
+        - {x: -18.5, y: 29.5}
+        - {x: -21.5, y: 19.5}
+        - {x: -21.5, y: -24.5}
+        - {x: -10.5, y: -29.5}
+        - {x: 4.5, y: -29.5}
+        - {x: 16.5, y: -6.5}
+        - {x: 21.5, y: 8.5}
+        - {x: 21.5, y: 22.5}
+    - name: newJHwithgun_25
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 468
+        width: 42
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 29.5}
+        - {x: -21, y: 16.5}
+        - {x: -21, y: -18.5}
+        - {x: -8, y: -29.5}
+        - {x: 7, y: -29.5}
+        - {x: 21, y: 1.5}
+        - {x: 21, y: 23.5}
+        - {x: 18, y: 29.5}
+    - name: newJHwithgun_26
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 468
+        width: 43
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.5, y: 30}
+        - {x: -21.5, y: -22}
+        - {x: -16.5, y: -30}
+        - {x: 7.5, y: -30}
+        - {x: 21.5, y: 4}
+        - {x: 21.5, y: 30}
+    - name: newJHwithgun_27
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 396
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.5, y: 24}
+        - {x: -24.5, y: -24}
+        - {x: 8.5, y: -24}
+        - {x: 24.5, y: -15}
+        - {x: 24.5, y: 4}
+        - {x: 8.5, y: 24}
+    - name: newJHwithgun_28
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 397
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24.5, y: -8}
+        - {x: 24.5, y: 4}
+        - {x: 3.5, y: 23}
+        - {x: -20.5, y: 23}
+        - {x: -24.5, y: 19}
+        - {x: -24.5, y: -22}
+        - {x: -23.5, y: -23}
+        - {x: 3.5, y: -23}
+        - {x: 8.5, y: -20}
+        - {x: 6.5, y: -16}
+        - {x: 17.5, y: -11}
+    - name: newJHwithgun_29
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 397
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 23.5}
+        - {x: -24, y: 21.5}
+        - {x: -24, y: -23.5}
+        - {x: 15, y: -23.5}
+        - {x: 24, y: -17.5}
+        - {x: 24, y: 4.5}
+        - {x: 10, y: 23.5}
+    - name: newJHwithgun_30
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 397
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.5, y: 23.5}
+        - {x: -23.5, y: 22.5}
+        - {x: -23.5, y: -23.5}
+        - {x: 10.5, y: -23.5}
+        - {x: 23.5, y: -20.5}
+        - {x: 23.5, y: 19.5}
+        - {x: 21.5, y: 23.5}
+    - name: newJHwithgun_31
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 397
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.5, y: 23.5}
+        - {x: -22.5, y: 20.5}
+        - {x: -22.5, y: -23.5}
+        - {x: 14.5, y: -23.5}
+        - {x: 22.5, y: -8.5}
+        - {x: 22.5, y: 3.5}
+        - {x: 7.5, y: 23.5}
+    - name: newJHwithgun_32
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 396
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 23.5}
+        - {x: -22.5, y: -23.5}
+        - {x: 9.5, y: -23.5}
+        - {x: 22.5, y: -17.5}
+        - {x: 22.5, y: 19.5}
+        - {x: 20.5, y: 23.5}
+    - name: newJHwithgun_33
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 397
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.5, y: 23.5}
+        - {x: -23.5, y: 22.5}
+        - {x: -23.5, y: -23.5}
+        - {x: 10.5, y: -23.5}
+        - {x: 23.5, y: -19.5}
+        - {x: 23.5, y: 21.5}
+        - {x: 22.5, y: 23.5}
+    - name: newJHwithgun_34
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 395
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: 24.5}
+        - {x: -23.5, y: -22.5}
+        - {x: -22.5, y: -24.5}
+        - {x: 2.5, y: -24.5}
+        - {x: 23.5, y: -17.5}
+        - {x: 23.5, y: 18.5}
+        - {x: 20.5, y: 24.5}
+      - - {x: 3.5, y: -18.5}
+        - {x: 6.5, y: -17.5}
+        - {x: 6.5, y: -14.5}
+        - {x: 3.5, y: -13.5}
+        - {x: 1.5, y: -15.5}
+    - name: newJHwithgun_35
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 397
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 23.5}
+        - {x: -23, y: 21.5}
+        - {x: -23, y: -23.5}
+        - {x: 5, y: -23.5}
+        - {x: 23, y: -7.5}
+        - {x: 23, y: 13.5}
+        - {x: 3, y: 23.5}
+    - name: newJHwithgun_36
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 333
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 23.5}
+        - {x: -23, y: 6.5}
+        - {x: -23, y: -19.5}
+        - {x: -6, y: -23.5}
+        - {x: 23, y: -23.5}
+        - {x: 23, y: 22.5}
+        - {x: 20, y: 23.5}
+    - name: newJHwithgun_37
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 331
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 24.5}
+        - {x: -23.5, y: 14.5}
+        - {x: -23.5, y: -6.5}
+        - {x: -2.5, y: -24.5}
+        - {x: 23.5, y: -24.5}
+        - {x: 23.5, y: 22.5}
+        - {x: 19.5, y: 24.5}
+      - - {x: -4.5, y: -18.5}
+        - {x: -1.5, y: -17.5}
+        - {x: -1.5, y: -14.5}
+        - {x: -4.5, y: -13.5}
+        - {x: -6.5, y: -15.5}
+    - name: newJHwithgun_38
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 333
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3.5, y: 23.5}
+        - {x: -7.5, y: 18.5}
+        - {x: -6.5, y: 8.5}
+        - {x: -23.5, y: 0.5}
+        - {x: -23.5, y: -12.5}
+        - {x: -12.5, y: -23.5}
+        - {x: 23.5, y: -23.5}
+        - {x: 23.5, y: 19.5}
+        - {x: 22.5, y: 23.5}
+    - name: newJHwithgun_39
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 332
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 23.5}
+        - {x: -22.5, y: -18.5}
+        - {x: -17.5, y: -23.5}
+        - {x: 22.5, y: -23.5}
+        - {x: 22.5, y: 17.5}
+        - {x: 15.5, y: 23.5}
+    - name: newJHwithgun_40
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 333
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.5, y: 23.5}
+        - {x: -22.5, y: 5.5}
+        - {x: -22.5, y: -17.5}
+        - {x: -10.5, y: -23.5}
+        - {x: 22.5, y: -23.5}
+        - {x: 22.5, y: 23.5}
+    - name: newJHwithgun_41
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 333
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1.5, y: 23.5}
+        - {x: -5.5, y: 18.5}
+        - {x: -4.5, y: 8.5}
+        - {x: -23.5, y: 0.5}
+        - {x: -23.5, y: -9.5}
+        - {x: -18.5, y: -19.5}
+        - {x: -5.5, y: -23.5}
+        - {x: 23.5, y: -23.5}
+        - {x: 23.5, y: 17.5}
+        - {x: 16.5, y: 23.5}
+    - name: newJHwithgun_42
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 333
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 23.5}
+        - {x: -24, y: 21.5}
+        - {x: -24, y: -13.5}
+        - {x: -19, y: -23.5}
+        - {x: 24, y: -23.5}
+        - {x: 24, y: 20.5}
+        - {x: 18, y: 23.5}
+    - name: newJHwithgun_43
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 333
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.5, y: 23}
+        - {x: -24.5, y: 3}
+        - {x: -24.5, y: -7}
+        - {x: -10.5, y: -23}
+        - {x: 24.5, y: -23}
+        - {x: 24.5, y: 20}
+        - {x: 19.5, y: 23}
+    - name: newJHwithgun_44
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 332
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.5, y: -11}
+        - {x: -13.5, y: -24}
+        - {x: 24.5, y: -24}
+        - {x: 24.5, y: 24}
+        - {x: -17.5, y: 24}
+        - {x: -24.5, y: 21}
+    - name: newJHwithgun_45
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 267
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_46
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 267
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_47
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 268
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_48
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 268
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_49
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 267
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_50
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 267
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_51
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 267
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_52
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 267
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_53
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 267
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_54
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 187
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_55
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 187
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_56
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 188
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_57
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 188
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_58
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 187
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_59
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 187
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_60
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 187
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_61
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 187
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_62
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 187
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_63
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 129
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_64
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 129
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_65
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 130
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_66
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 130
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_67
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 129
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_68
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 129
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_69
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 129
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_70
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 129
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_71
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 129
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_72
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 27
+        width: 31
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_73
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 36
+        width: 32
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 33}
+        - {x: -16, y: -23}
+        - {x: -5, y: -33}
+        - {x: 16, y: -33}
+        - {x: 16, y: 33}
+    - name: newJHwithgun_74
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 29
+        width: 31
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_75
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 16
+        width: 30
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_76
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 0
+        width: 50
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: -51}
+        - {x: -4, y: -49}
+        - {x: -7, y: -48}
+        - {x: -9, y: -51}
+      - - {x: 3, y: -50}
+        - {x: 3, y: -51}
+        - {x: 11, y: -51}
+        - {x: 11, y: -50}
+        - {x: 8, y: -47}
+        - {x: 6, y: -47}
+      - - {x: -9, y: 51}
+        - {x: -11, y: 36}
+        - {x: -11, y: -39}
+        - {x: 9, y: -39}
+        - {x: 25, y: -34}
+        - {x: 25, y: 51}
+      - - {x: -23, y: -23}
+        - {x: -25, y: -24}
+        - {x: -25, y: -30}
+        - {x: -22, y: -30}
+        - {x: -19, y: -27}
+        - {x: -19, y: -26}
+        - {x: -21, y: -23}
+    - name: newJHwithgun_77
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 2
+        width: 63
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: -47}
+        - {x: -14.5, y: -50}
+        - {x: -6.5, y: -50}
+        - {x: -6.5, y: -48}
+        - {x: -9.5, y: -47}
+      - - {x: -0.5, y: -48}
+        - {x: -0.5, y: -50}
+        - {x: 6.5, y: -50}
+        - {x: 6.5, y: -48}
+        - {x: 4.5, y: -46}
+        - {x: 1.5, y: -46}
+      - - {x: 23.5, y: -50}
+        - {x: 23.5, y: -48}
+        - {x: 20.5, y: -47}
+        - {x: 18.5, y: -50}
+      - - {x: 10.5, y: -29}
+        - {x: 8.5, y: -27}
+        - {x: 11.5, y: -29}
+        - {x: 14.5, y: -29}
+        - {x: 22.5, y: -30}
+        - {x: 22.5, y: 50}
+        - {x: -14.5, y: 50}
+        - {x: -31.5, y: 32}
+        - {x: -31.5, y: -35}
+        - {x: 3.5, y: -43}
+        - {x: 9.5, y: -43}
+        - {x: 12.5, y: -38}
+        - {x: 12.5, y: -35}
+      - - {x: 29.5, y: -20}
+        - {x: 25.5, y: -23}
+        - {x: 25.5, y: -28}
+        - {x: 26.5, y: -29}
+        - {x: 30.5, y: -29}
+        - {x: 31.5, y: -28}
+        - {x: 31.5, y: -20}
+    - name: newJHwithgun_78
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 2
+        width: 36
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: -47}
+        - {x: -18, y: -50}
+        - {x: -10, y: -50}
+        - {x: -10, y: -48}
+        - {x: -13, y: -47}
+      - - {x: -4, y: -48}
+        - {x: -4, y: -50}
+        - {x: 3, y: -50}
+        - {x: 3, y: -48}
+        - {x: 1, y: -46}
+        - {x: -2, y: -46}
+      - - {x: -13, y: 50}
+        - {x: -18, y: 36}
+        - {x: -18, y: -34}
+        - {x: -14, y: -38}
+        - {x: 2, y: -38}
+        - {x: 8, y: -34}
+        - {x: 17, y: 11}
+        - {x: 17, y: 49}
+        - {x: 14, y: 50}
+    - name: newJHwithgun_79
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 2
+        width: 36
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: -46.5}
+        - {x: -18, y: -49.5}
+        - {x: -10, y: -49.5}
+        - {x: -10, y: -47.5}
+        - {x: -13, y: -46.5}
+      - - {x: -4, y: -47.5}
+        - {x: -4, y: -49.5}
+        - {x: 3, y: -49.5}
+        - {x: 3, y: -47.5}
+        - {x: 1, y: -45.5}
+        - {x: -2, y: -45.5}
+      - - {x: -18, y: 49.5}
+        - {x: -18, y: -38.5}
+        - {x: 2, y: -42.5}
+        - {x: 10, y: -42.5}
+        - {x: 18, y: -31.5}
+        - {x: 18, y: 46.5}
+        - {x: 17, y: 49.5}
+    - name: newJHwithgun_80
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 2
+        width: 35
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.5, y: -47}
+        - {x: -17.5, y: -50}
+        - {x: -10.5, y: -50}
+        - {x: -10.5, y: -48}
+        - {x: -13.5, y: -47}
+      - - {x: 2.5, y: -50}
+        - {x: 2.5, y: -48}
+        - {x: -0.5, y: -47}
+        - {x: -2.5, y: -50}
+      - - {x: -17.5, y: 50}
+        - {x: -17.5, y: -38}
+        - {x: 2.5, y: -38}
+        - {x: 15.5, y: -32}
+        - {x: 15.5, y: 48}
+        - {x: 8.5, y: 50}
+    - name: newJHwithgun_81
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 25
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_82
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 25
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: newJHwithgun_83
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 19
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
