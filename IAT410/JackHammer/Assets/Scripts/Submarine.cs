@@ -55,7 +55,7 @@ public class Submarine : MonoBehaviour {
             //      Debug.Log("SHIT!");
             //     anim.SetBool("stun", true);
 			// waits
-		gameObject.SetActive(true);
+		    gameObject.SetActive(true);
 			animator.SetInteger ("Direction", -1);
 			yield return new WaitForSeconds(0.5f);
             //     anim.SetBool("stun", false);

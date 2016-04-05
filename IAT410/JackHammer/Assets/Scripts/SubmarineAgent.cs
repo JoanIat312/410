@@ -43,6 +43,8 @@ public class SubmarineAgent : MonoBehaviour {
 		bossHealth.fillAmount = health / 2000f;
 	}
 	void Start () {
+        timeForNextAttack = Time.time;
+        timeForHide = Time.time;
 		agent = GetComponent<NavMeshAgent> ();
 		player = GameObject.Find ("Player");
 		agent.updatePosition = true;
