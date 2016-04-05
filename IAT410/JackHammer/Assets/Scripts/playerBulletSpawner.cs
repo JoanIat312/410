@@ -8,7 +8,7 @@ public class playerBulletSpawner : MonoBehaviour {
 
 		public AudioClip shot;
 		public int equippedGun = 2;
-		// active weapon status - 0 is default, 1 is fast shootng machinegun
+		// active weapon status - 0 is default, 1 is fast shootng machinegun, 2 is shotgun
 
 		public float defaultFireRate = .5f;
 		public float currentFireRate = .5f;
@@ -48,8 +48,15 @@ public class playerBulletSpawner : MonoBehaviour {
 				machineGunBullets -= 1;
 				//Debug.Log (machineGunBullets);
 				if (machineGunBullets <= 0) {
-					// go back to default gun
-					SetWeapon (0);
+					// go back to default gun if not shotgun bullets either
+                    if (shotGunBullets > 0)
+                    {
+                        SetWeapon(2);
+                    }
+                    else
+                    {
+                        SetWeapon(0);
+                    }
 				}
 				GameObject newBullet = Instantiate (bObject, new Vector3 (transform.position.x, 0.38f, transform.position.z), transform.rotation) as GameObject;
 				newBullet.tag = "bullets";      
@@ -59,8 +66,15 @@ public class playerBulletSpawner : MonoBehaviour {
 				shotGunBullets -= 1;
 				//Debug.Log (shotGunBullets);
 				if (shotGunBullets <= 0) {
-					// go back to default gun
-					SetWeapon (0);
+                    // go back to default gun if not machinegun bullets either
+                    if (machineGunBullets > 0)
+                    {
+                     SetWeapon(1);
+                    }
+                    else
+                    {
+                     SetWeapon(0);
+                    }
 				}
 				// spawn 6 bullets
 				for (int i = 0; i < 6; i++) {

@@ -133,6 +133,7 @@ public class GameManager : MonoBehaviour {
 		
 	}
 	public void loadNextScene(){
+        Debug.Log(level + 1);
 		level++;
 		Application.LoadLevel (level);
 	}

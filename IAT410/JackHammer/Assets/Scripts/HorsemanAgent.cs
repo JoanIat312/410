@@ -27,7 +27,7 @@ public class HorsemanAgent : MonoBehaviour
 
 	public void OnGUI(){
 		if (this.name == "CannonAgent") {
-			bossHealth.fillAmount = health / 1000f;
+			bossHealth.fillAmount = health / 1250f;
 		}
 	}
 	public enum State
