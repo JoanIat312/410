@@ -33,7 +33,7 @@ public class TankAgent : MonoBehaviour {
 		ATTACK
 	}
 	public void OnGUI(){
-			bossHealth.fillAmount = health / 1500f;
+			bossHealth.fillAmount = health / 2000f;
 	}
 	void Start () {
 		agent = GetComponent<NavMeshAgent> ();

@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour {
 	}
 		
 	void loadWin(){
-		Application.LoadLevel ("Winning");
+		Application.LoadLevel ("6trump");
 	}
 	void loadLose(){
 		Application.LoadLevel("GameOver");

@@ -34,7 +34,7 @@ public class Rockets : MonoBehaviour {
 			float zDif = targetPos.z - transform.position.z;
 			dis = new Vector3 (xDif, 0.38f, zDif);
 			float angle = Mathf.Atan2(xDif, zDif) * Mathf.Rad2Deg;
-			Debug.Log (angle);
+//			Debug.Log (angle);
 			transform.rotation = Quaternion.Euler(new Vector3 (90, angle, transform.rotation.z)); 
 		//dis = targetPos - objectPos;
 		//dis.Normalize ();
