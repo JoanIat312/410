@@ -28,12 +28,26 @@ public class MoviePlay : MonoBehaviour {
 	void Update () {
       if (Input.GetMouseButton(0))
       {
-       Application.LoadLevel(Application.loadedLevel + 1);
+       if (Application.loadedLevelName == "ending-movie")
+       {
+        Application.LoadLevel("Title");
+       }
+       else
+       {
+        Application.LoadLevel(Application.loadedLevel + 1);
+       }
       }
       else if (!movie.isPlaying)
       {
        Debug.Log("movie end");
-       Application.LoadLevel(Application.loadedLevel + 1);
+       if (Application.loadedLevelName == "ending-movie")
+       {
+        Application.LoadLevel("Title");
+       }
+       else
+       {
+        Application.LoadLevel(Application.loadedLevel + 1);
+       }
       }
      }
 }
