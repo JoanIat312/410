@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour {
     public static int score = 0;
 	public GameObject pauseMenu;
 	private float stunDurationTimeStamp = 1;
-	public static float stunDuration = 3f;
+	private static float stunDuration = 4f;
 	public static float stunUseDelay = 15f;
 	public float stunUseDelayTimeStamp;
 	private bool paused = false;
