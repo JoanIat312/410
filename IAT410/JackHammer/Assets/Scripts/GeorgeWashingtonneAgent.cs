@@ -11,6 +11,7 @@ public class GeorgeWashingtonneAgent: MonoBehaviour
 	// false is waiting to be found (does nothing), 1 is found (follows player and attacks enemies)
 	private float distanceToTrigger = .9f;
 	public float damagePerHit = 1f;
+    public float sightDistance = 4.5f;
 
 	// Use this for initialization
 	void Start ()
@@ -38,7 +39,7 @@ public class GeorgeWashingtonneAgent: MonoBehaviour
 //			agent.SetDestination (playerPos);
 //		}
 		Vector3 closestEnemyPos = GetClosestEnemy ().transform.position;
-		if ((Vector3.Distance (playerPos, closestEnemyPos)) < 4.5f) {
+        if ((Vector3.Distance (playerPos, closestEnemyPos)) < sightDistance) {
 			agent.SetDestination (closestEnemyPos);
 			agent.stoppingDistance = 0;
 		} else {
@@ -59,7 +60,7 @@ public class GeorgeWashingtonneAgent: MonoBehaviour
 
 	void OnCollisionEnter (Collision col)
 	{
-		Debug.Log ("played");
+//		Debug.Log ("played");
 		col.gameObject.SendMessage ("TakeDamage", damagePerHit, SendMessageOptions.DontRequireReceiver);
 //      if (col.gameObject.tag == "EnemyAgent") {
 //       Debug.Log("DAMAGED YOW!");
@@ -78,12 +79,11 @@ public class GeorgeWashingtonneAgent: MonoBehaviour
 		for (int i = 0; i < objectsWithTag.Length; i++) {
 			if (closestObject == null) {
 				closestObject = objectsWithTag [i];
-				if (Vector3.Distance (playerPos, objectsWithTag [i].transform.position) <= Vector3.Distance (transform.position, closestObject.transform.position)) {
-					closestObject = objectsWithTag [i];
-				} 
 			}
 			//compares distances from player to each of the enemies
-
+            if (Vector3.Distance (playerPos, objectsWithTag [i].transform.position) <= Vector3.Distance (transform.position, closestObject.transform.position)) {
+             closestObject = objectsWithTag [i];
+            } 
 		}
 
 		return closestObject;
